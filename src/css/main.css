@@ -1,0 +1,164 @@
+/* roboto-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-v20-latin_cyrillic-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Roboto"), local("Roboto-Regular"), url("../fonts/roboto-v20-latin_cyrillic-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v20-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/roboto-v20-latin_cyrillic-regular.woff") format("woff"), url("../fonts/roboto-v20-latin_cyrillic-regular.ttf") format("truetype"), url("../fonts/roboto-v20-latin_cyrillic-regular.svg#Roboto") format("svg");
+  /* Legacy iOS */ }
+
+/* roboto-700 - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/roboto-v20-latin_cyrillic-700.eot");
+  /* IE9 Compat Modes */
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("../fonts/roboto-v20-latin_cyrillic-700.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v20-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/roboto-v20-latin_cyrillic-700.woff") format("woff"), url("../fonts/roboto-v20-latin_cyrillic-700.ttf") format("truetype"), url("../fonts/roboto-v20-latin_cyrillic-700.svg#Roboto") format("svg");
+  /* Legacy iOS */ }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: 'Roboto', sans-serif;
+  outline: none; }
+
+html, body {
+  min-width: 320px;
+  font-size: 16px;
+  background-color: #fbfbfb; }
+
+button {
+  margin: 0;
+  padding: 0;
+  background-color: none; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+img {
+  border: 0;
+  max-width: 100%; }
+
+a {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+.hide {
+  display: none; }
+
+.show {
+  display: block; }
+
+.fixed {
+  position: fixed;
+  overflow: hidden; }
+
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both; }
+
+.hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px; }
+
+body {
+  background-color: #fff;
+  height: 1000px; }
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 375px;
+  padding-right: 37px; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 29px 0px 0px 0px; }
+
+nav ul li {
+  display: inline-block;
+  margin-right: 27px; }
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0; }
+
+nav ul li:last-child {
+  margin-right: 0; }
+
+nav a {
+  color: black; }
+
+nav a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid #fc557c;
+  color: #fc557c; }
+
+.contacts {
+  margin-left: auto;
+  font-size: 1.62em;
+  margin-right: 29px;
+  font-weight: 600;
+  letter-spacing: -0.5px; }
+  .contacts a {
+    color: black; }
+  .contacts a:hover {
+    text-decoration: none; }
+
+button.callback {
+  border: 2px solid #ff4e2e;
+  width: 208px;
+  height: 45px;
+  font-size: 16px;
+  color: #fc557c;
+  background-color: #fbfbfb;
+  cursor: pointer; }
+
+.cover {
+  display: flex;
+  justify-content: space-between; }
+
+.text {
+  margin-top: 211px; }
+  .text h1 {
+    font-size: 5em;
+    font-weight: 700;
+    z-index: 50; }
+  .text h2 {
+    font-size: 1.55em;
+    font-weight: 500;
+    margin-top: 15px; }
+  .text button {
+    width: 270px;
+    height: 60px;
+    margin-top: 45px;
+    font-size: 18px;
+    color: white;
+    background-color: #ff4e2e;
+    border: 1px solid #ff4e2e; }
+
+.pic {
+  border: 1px solid blue;
+  width: 50%; }
+
+.gradient {
+  border: 1px solid red;
+  width: 100%;
+  height: 100%;
+  background-color: black; }
