@@ -134,7 +134,9 @@ button.callback {
   justify-content: space-between; }
 
 .text {
-  margin-top: 211px; }
+  margin-top: 211px;
+  margin-left: 375px;
+  z-index: 100; }
   .text h1 {
     font-size: 5em;
     font-weight: 700;
@@ -152,12 +154,22 @@ button.callback {
     background-color: #ff4e2e;
     border: 1px solid #ff4e2e; }
 
-.pic {
-  border: 1px solid blue;
-  width: 50%; }
+.cover {
+  display: flex;
+  justify-content: space-between; }
 
-.gradient {
-  border: 1px solid red;
-  width: 100%;
-  height: 100%;
-  background-color: black; }
+.pic {
+  margin-top: 60px;
+  border: 1px solid blue;
+  z-index: 10;
+  float: right;
+  width: 42.5%;
+  height: 635px; }
+  .pic .gradient {
+    height: 100%;
+    border: 1px solid red;
+    background-image: url(../../img/gradientempty.png);
+    background-repeat: no-repeat;
+    background-image: -moz-linear-gradient(77deg, #ff8f5a 0%, #ff2f96 99%);
+    background-image: -webkit-linear-gradient(77deg, #ff8f5a 0%, #ff2f96 99%);
+    background-image: -ms-linear-gradient(77deg, #ff8f5a 0%, #ff2f96 99%); }
