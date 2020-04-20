@@ -167,9 +167,9 @@ button.callback {
   height: 635px; }
   .pic .gradient {
     height: 100%;
-    border: 1px solid red;
-    background-image: url(../../img/gradientempty.png);
+    width: 100%;
+    background-image: url(../../img/gradientfull.svg);
     background-repeat: no-repeat;
-    background-image: -moz-linear-gradient(77deg, #ff8f5a 0%, #ff2f96 99%);
-    background-image: -webkit-linear-gradient(77deg, #ff8f5a 0%, #ff2f96 99%);
-    background-image: -ms-linear-gradient(77deg, #ff8f5a 0%, #ff2f96 99%); }
+    background-size: 1000px 759px;
+    background-position: top left;
+    overflow: hidden; }

@@ -123,13 +123,14 @@ button.callback {
     & .chel {}
     & .gradient {
         height: 100%;
-        border: 1px solid red;
-        background-image: url(../../img/gradientempty.png);
+        width: 100%;
+        background-image: url(../../img/gradientfull.svg);
         background-repeat: no-repeat;
-        // background-size: 767px 635px;
-        // background-position: center top;
-        background-image: -moz-linear-gradient( 77deg, rgb(255,143,90) 0%, rgb(255,47,150) 99%);
-        background-image: -webkit-linear-gradient( 77deg, rgb(255,143,90) 0%, rgb(255,47,150) 99%);
-        background-image: -ms-linear-gradient( 77deg, rgb(255,143,90) 0%, rgb(255,47,150) 99%);
+        background-size: 1000px 759px;
+        background-position: top left;
+        overflow: hidden;
+        // background-image: -moz-linear-gradient( 77deg, rgb(255,143,90) 0%, rgb(255,47,150) 99%);
+        // background-image: -webkit-linear-gradient( 77deg, rgb(255,143,90) 0%, rgb(255,47,150) 99%);
+        // background-image: -ms-linear-gradient( 77deg, rgb(255,143,90) 0%, rgb(255,47,150) 99%);
     }
 }
