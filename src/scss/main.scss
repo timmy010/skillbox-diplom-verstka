@@ -114,13 +114,19 @@ button.callback {
 
 .pic {
     margin-top: 60px;
-    border: 1px solid blue;
     z-index: 10;
     float: right;
     width: 42.5%;
     height: 635px;
+    position: relative;
 
-    & .chel {}
+    & .chel {
+        position: absolute;
+        left: 87px;
+        top: 0;
+        width: 432px;
+        height: 633px;
+    }
     & .gradient {
         height: 100%;
         width: 100%;
