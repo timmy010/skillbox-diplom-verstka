@@ -18,13 +18,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 0px 0px 0px;
+    padding: 26px 0px 0px 0px;
 }
 
 nav  {
     & ul li {
         display: inline-block;
-        margin-right: 27px;
+        margin-right: 28px;
     }
 
     & ul {
@@ -65,9 +65,9 @@ nav  {
 }
 
 button.callback {
-    border: 2px solid $color_dark_red;
+    border: 1px solid $color_dark_red;
     width: 208px;
-    height: 45px;
+    height: 49px;
     font-size: 16px;
     color: $color_light_red;
     background-color: #fbfbfb;
@@ -132,7 +132,7 @@ button.callback {
         width: 100%;
         background-image: url(../../img/gradientfull.svg);
         background-repeat: no-repeat;
-        background-size: 1000px 759px;
+        background-size: 1000px 762px;
         background-position: top left;
         overflow: hidden;
         // background-image: -moz-linear-gradient( 77deg, rgb(255,143,90) 0%, rgb(255,47,150) 99%);
