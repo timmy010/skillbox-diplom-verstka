@@ -4,7 +4,7 @@
 
 body {
     background-color: #fff;
-    height: 1000px;
+    height: 3000px;
 }
 
 .container {
@@ -138,5 +138,53 @@ button.callback {
         // background-image: -moz-linear-gradient( 77deg, rgb(255,143,90) 0%, rgb(255,47,150) 99%);
         // background-image: -webkit-linear-gradient( 77deg, rgb(255,143,90) 0%, rgb(255,47,150) 99%);
         // background-image: -ms-linear-gradient( 77deg, rgb(255,143,90) 0%, rgb(255,47,150) 99%);
+    }
+}
+
+// .cover~.container {
+//     padding: 0 345px;
+// }
+
+.whatido {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 85px;
+
+    & .title {
+        font-size: 3.4em;
+    }
+
+    & .benefits-container {
+        display: flex;
+        justify-content: end;
+        margin-top: 87px;
+
+        & .benefits-item {
+            text-align: center;
+            width: 100%;
+            flex: 1;
+
+            & img {
+                width: 80px;
+                height: 74px;
+            }
+            & p {
+                margin-top: 16px;
+                font-size: 1.3em;
+                color: $color_symbol;
+            }
+        }
+    }
+
+    & button {
+        width: 270px;
+        height: 60px;
+        margin-top: 99px;
+        font-size: 18px;
+        color: white;
+        background-color: $color_dark_red;
+        border: 1px solid $color_dark_red;
     }
 }

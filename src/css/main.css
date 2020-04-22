@@ -75,7 +75,7 @@ a:hover {
 
 body {
   background-color: #fff;
-  height: 1000px; }
+  height: 3000px; }
 
 .container {
   max-width: 1920px;
@@ -179,3 +179,35 @@ button.callback {
     background-size: 1000px 762px;
     background-position: top left;
     overflow: hidden; }
+
+.whatido {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 85px; }
+  .whatido .title {
+    font-size: 3.4em; }
+  .whatido .benefits-container {
+    display: flex;
+    justify-content: end;
+    margin-top: 87px; }
+    .whatido .benefits-container .benefits-item {
+      text-align: center;
+      width: 100%;
+      flex: 1; }
+      .whatido .benefits-container .benefits-item img {
+        width: 80px;
+        height: 74px; }
+      .whatido .benefits-container .benefits-item p {
+        margin-top: 16px;
+        font-size: 1.3em;
+        color: #8993ad; }
+  .whatido button {
+    width: 270px;
+    height: 60px;
+    margin-top: 99px;
+    font-size: 18px;
+    color: white;
+    background-color: #ff4e2e;
+    border: 1px solid #ff4e2e; }
