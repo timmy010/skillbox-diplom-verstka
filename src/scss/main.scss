@@ -157,14 +157,14 @@ button.callback {
     }
 
     & .benefits-container {
+        width: 100%;
         display: flex;
-        justify-content: end;
+        justify-content: space-between;
         margin-top: 87px;
 
         & .benefits-item {
             text-align: center;
-            width: 100%;
-            flex: 1;
+            width: 269px;
 
             & img {
                 width: 80px;

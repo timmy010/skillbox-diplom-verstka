@@ -189,13 +189,13 @@ button.callback {
   .whatido .title {
     font-size: 3.4em; }
   .whatido .benefits-container {
+    width: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     margin-top: 87px; }
     .whatido .benefits-container .benefits-item {
       text-align: center;
-      width: 100%;
-      flex: 1; }
+      width: 269px; }
       .whatido .benefits-container .benefits-item img {
         width: 80px;
         height: 74px; }
