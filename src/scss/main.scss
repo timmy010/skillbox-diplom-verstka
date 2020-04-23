@@ -141,18 +141,15 @@ button.callback {
     }
 }
 
-// .cover~.container {
-//     padding: 0 345px;
-// }
-
 .whatido {
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
     align-items: center;
     padding-top: 85px;
+    padding-bottom: 96px;
 
-    & .title {
+    & h2 {
         font-size: 3.4em;
     }
 
@@ -164,7 +161,7 @@ button.callback {
 
         & .benefits-item {
             text-align: center;
-            width: 269px;
+            max-width: 269px;
 
             & img {
                 width: 80px;
@@ -182,6 +179,83 @@ button.callback {
         width: 270px;
         height: 60px;
         margin-top: 99px;
+        font-size: 18px;
+        color: white;
+        background-color: $color_dark_red;
+        border: 1px solid $color_dark_red;
+    }
+}
+
+.portfolio {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 96px;
+    width: 100%;
+
+    & h2 {
+        font-size: 3.4em;
+    }
+
+    & .swiper-container {
+        width: 100%;
+        height: 100%;
+        margin-top: 99px;
+        position: relative;
+
+        & .swiper-wrapper {
+            justify-content: space-between;
+        }
+
+        .swiper-slide {
+            width: auto;
+            text-align: center;
+
+            & p {
+                margin-top: 31px;
+                font-size: 1.2em;
+                color: $color_symbol;
+            }
+          }
+    
+        .swiper-button-next {
+            z-index: 2;
+            position: absolute;
+            background-image: url('../../img/arrow_next.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+            width: 60px;
+            height: 60px;
+            top: 40%;
+            right: -2.6%;
+            &::after {
+                display: none;
+            }
+        }
+    
+        .swiper-button-prev {
+            background-image: url('../../img/arrow_prev.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+            width: 60px;
+            height: 60px;
+            top: 40%;
+            left: -2.6%;
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    & button {
+        width: 269px;
+        height: 58px;
+        margin-top: 96px;
         font-size: 18px;
         color: white;
         background-color: $color_dark_red;

@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Дипломный проект - Верстка в Skillbox</title>
+    <link rel="stylesheet" href="src/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="src/css/main.css">
+    <script src="src/swiper/js/swiper.min.js"></script>
     <script src="src/js/main.js"></script>
 </head>
 <body>
@@ -36,7 +38,7 @@
 
     <div class="container">
         <div class="whatido">
-            <h2 class="title">Что я делаю</h2>
+            <h2>Что я делаю</h2>
             <div class="benefits-container">
                 <div class="benefits-item">
                     <img src="img/icons/tools-and-utensils.png" alt="">
@@ -56,6 +58,38 @@
                 </div>
             </div>
             <button>Узнать стоимость</button> 
+        </div>
+
+        <div class="portfolio">
+            <h2>Примеры моих работ</h2>
+
+            <!-- SLIDER from swiperjs.com START -->
+
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <a href=""><img src="img/site_psoholog.png" alt=""></a>
+                        <p>Сайт психолога Верны Антоновой</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href=""><img src="img/site_det.png" alt=""></a>
+                        <p>Сайт магазина детской одежды</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href=""><img src="img/site_rybolov.png" alt=""></a>
+                        <p>Сайт магазина &laquo;Рыболов&raquo;</p>
+                    </div>
+                </div>
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+            <!-- SLIDER from swiperjs.com END -->
+            <button>Заказать проект</button> 
         </div>
     </div> 
 </body>

@@ -185,8 +185,9 @@ button.callback {
   flex-flow: column wrap;
   justify-content: space-between;
   align-items: center;
-  padding-top: 85px; }
-  .whatido .title {
+  padding-top: 85px;
+  padding-bottom: 96px; }
+  .whatido h2 {
     font-size: 3.4em; }
   .whatido .benefits-container {
     width: 100%;
@@ -195,7 +196,7 @@ button.callback {
     margin-top: 87px; }
     .whatido .benefits-container .benefits-item {
       text-align: center;
-      width: 269px; }
+      max-width: 269px; }
       .whatido .benefits-container .benefits-item img {
         width: 80px;
         height: 74px; }
@@ -207,6 +208,64 @@ button.callback {
     width: 270px;
     height: 60px;
     margin-top: 99px;
+    font-size: 18px;
+    color: white;
+    background-color: #ff4e2e;
+    border: 1px solid #ff4e2e; }
+
+.portfolio {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 96px;
+  width: 100%; }
+  .portfolio h2 {
+    font-size: 3.4em; }
+  .portfolio .swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-top: 99px;
+    position: relative; }
+    .portfolio .swiper-container .swiper-wrapper {
+      justify-content: space-between; }
+    .portfolio .swiper-container .swiper-slide {
+      width: auto;
+      text-align: center; }
+      .portfolio .swiper-container .swiper-slide p {
+        margin-top: 31px;
+        font-size: 1.2em;
+        color: #8993ad; }
+    .portfolio .swiper-container .swiper-button-next {
+      z-index: 2;
+      position: absolute;
+      background-image: url("../../img/arrow_next.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+      width: 60px;
+      height: 60px;
+      top: 40%;
+      right: -2.6%; }
+      .portfolio .swiper-container .swiper-button-next::after {
+        display: none; }
+    .portfolio .swiper-container .swiper-button-prev {
+      background-image: url("../../img/arrow_prev.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+      width: 60px;
+      height: 60px;
+      top: 40%;
+      left: -2.6%; }
+      .portfolio .swiper-container .swiper-button-prev::after {
+        display: none; }
+  .portfolio button {
+    width: 269px;
+    height: 58px;
+    margin-top: 96px;
     font-size: 18px;
     color: white;
     background-color: #ff4e2e;
