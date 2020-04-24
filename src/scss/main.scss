@@ -3,7 +3,7 @@
 @import "consta.scss";
 
 body {
-    background-color: #fff;
+    background-color: #fbfbfb;
     height: 3000px;
 }
 
@@ -14,14 +14,14 @@ body {
     padding: 0 375px;
 }
 
-.header {
+.header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 26px 0px 0px 0px;
+    padding-top: 26px;
 }
 
-nav  {
+.main-menu  {
     & ul li {
         display: inline-block;
         margin-right: 28px;
@@ -142,6 +142,10 @@ button.callback {
 }
 
 .whatido {
+    background-color: #fff;
+}
+
+.whatido .container {
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
@@ -186,7 +190,7 @@ button.callback {
     }
 }
 
-.portfolio {
+.portfolio .container {
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
@@ -289,4 +293,126 @@ button.callback {
             line-height: 27px;
         }
     }
+}
+
+.footer {
+    margin-bottom: 66px;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    padding-top: 77px;
+
+    & ul li {
+        list-style: none;
+    }
+
+    .footer-menu {
+        font-size: 1.1em;
+        & a {
+            color: $color_symbol;
+        }
+        
+        & ul li {
+            line-height: 33px;
+        }
+    }
+    .footer-contacts {
+        margin: 5px 0px 0px 92px;
+        & a {
+            display: block;
+            color: black;
+            font-size: 1.6em;
+        }
+        & .tel {
+            margin-bottom: 30px;
+        }
+
+        & [class^="icon-"] {
+            margin: 0px 17px 0px 0px;
+        }
+
+        & [class^="icon-"]:before, [class*=" icon-"]:before {
+            color: #fa0891;
+            font-size: 0.9em;;
+            background: -webkit-linear-gradient(#fa0891, #f26522);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .footer-buttons {
+        margin-right: 23px;
+        & button {
+            border: 1px solid $color_dark_red;
+            width: 247px;
+            height: 45px;
+            font-size: 16px;
+            color: $color_light_red;
+            background-color: #fbfbfb;
+            cursor: pointer;
+        }
+
+        .social {
+            margin-top: 30px;
+        }
+
+        ul.social {
+            padding: 0;
+            margin: 0;
+            margin-top: 4px;
+        }
+        
+        .social li {
+            display: inline-block;
+        }
+        
+        .social li:last-child>a {
+            margin-right: 0;
+        }
+        
+        .social a {
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            background-repeat: no-repeat;
+        }
+        
+        .vk-icon {
+            background-image: url(../../img/icons/social.png);
+            background-size: auto 30px;
+            margin-right: 10px;
+        }
+        
+        .fb-icon {
+            background-image: url(../../img/icons/social.png);
+            background-position: -56px 0px;
+            background-size: auto 30px;
+            margin-right: 8px;
+        }
+        
+        .tw-icon {
+            background-image: url(../../img/icons/social.png);
+            background-position: -110px 0px;
+            background-size: auto 30px;
+            margin-right: 12px;
+        }
+        
+        .inst-icon {
+            background-image: url(../../img/icons/social.png);
+            background-position: -169px 0px;
+            background-size: auto 30px;
+        }
+    }
+}
+
+.copyrait {
+    display: block;
+    background-color: #31293c;
+    font-size: 1.1em;
+    text-align: center;
+    color: white;
+    padding: 29px 0 29px 0px;
 }
