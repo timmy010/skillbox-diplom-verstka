@@ -2,18 +2,6 @@
 @import "colors.scss";
 @import "consta.scss";
 
-body {
-    background-color: #fbfbfb;
-    height: 3000px;
-}
-
-.container {
-	max-width: 1920px;
-	margin: 0 auto;
-    position: relative;
-    padding: 0 375px;
-}
-
 .header .container {
     display: flex;
     justify-content: space-between;
@@ -71,7 +59,6 @@ button.callback {
     font-size: 16px;
     color: $color_light_red;
     background-color: #fbfbfb;
-    cursor: pointer;
 }
 
 .cover {
@@ -225,7 +212,8 @@ button.callback {
           }
     
         .swiper-button-next {
-            z-index: 2;
+            z-index: 100;
+            cursor: pointer;
             position: absolute;
             background-image: url('../../img/arrow_next.png');
             background-repeat: no-repeat;
@@ -242,6 +230,8 @@ button.callback {
         }
     
         .swiper-button-prev {
+            z-index: 100;
+            cursor: pointer;
             background-image: url('../../img/arrow_prev.png');
             background-repeat: no-repeat;
             background-position: center;
@@ -325,6 +315,7 @@ button.callback {
             display: block;
             color: black;
             font-size: 1.6em;
+            text-decoration: none;
         }
         & .tel {
             margin-bottom: 30px;
@@ -352,7 +343,6 @@ button.callback {
             font-size: 16px;
             color: $color_light_red;
             background-color: #fbfbfb;
-            cursor: pointer;
         }
 
         .social {

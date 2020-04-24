@@ -31,10 +31,17 @@ html, body {
   font-size: 16px;
   background-color: #fbfbfb; }
 
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 375px; }
+
 button {
   margin: 0;
   padding: 0;
-  background-color: none; }
+  background-color: none;
+  cursor: pointer; }
 
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
@@ -72,16 +79,6 @@ a:hover {
   width: 1px;
   height: 1px;
   margin: -1px; }
-
-body {
-  background-color: #fbfbfb;
-  height: 3000px; }
-
-.container {
-  max-width: 1920px;
-  margin: 0 auto;
-  position: relative;
-  padding: 0 375px; }
 
 .header .container {
   display: flex;
@@ -126,8 +123,7 @@ button.callback {
   height: 49px;
   font-size: 16px;
   color: #fc557c;
-  background-color: #fbfbfb;
-  cursor: pointer; }
+  background-color: #fbfbfb; }
 
 .cover {
   display: flex;
@@ -241,7 +237,8 @@ button.callback {
         font-size: 1.2em;
         color: #8993ad; }
     .portfolio .container .swiper-container .swiper-button-next {
-      z-index: 2;
+      z-index: 100;
+      cursor: pointer;
       position: absolute;
       background-image: url("../../img/arrow_next.png");
       background-repeat: no-repeat;
@@ -255,6 +252,8 @@ button.callback {
       .portfolio .container .swiper-container .swiper-button-next::after {
         display: none; }
     .portfolio .container .swiper-container .swiper-button-prev {
+      z-index: 100;
+      cursor: pointer;
       background-image: url("../../img/arrow_prev.png");
       background-repeat: no-repeat;
       background-position: center;
@@ -315,7 +314,8 @@ button.callback {
     .footer .container .footer-contacts a {
       display: block;
       color: black;
-      font-size: 1.6em; }
+      font-size: 1.6em;
+      text-decoration: none; }
     .footer .container .footer-contacts .tel {
       margin-bottom: 30px; }
     .footer .container .footer-contacts [class^="icon-"] {
@@ -334,8 +334,7 @@ button.callback {
       height: 45px;
       font-size: 16px;
       color: #fc557c;
-      background-color: #fbfbfb;
-      cursor: pointer; }
+      background-color: #fbfbfb; }
     .footer .container .footer-buttons .social {
       margin-top: 30px; }
     .footer .container .footer-buttons ul.social {
