@@ -35,7 +35,7 @@ html, body {
   max-width: 1920px;
   margin: 0 auto;
   position: relative;
-  padding: 0 375px; }
+  padding: 0 19.5%; }
 
 button {
   margin: 0;
@@ -82,9 +82,24 @@ a:hover {
 
 .header .container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding-top: 26px; }
+  padding-top: 30px; }
+
+.burger {
+  padding: 0;
+  display: none;
+  width: 45px;
+  height: 45px;
+  background-image: url("../../img/burger.svg");
+  background-size: 45px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  cursor: pointer; }
 
 .main-menu ul li {
   display: inline-block;
@@ -120,7 +135,7 @@ a:hover {
 button.callback {
   border: 1px solid #ff4e2e;
   width: 208px;
-  height: 49px;
+  height: 44px;
   font-size: 16px;
   color: #fc557c;
   background-color: #fbfbfb; }
@@ -131,7 +146,6 @@ button.callback {
 
 .text {
   margin-top: 211px;
-  margin-left: 375px;
   z-index: 100; }
   .text h1 {
     font-size: 5em;
@@ -150,29 +164,32 @@ button.callback {
     background-color: #ff4e2e;
     border: 1px solid #ff4e2e; }
 
-.cover {
+.cover .container {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  padding: 0 0 0 19.5%;
+  margin: 0;
+  width: 100%; }
 
 .pic {
   margin-top: 60px;
-  z-index: 10;
-  float: right;
-  width: 42.5%;
+  width: 52.5%;
   height: 635px;
   position: relative; }
   .pic .chel {
     position: absolute;
     left: 87px;
-    top: 0;
+    top: 9px;
     width: 432px;
-    height: 633px; }
+    height: 625px;
+    min-width: 432px; }
   .pic .gradient {
     height: 100%;
     width: 100%;
+    min-width: 562px;
     background-image: url(../../img/gradientfull.svg);
     background-repeat: no-repeat;
-    background-size: 1000px 762px;
+    background-size: 994px 769px;
     background-position: top left;
     overflow: hidden; }
 
@@ -191,7 +208,9 @@ button.callback {
   .whatido .container .benefits-container {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     margin-top: 87px; }
     .whatido .container .benefits-container .benefits-item {
       text-align: center;
@@ -284,7 +303,7 @@ button.callback {
   justify-content: center;
   align-items: center; }
   .banner .banner-text {
-    width: 53%;
+    padding: 0 22% 0 25.4%;
     color: white; }
     .banner .banner-text h2 {
       font-size: 3em; }
@@ -376,3 +395,24 @@ button.callback {
   text-align: center;
   color: white;
   padding: 29px 0 29px 0px; }
+
+@media (max-width: 1024px) {
+  .main-menu {
+    display: none; }
+  .burger {
+    display: inline-block; }
+  .container {
+    padding: 0 4%; }
+  .cover .container {
+    padding: 0 0 0 3.7%; }
+  .text {
+    margin-top: 239px; }
+  .text h1 {
+    font-size: 54px; }
+  button.callback {
+    margin-right: 0px; }
+  .whatido {
+    border: 1px solid red; }
+  .pic .gradient {
+    background-size: 994px 769px;
+    min-width: none; } }

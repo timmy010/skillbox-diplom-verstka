@@ -4,10 +4,26 @@
 
 .header .container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding-top: 26px;
+    padding-top: 30px;
 }
+
+.burger {
+	padding: 0;
+	display: none;
+	width: 45px;
+	height: 45px;
+	background-image: url('../../img/burger.svg');
+	background-size: 45px;
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+	cursor: pointer;
+  }
 
 .main-menu  {
     & ul li {
@@ -55,7 +71,7 @@
 button.callback {
     border: 1px solid $color_dark_red;
     width: 208px;
-    height: 49px;
+    height: 44px;
     font-size: 16px;
     color: $color_light_red;
     background-color: #fbfbfb;
@@ -68,7 +84,6 @@ button.callback {
 
 .text {
     margin-top: 211px;
-    margin-left: 375px;
     z-index: 100;
 
     & h1 {
@@ -94,32 +109,35 @@ button.callback {
     }
 }
 
-.cover {
+.cover .container {
     display: flex;
     justify-content: space-between;
+    padding: 0 0 0 19.5%;
+    margin: 0;
+    width: 100%;
 }
 
 .pic {
     margin-top: 60px;
-    z-index: 10;
-    float: right;
-    width: 42.5%;
+    width: 52.5%;
     height: 635px;
     position: relative;
 
     & .chel {
         position: absolute;
         left: 87px;
-        top: 0;
+        top: 9px;
         width: 432px;
-        height: 633px;
+        height: 625px;
+        min-width: 432px;
     }
     & .gradient {
         height: 100%;
         width: 100%;
+        min-width: 562px;
         background-image: url(../../img/gradientfull.svg);
         background-repeat: no-repeat;
-        background-size: 1000px 762px;
+        background-size: 994px 769px;
         background-position: top left;
         overflow: hidden;
         // background-image: -moz-linear-gradient( 77deg, rgb(255,143,90) 0%, rgb(255,47,150) 99%);
@@ -147,7 +165,9 @@ button.callback {
     & .benefits-container {
         width: 100%;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
+        align-items: center;
         margin-top: 87px;
 
         & .benefits-item {
@@ -269,7 +289,8 @@ button.callback {
     align-items: center;
 
     .banner-text {
-        width: 53%;
+        padding: 0 22% 0 25.4%;
+        // width: 53%;
         color: white;
 
         & h2 {
@@ -406,3 +427,5 @@ button.callback {
     color: white;
     padding: 29px 0 29px 0px;
 }
+
+@import "mobile.scss";
