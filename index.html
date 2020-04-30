@@ -13,35 +13,41 @@
 <body>
     
     <div class="header">
-        <div class="container">
-            <button class="burger"></button>
-            <nav class="main-menu">
-                <ul>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Портфолио</a></li>
-                    <li><a href="#">Стоимость</a></li>
+        <div class="container header__container">
+            <button class="header__burger header__burger--show"></button>
+            <nav class="menu header__menu">
+                <ul class="menu__list header__menu-list">
+                    <li class="menu__item header-menu__item">
+                        <a class="menu__link" href="#">Услуги</a>
+                    </li>
+                    <li class="menu__item header-menu__item">
+                        <a class="menu__link menu__link--hover" href="#">Портфолио</a>
+                    </li>
+                    <li class="menu__item header-menu__item">
+                        <a class="menu__link" href="#">Стоимость</a>
+                    </li>
                 </ul>
             </nav>
-            <span class="contacts"><a href="tel:84999955577">+7 (499) 995-55-77</a></span>
-            <button class="callback">Заказать звонок</button>
+            <a class="phone header__phone" href="tel:84999955577">+7 (499) 995-55-77</a>
+            <button class="button header__button">Заказать звонок</button>
         </div>
     </div>
+    <h1 class="title hidden">Дмитрий Алексеев - Frontend-разработчик и веб-верстальщик</h1>
     <div class="cover">
-        <div class="container">
-            <div class="text">
-                <h1>Дмитрий Алексеев</h1>
-                <h2>Frontend-разработчик и веб-верстальщик</h2>
-                <button>Узнать больше</button>
+        <div class="container cover__container">
+            <div class="cover__text">
+                <h2 class="title cover__title">Дмитрий Алексеев</h2>
+                <h3 class="cover__subtitle">Frontend-разработчик и веб-верстальщик</h3>
+                <button class="button cover__button">Узнать больше</button>
             </div>
-
-        <div class="pic">
-            <img src="img/chel.png" alt="" class="chel">
-            <div class="gradient"></div>        
+            <div class="cover__pic">
+                <img class="cover__person" src="img/chel.png" alt="Дмитрий Алексеев">
+                <div class="cover__gradient"></div>
+            </div>
         </div>
-    </div>      
     </div>
 
-    <div class="whatido">
+    <!-- <div class="whatido">
         <div class="container">
             <h2>Что я делаю</h2>
             <div class="benefits-container">
@@ -67,14 +73,12 @@
     </div>       
         <div class="portfolio">
             <div class="container">
-            <h2>Примеры моих работ</h2>
+            <h2>Примеры моих работ</h2> -->
 
             <!-- SLIDER from swiperjs.com START -->
 
-            <div class="swiper-container">
-                <!-- Additional required wrapper -->
+            <!-- <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <!-- Slides -->
                     <div class="swiper-slide">
                         <a href=""><img src="img/site_psoholog.png" alt=""></a>
                         <p>Сайт психолога Верны Антоновой</p>
@@ -87,15 +91,15 @@
                         <a href=""><img src="img/site_rybolov.png" alt=""></a>
                         <p>Сайт магазина &laquo;Рыболов&raquo;</p>
                     </div>
-                </div>
+                </div> -->
             
                 <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
+                <!-- <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
-            </div>
+            </div> -->
 
             <!-- SLIDER from swiperjs.com END -->
-            <button>Заказать проект</button> 
+            <!-- <button>Заказать проект</button> 
         </div>
     </div> 
 
@@ -134,6 +138,6 @@
     </div>
     <div class="copyrait">
         <span>&copy; Дмитрий Алексеев, 2016-2018</span>
-    </div>
+    </div> -->
 </body>
 </html>
