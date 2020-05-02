@@ -8,10 +8,10 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./src/css'))
 });
 
-gulp.task('swiper', function() {
-  return gulp.src('node_modules/swiper/**')
-    .pipe(gulp.dest('src/swiper/'))
-})
+// gulp.task('swiper', function() {
+//   return gulp.src('node_modules/swiper/**')
+//     .pipe(gulp.dest('src/swiper/'))
+// })
  
 gulp.task('default', function () {
   // gulp.watch('./src/scss/**/*.scss', gulp.series( 'sass','swiper'));

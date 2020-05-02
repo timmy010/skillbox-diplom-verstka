@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Дипломный проект - Верстка в Skillbox</title>
     <link rel="stylesheet" href="src/swiper/css/swiper.min.css">
-    <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="fonts/icon-fonts/css/fontello.css">
+    <link rel="stylesheet" href="src/css/main.css">
     <script src="src/swiper/js/swiper.min.js"></script>
+    <script src="src/js/jquery-3.4.1.js"></script>
     <script src="src/js/main.js"></script>
 </head>
 <body>
@@ -21,7 +22,7 @@
                         <a class="menu__link" href="#">Услуги</a>
                     </li>
                     <li class="menu__item header-menu__item">
-                        <a class="menu__link menu__link--hover" href="#">Портфолио</a>
+                        <a class="menu__link" href="#">Портфолио</a>
                     </li>
                     <li class="menu__item header-menu__item">
                         <a class="menu__link" href="#">Стоимость</a>
@@ -36,7 +37,7 @@
         <div class="container cover__container">
             <div class="cover__text">
                 <h2 class="title cover__title">Дмитрий Алексеев</h2>
-                <h3 class="cover__subtitle">Frontend-разработчик и веб-верстальщик</h3>
+                <p class="cover__subtitle">Frontend-разработчик и веб-верстальщик</p>
                 <button class="button cover__button">Узнать больше</button>
             </div>
             <div class="cover__pic">
@@ -46,63 +47,68 @@
         </div>
     </section>
 
-    <div class="whatido">
-        <div class="container">
-            <h2>Что я делаю</h2>
-            <div class="benefits-container">
-                <div class="benefits-item">
-                    <img src="img/icons/tools-and-utensils.png" alt="">
-                    <p>Вёрстка лендинг-страниц и&nbsp;сайтов любой сложности</p>
+    <section class="whatido">
+        <div class="container whatido__container">
+            <h2 class="title whatido__title">Что я делаю</h2>
+            <div class="whatido__benefits-container">
+                <div class="benefits-item whatido__benefits-item">
+                    <img class="benefits-item__img" src="img/icons/tools-and-utensils.png" alt="">
+                    <p class="benefits-item__title">Вёрстка лендинг-страниц и&nbsp;сайтов любой сложности</p>
                 </div>
-                <div class="benefits-item">
-                    <img src="img/icons/responsive.png" alt="">
-                    <p>Адаптивная верстка под все браузеры и устройства</p>
+                <div class="benefits-item whatido__benefits-item">
+                    <img class="benefits-item__img" src="img/icons/responsive.png" alt="">
+                    <p class="benefits-item__title">Адаптивная верстка под все браузеры и устройства</p>
                 </div>
-                <div class="benefits-item">
-                    <img src="img/icons/programming.png" alt="">
-                    <p>Frontend-разработка и программирование</p>
+                <div class="benefits-item whatido__benefits-item">
+                    <img class="benefits-item__img" src="img/icons/programming.png" alt="">
+                    <p class="benefits-item__title">Frontend-разработка и программирование</p>
                 </div>
-                <div class="benefits-item">
-                    <img src="img/icons/coding.png" alt="">
-                    <p>Исправление и доработка существующей верстки</p>
+                <div class="benefits-item whatido__benefits-item">
+                    <img class="benefits-item__img" src="img/icons/coding.png" alt="">
+                    <p class="benefits-item__title">Исправление и доработка существующей верстки</p>
                 </div>
             </div>
-            <button>Узнать стоимость</button> 
+            <button class="button whatido__button">Узнать стоимость</button>
         </div>
-    </div>       
-        <!--<div class="portfolio">
-            <div class="container">
-            <h2>Примеры моих работ</h2> -->
+    </section>
+       
+        <div class="portfolio">
+            <div class="container portfolio__container">
+            <h2 class="title portfolio__title">Примеры моих работ</h2>
 
             <!-- SLIDER from swiperjs.com START -->
-
-            <!-- <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href=""><img src="img/site_psoholog.png" alt=""></a>
-                        <p>Сайт психолога Верны Антоновой</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href=""><img src="img/site_det.png" alt=""></a>
-                        <p>Сайт магазина детской одежды</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href=""><img src="img/site_rybolov.png" alt=""></a>
-                        <p>Сайт магазина &laquo;Рыболов&raquo;</p>
-                    </div>
-                </div> -->
-            
-                <!-- If we need navigation buttons -->
-                <!-- <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div> -->
+                <div class="slider-container">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide portfolio__swiper-slide">
+                                    <img src="/img/site_psoholog.png" alt="" class="swiper-slide__img">
+                                    <p class="swiper-slide__title">Сайт психолога Веры Антоновой</p>
+                                </div>
+                                <div class="swiper-slide portfolio__swiper-slide">
+                                    <img src="/img/site_det.png" alt="" class="swiper-slide__img">
+                                    <p class="swiper-slide__title">Сайт магазина детской одежды</p>
+                                </div>
+                                <div class="swiper-slide portfolio__swiper-slide">
+                                    <img src="/img/site_rybolov.png" alt="" class="swiper-slide__img">
+                                    <p class="swiper-slide__title">Сайт магазина Рыболов</p>
+                                </div>
+                                <div class="swiper-slide portfolio__swiper-slide">
+                                    <img src="/img/site_det.png" alt="" class="swiper-slide__img">
+                                    <p class="swiper-slide__title">Детская консультация</p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
 
             <!-- SLIDER from swiperjs.com END -->
-            <!-- <button>Заказать проект</button> 
+            <button class="button portfolio__button">Заказать проект</button> 
         </div>
     </div> 
 
-    <div class="banner">
+    <!--<div class="banner">
         <div class="banner-text">
             <h2>Адаптивная вёрстка под все устройства и&nbsp;браузеры от 1000 рублей всего за&nbsp;4 часа.*</h2>
             <p>* Срок и&nbsp;стоимость могут отличаться от заявленных и&nbsp;рассчитываются  индивидуально, в&nbsp;зависимости от сложности задач</p>
