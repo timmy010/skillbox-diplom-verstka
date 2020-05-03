@@ -214,7 +214,7 @@
     justify-content: center;
     align-items: center;
     padding-top: 96px;
-    padding-bottom: 101px;
+    padding-bottom: 102px;
     width: 100%;
 }
 
@@ -252,12 +252,13 @@
     z-index: 100;
     cursor: pointer;
     position: absolute;
-    background-image: url('../../img/arrow_next.png');
+    background-image: url('../../img/arrow_prev.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
     border-radius: 50%;
+    transform: rotate(180deg);
     width: 64px;
     height: 64px;
     top: 46%;
@@ -295,7 +296,7 @@
     align-items: center;
 
     &__container {
-        padding: 76px 0 66px 0;
+        padding: 76px 0 64px 0;
     }
 
     &__text {
@@ -319,9 +320,7 @@
 .footer__container {
     display: flex;
     justify-content: space-between;
-    // align-items: center;
-    padding-top: 77px;
-    padding-bottom: 66px;
+    padding: 77px 20.8% 63px 19.5%;
 }
 
 .footer-menu__item {
@@ -337,29 +336,47 @@
 }
 
 .footer__contacts {
-    margin: 5px 0px 0px 92px;
-    display: flex;
-    flex-flow: column;
-}
-
-.footer__phone {
-    margin-bottom: 30px;
-}
-
-[class^="icon-"] {
-    margin: 0px 17px 0px 0px;
+    margin: 5px 0px 0px 94px;
 }
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
     color: #fa0891;
     font-size: 0.9em;;
     background: -webkit-linear-gradient(#fa0891, #f26522);
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.icon-phone {
+    margin: 0px 5px 0px 0px;
+}
+
+.icon-mail-alt {
+    margin: 0px 8px 0px 0px;
+}
+
+.footer-contacts__link {
+    display: block;
+    color: black;
+    font-size: 1.6em;
+    text-decoration: none;
+}
+
+.footer__phone {
+    margin-bottom: 30px;
 }
 
 .footer-buttons {
     margin-right: 23px;
+}
+
+.footer__button {
+    border: 1px solid $color_dark_red;
+    width: 247px;
+    height: 46px;
+    font-size: 16px;
+    color: $color_light_red;
+    background-color: #fbfbfb;
 }
 
 .social {
@@ -369,7 +386,7 @@
 .footer__social-list {
     padding: 0;
     margin: 0;
-    margin-top: 4px;
+    margin-top: 31px;
 }
 
 .footer__social-item {
@@ -413,12 +430,11 @@
     background-size: auto 30px;
 }
 
-// .copyrait {
-//     display: block;
-//     background-color: #31293c;
-//     font-size: 1.1em;
-//     text-align: center;
-//     color: white;
-//     padding: 29px 0 29px 0px;
-// }
-// }
+.copyrait {
+    display: block;
+    background-color: #31293c;
+    font-size: 1.1em;
+    text-align: center;
+    color: white;
+    padding: 29px 0 29px 0px;
+}
