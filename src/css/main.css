@@ -325,3 +325,81 @@ img {
     margin-top: 35px;
     width: 86%;
     line-height: 27px; }
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 77px;
+  padding-bottom: 66px; }
+
+.footer-menu__item {
+  line-height: 33px; }
+
+.footer__menu {
+  font-size: 1.1em; }
+
+.footer-menu__item {
+  display: block; }
+
+.footer__contacts {
+  margin: 5px 0px 0px 92px;
+  display: flex;
+  flex-flow: column; }
+
+.footer__phone {
+  margin-bottom: 30px; }
+
+[class^="icon-"] {
+  margin: 0px 17px 0px 0px; }
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  color: #fa0891;
+  font-size: 0.9em;
+  background: -webkit-linear-gradient(#fa0891, #f26522);
+  background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+.footer-buttons {
+  margin-right: 23px; }
+
+.social {
+  margin-top: 30px; }
+
+.footer__social-list {
+  padding: 0;
+  margin: 0;
+  margin-top: 4px; }
+
+.footer__social-item {
+  display: inline-block; }
+
+.footer__social-item:last-child > a {
+  margin-right: 0; }
+
+.footer__social-link {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-repeat: no-repeat; }
+
+.vk-icon {
+  background-image: url(../../img/icons/social.png);
+  background-size: auto 30px;
+  margin-right: 10px; }
+
+.fb-icon {
+  background-image: url(../../img/icons/social.png);
+  background-position: -56px 0px;
+  background-size: auto 30px;
+  margin-right: 8px; }
+
+.tw-icon {
+  background-image: url(../../img/icons/social.png);
+  background-position: -110px 0px;
+  background-size: auto 30px;
+  margin-right: 12px; }
+
+.inst-icon {
+  background-image: url(../../img/icons/social.png);
+  background-position: -169px 0px;
+  background-size: auto 30px; }
