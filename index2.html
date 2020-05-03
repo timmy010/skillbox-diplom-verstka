@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Дипломный проект - Верстка в Skillbox</title>
     <link rel="stylesheet" href="src/swiper/css/swiper.min.css">
-    <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="fonts/icon-fonts/css/fontello.css">
+    <link rel="stylesheet" href="src/css/main.css">
     <script src="src/swiper/js/swiper.min.js"></script>
+    <script src="src/js/jquery-3.4.1.js"></script>
     <script src="src/js/main.js"></script>
 </head>
 <body>
@@ -76,41 +77,45 @@
             <h2 class="title portfolio__title">Примеры моих работ</h2>
 
             <!-- SLIDER from swiperjs.com START -->
-
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a class="swiper-slide__link" href=""><img src="img/site_psoholog.png" alt=""></a>
-                        <p class="swiper-slide__title">Сайт психолога Верны Антоновой</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href=""><img src="img/site_det.png" alt=""></a>
-                        <p>Сайт магазина детской одежды</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href=""><img src="img/site_rybolov.png" alt=""></a>
-                        <p>Сайт магазина &laquo;Рыболов&raquo;</p>
-                    </div>
+                <div class="slider-container">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide portfolio__swiper-slide">
+                                    <img src="/img/site_psoholog.png" alt="" class="swiper-slide__img">
+                                    <p class="swiper-slide__title">Сайт психолога Веры Антоновой</p>
+                                </div>
+                                <div class="swiper-slide portfolio__swiper-slide">
+                                    <img src="/img/site_det.png" alt="" class="swiper-slide__img">
+                                    <p class="swiper-slide__title">Сайт магазина детской одежды</p>
+                                </div>
+                                <div class="swiper-slide portfolio__swiper-slide">
+                                    <img src="/img/site_rybolov.png" alt="" class="swiper-slide__img">
+                                    <p class="swiper-slide__title">Сайт магазина Рыболов</p>
+                                </div>
+                                <div class="swiper-slide portfolio__swiper-slide">
+                                    <img src="/img/site_det.png" alt="" class="swiper-slide__img">
+                                    <p class="swiper-slide__title">Детская консультация</p>
+                                </div>
+                            </div>
+                        </div>
                 </div>
-            
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
 
             <!-- SLIDER from swiperjs.com END -->
             <button class="button portfolio__button">Заказать проект</button> 
         </div>
     </div> 
 
-    <!--<div class="banner">
+    <div class="banner">
         <div class="banner-text">
             <h2>Адаптивная вёрстка под все устройства и&nbsp;браузеры от 1000 рублей всего за&nbsp;4 часа.*</h2>
             <p>* Срок и&nbsp;стоимость могут отличаться от заявленных и&nbsp;рассчитываются  индивидуально, в&nbsp;зависимости от сложности задач</p>
         </div>
     </div>
 
-    <div class="footer">
+    <!--<div class="footer">
         <div class="container">
             <nav class="footer-menu">
                 <ul>
