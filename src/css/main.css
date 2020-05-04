@@ -423,7 +423,10 @@ img {
   display: block;
   background-color: #31293c;
   font-size: 1.1em;
+<<<<<<< HEAD
   font-style: inherit;
+=======
+>>>>>>> 47011addd84b6b6c391afc63e2dde97d9b79ac89
   text-align: center;
   color: white;
   padding: 29px 0 29px 0px; }
