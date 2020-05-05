@@ -96,6 +96,11 @@ input, textarea {
 
 // POPUP END
 
+a:hover {
+    opacity: 0.8;
+    transition: 0.3;
+}
+
 .container {
     max-width: 1920px;
 	margin: 0 auto;
@@ -208,7 +213,9 @@ input, textarea {
 
 .title {
     font-size: 5em;
-    font-weight: 700;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-style: normal;
 }
 
 .cover__text {
@@ -383,14 +390,14 @@ input, textarea {
     top: 46%;
     left: auto;
     right: 343px;
-    transition: 0.3s;
+    transition: border, 0.2s;
 
     &::after {
         display: none;
     }
 
     &:hover {
-        opacity: 0.9;
+        border: 1px solid $color_dark_red;
     }
 }
     
@@ -406,14 +413,14 @@ input, textarea {
     height: 64px;
     top: 46%;
     left: 343px;
-    transition: 0.3s;
+    transition: border, 0.2s;
 
     &::after {
         display: none;
     }
 
     &:hover {
-        opacity: 0.9;
+        border: 1px solid $color_dark_red;
     }
 }
 

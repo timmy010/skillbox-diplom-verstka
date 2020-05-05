@@ -1,22 +1,16 @@
-/* roboto-regular - latin_cyrillic */
 @font-face {
   font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/roboto-v20-latin_cyrillic-regular.eot");
-  /* IE9 Compat Modes */
-  src: local("Roboto"), local("Roboto-Regular"), url("../fonts/roboto-v20-latin_cyrillic-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v20-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/roboto-v20-latin_cyrillic-regular.woff") format("woff"), url("../fonts/roboto-v20-latin_cyrillic-regular.ttf") format("truetype"), url("../fonts/roboto-v20-latin_cyrillic-regular.svg#Roboto") format("svg");
-  /* Legacy iOS */ }
+  src: url("Roboto-Regular.eot");
+  src: local("Roboto"), local("Roboto-Regular"), url("/fonts/Roboto/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("/fonts/Roboto/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 
-/* roboto-700 - latin_cyrillic */
 @font-face {
   font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/roboto-v20-latin_cyrillic-700.eot");
-  /* IE9 Compat Modes */
-  src: local("Roboto Bold"), local("Roboto-Bold"), url("../fonts/roboto-v20-latin_cyrillic-700.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v20-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/roboto-v20-latin_cyrillic-700.woff") format("woff"), url("../fonts/roboto-v20-latin_cyrillic-700.ttf") format("truetype"), url("../fonts/roboto-v20-latin_cyrillic-700.svg#Roboto") format("svg");
-  /* Legacy iOS */ }
+  src: url("Roboto-Bold.eot");
+  src: local("Roboto"), local("Roboto-Bold"), url("/fonts/Roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/Roboto/Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
 
 html, body, div, span, h1, h2, a, img, ul, li, form, label, table, caption, tr, th, td, article, aside, footer, header, nav, section {
   margin: 0;
@@ -24,6 +18,8 @@ html, body, div, span, h1, h2, a, img, ul, li, form, label, table, caption, tr, 
   border: 0;
   font-size: 100%;
   font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-style: normal;
   outline: none; }
 
 html, body {
@@ -141,6 +137,10 @@ input, textarea {
   background-repeat: no-repeat;
   background-position: center; }
 
+a:hover {
+  opacity: 0.8;
+  transition: 0.3; }
+
 .container {
   max-width: 1920px;
   margin: 0 auto;
@@ -237,7 +237,9 @@ input, textarea {
 
 .title {
   font-size: 5em;
-  font-weight: 700; }
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-style: normal; }
 
 .cover__text {
   margin-top: 211px;
@@ -378,11 +380,11 @@ input, textarea {
   top: 46%;
   left: auto;
   right: 343px;
-  transition: 0.3s; }
+  transition: border, 0.2s; }
   .swiper-button-next::after {
     display: none; }
   .swiper-button-next:hover {
-    opacity: 0.9; }
+    border: 1px solid #ff4e2e; }
 
 .swiper-button-prev {
   cursor: pointer;
@@ -396,11 +398,11 @@ input, textarea {
   height: 64px;
   top: 46%;
   left: 343px;
-  transition: 0.3s; }
+  transition: border, 0.2s; }
   .swiper-button-prev::after {
     display: none; }
   .swiper-button-prev:hover {
-    opacity: 0.9; }
+    border: 1px solid #ff4e2e; }
 
 .banner {
   background-image: -moz-linear-gradient(77deg, #ff8f5a 0%, #ff2f96 99%);
