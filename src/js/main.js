@@ -24,12 +24,12 @@ $(function(){
 
 	$('.button').on('click', function(e) {
 		e.preventDefault();
-		$('.popup__container').fadeIn();
+		$('.popup__container').fadeIn(100, 'linear');
 		$("body").addClass("fixed");
 	});
 
 	$('.popup__close').click(function() {
-		$(this).parents('.popup__container').fadeOut();
+		$(this).parents('.popup__container').fadeOut(100, 'linear');
 		$("body").removeClass("fixed");
 		return false;
 	});        	
@@ -38,14 +38,16 @@ $(function(){
 	$(document).keydown(function(e) {
 		if (e.keyCode === 27) {
 			e.stopPropagation();
-			$('.popup__container').fadeOut();
+			$('.popup__container').fadeOut(100, 'linear');
+			$("body").removeClass("fixed");
 		}
 	});
 	
 	// Клик по фону, но не по окну.
 	$('.popup__container').click(function(e) {
 		if ($(e.target).closest('.popup__form').length == 0) {
-			$(this).fadeOut();				
+			$(this).fadeOut(100, 'linear');
+			$("body").removeClass("fixed");				
 		}
 	});
 });
