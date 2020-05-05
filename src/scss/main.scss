@@ -2,6 +2,100 @@
 @import "colors.scss";
 @import "consta.scss";
 
+// POPUP START
+
+.popup__container:before {
+	content: '';
+	background: #000;
+	position: fixed; 
+	left: 0;
+	top: 0;
+	width: 100%; 
+	height: 100%;
+	opacity: 0.7;
+	z-index: 9999;
+}
+
+.popup__form {
+    position: fixed;
+    width: 30%;
+	top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+	padding: 20px;	
+	background: #fff;
+	border: 1px solid $color_light_red;
+	border-radius: 5px; 
+	z-index: 9999;
+    opacity: 1;	
+}
+
+.popup__title {
+    text-align: center;
+    font-size: 2em;
+}
+
+.popup__subtitle {
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.popup__descripton {
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.popup__label {
+	font-size: 18px;
+    color: $color_symbol;
+}
+
+.popup__input {
+    width: 100%;
+	height: 42px;
+	background-color: #ff4d2e1f;
+	border: 1px solid #ff4e2e1f;
+    display: block;
+    margin: 10px 0;
+    padding-left: 10px;
+}
+
+.popup__textarea {
+    width: 100%;
+	background-color: #ff4d2e1f;
+	border: 1px solid #ff4e2e1f;
+    display: block;
+    margin: 10px 0;
+    padding-left: 10px;
+}
+
+input, textarea {
+    font-size: 16px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+}
+
+.popup__button  {
+    width: 100%;
+	height: 55px;
+	cursor: pointer;
+}
+
+.popup__close {
+	position: absolute;
+	top: 10px;
+    right: 17px;
+    width: 20px;
+    height: 20px;
+    background-image: url('../../img/close.png');
+	background-size: 15px 15px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+// POPUP END
+
 .header__container {
     display: flex;
     flex-wrap: wrap;
@@ -78,6 +172,12 @@
     color: #fbfbfb;
     background-color: $color_dark_red;
     cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+        color: $color_dark_red; 
+        background-color: #fbfbfb;
+    }
 }
 
 .header__button {
@@ -86,6 +186,11 @@
     color: $color_dark_red;
     border: 1px solid $color_light_red;
     background-color: #fbfbfb;
+
+    &:hover {
+        color: #fbfbfb;
+        background-color: $color_dark_red;
+    }
 }
 
 .cover__container {
@@ -196,6 +301,7 @@
 .benefits-item {
     text-align: center;
     max-width: 269px;
+    list-style: none;
 
     &__img {
         width: 76px;
@@ -337,6 +443,7 @@
 
 .footer__contacts {
     margin: 5px 0px 0px 94px;
+    font-style: inherit;
 }
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
@@ -366,10 +473,6 @@
     margin-bottom: 30px;
 }
 
-.footer-buttons {
-    margin-right: 23px;
-}
-
 .footer__button {
     border: 1px solid $color_dark_red;
     width: 247px;
@@ -377,6 +480,11 @@
     font-size: 16px;
     color: $color_light_red;
     background-color: #fbfbfb;
+
+    &:hover {
+        color: #fbfbfb;
+        background-color: $color_dark_red;
+    }
 }
 
 .social {
@@ -430,14 +538,11 @@
     background-size: auto 30px;
 }
 
-.copyrait {
+.copyright {
     display: block;
     background-color: #31293c;
     font-size: 1.1em;
-<<<<<<< HEAD
     font-style: inherit;
-=======
->>>>>>> 47011addd84b6b6c391afc63e2dde97d9b79ac89
     text-align: center;
     color: white;
     padding: 29px 0 29px 0px;
