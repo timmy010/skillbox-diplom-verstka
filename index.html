@@ -7,25 +7,21 @@
     <link rel="stylesheet" href="src/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="fonts/icon-fonts/css/fontello.css">
     <link rel="stylesheet" href="src/css/main.css">
-    <script src="src/swiper/js/swiper.min.js"></script>
-    <script src="src/js/smoothscroll.min.js"></script>
-    <script src="src/js/jquery-3.4.1.js"></script>
-    <script src="src/js/main.js"></script>
 </head>
 <body>
     <h1 class="title hidden">Дмитрий Алексеев - Frontend-разработчик и веб-верстальщик</h1>
 
     <div class="popup__container hide">
-        <form class="popup__form" method="post" id="deloForm">
+        <form class="popup__form" method="">
             <h2 class="popup__title">Оставить заявку</h2>
             <p class="popup__subtitle">Оставьте свои контактные данные и нажмите Отправить.</p>
             <p class="popup__subtitle">Я свяжусь с Вами через 5 минут, чтобы обсудить Вашу задачу</p>
             <label class="popup__label" for="popup_name"><span>* Ваше имя</span></label>
-            <input class="popup__input" type="text" name="popup_name" placeholder="Иван" id="popup_name" required>
+            <input class="popup__input popup__input-name" type="text" name="Name" placeholder="Иван" required>
             <label class="popup__label" for="popup_phone"><span>* Ваш номер телефона</span></label>
-            <input class="popup__input" type="text" name="popup_phone" placeholder="+7-(999)-999-99-99" id="delo_name" required>
+            <input class="popup__input popup__input-phone" type="tel" name="Phone" placeholder="+7-(999)-999-99-99" required>
             <label class="popup__label" for="popup_description"><span>Комментарий</span></label>
-            <textarea class="popup__textarea" rows="7" name="popup_description" maxlength="1000" required id="delo_description" placeholder="По цене"></textarea> 
+            <textarea class="popup__textarea popup__textarea-comment" rows="7" name="popup_comment" placeholder="Хочу одностраничный сайт"></textarea> 
             <input class="button popup__button" type="button" name="send" value="Отправить">
     
             <p class="popup__descripton">Поля помеченные * обязательны для заполнения</p>
@@ -184,5 +180,11 @@
             &copy; Дмитрий Алексеев, 2016-2018
         </small>
     </footer>
+
+    <script src="src/swiper/js/swiper.min.js"></script>
+    <script src="src/js/smoothscroll.min.js"></script>
+    <script src="src/js/jquery-3.4.1.js"></script>
+    <script src="src/js/jquery.inputmask.min.js"></script>
+    <script src="src/js/main.js"></script>
 </body>
 </html>

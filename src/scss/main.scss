@@ -95,6 +95,16 @@ input, textarea {
 	background-position: center;
 }
 
+.popup__error {
+    border: 1px solid red;
+}
+
+.popup__error-text {
+    font-size:14px;
+    color: red;
+    text-align: center;
+}
+
 // POPUP END
 
 a:hover {
@@ -462,7 +472,7 @@ a:hover {
 .footer__container {
     display: flex;
     justify-content: space-between;
-    padding: 77px 20% 63px 19.7%;
+    padding: 77px 20% 64px 19.7%;
 }
 
 .footer-menu__item {
