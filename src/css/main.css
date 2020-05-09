@@ -1,14 +1,14 @@
 @font-face {
   font-family: 'Roboto';
   src: url("Roboto-Regular.eot");
-  src: local("Roboto"), local("Roboto-Regular"), url("/fonts/Roboto/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("/fonts/Roboto/Roboto-Regular.woff") format("woff");
+  src: local("Roboto"), local("Roboto-Regular"), url("../../fonts/Roboto/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/Roboto/Roboto-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Roboto';
   src: url("Roboto-Bold.eot");
-  src: local("Roboto"), local("Roboto-Bold"), url("/fonts/Roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/Roboto/Roboto-Bold.woff") format("woff");
+  src: local("Roboto"), local("Roboto-Bold"), url("../../fonts/Roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../../fonts/Roboto/Roboto-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal; }
 
@@ -71,10 +71,10 @@ img {
 
 .popup__form {
   position: fixed;
-  width: 30%;
-  top: 20%;
   left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
   padding: 20px;
   background: #fff;
   border: 1px solid #fc557c;
@@ -139,13 +139,13 @@ input, textarea {
 
 a:hover {
   opacity: 0.8;
-  transition: 0.3; }
+  transition: opacity 0.5s linear; }
 
 .container {
   max-width: 1920px;
   margin: 0 auto;
   position: relative;
-  padding: 0 15.7%; }
+  padding: 0 18.8% 0 19.7%; }
 
 .header__container {
   display: flex;
@@ -203,7 +203,7 @@ a:hover {
 
 .header__phone {
   margin-left: auto;
-  margin-right: 30px;
+  margin-right: 29px;
   margin-bottom: 3px; }
 
 .button {
@@ -218,7 +218,8 @@ a:hover {
   transition: 0.5s; }
   .button:hover {
     color: #ff4e2e;
-    background-color: #fbfbfb; }
+    background-color: #fbfbfb;
+    transition: color 0.5s linear, background-color 0.5s linear; }
 
 .header__button {
   width: 208px;
@@ -228,12 +229,13 @@ a:hover {
   background-color: #fbfbfb; }
   .header__button:hover {
     color: #fbfbfb;
-    background-color: #ff4e2e; }
+    background-color: #ff4e2e;
+    transition: color 0.5s linear, background-color 0.5s linear; }
 
 .cover__container {
   display: flex;
   justify-content: space-between;
-  padding: 0 0 0 15.8%; }
+  padding: 0 0 0 19.7%; }
 
 .title {
   font-size: 5em;
@@ -277,7 +279,7 @@ a:hover {
     min-width: 562px;
     background-image: url(../../img/gradientfull.svg);
     background-repeat: no-repeat;
-    background-size: 994px 769px;
+    background-size: 1010px 773px;
     background-position: top left;
     overflow: hidden; }
 
@@ -288,7 +290,7 @@ a:hover {
     flex-flow: column wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 85px 15.5% 96px 15.5%; }
+    padding: 85px 18.5% 96px 19.4%; }
   .whatido__title {
     font-size: 3.4em; }
   .whatido__benefits-container {
@@ -327,7 +329,7 @@ a:hover {
     width: 76px;
     height: 74px; }
   .benefits-item__title {
-    margin-top: 16px;
+    margin-top: 14px;
     font-size: 1.3em;
     line-height: 1.4em;
     color: #8993ad; }
@@ -375,16 +377,17 @@ a:hover {
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
   border-radius: 50%;
   transform: rotate(180deg);
-  width: 64px;
-  height: 64px;
-  top: 46%;
+  width: 65px;
+  height: 60px;
+  top: 46.4%;
   left: auto;
-  right: 343px;
-  transition: border, 0.2s; }
+  right: 324px; }
   .swiper-button-next::after {
     display: none; }
   .swiper-button-next:hover {
-    border: 1px solid #ff4e2e; }
+    color: #fbfbfb;
+    background-color: #ff4e2e;
+    transition: color 0.5s linear, background-color 0.5s linear; }
 
 .swiper-button-prev {
   cursor: pointer;
@@ -394,15 +397,16 @@ a:hover {
   background-size: contain;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
   border-radius: 50%;
-  width: 64px;
-  height: 64px;
-  top: 46%;
-  left: 343px;
-  transition: border, 0.2s; }
+  width: 65px;
+  height: 60px;
+  top: 46.4%;
+  left: 342px; }
   .swiper-button-prev::after {
     display: none; }
   .swiper-button-prev:hover {
-    border: 1px solid #ff4e2e; }
+    color: #fbfbfb;
+    background-color: #ff4e2e;
+    transition: color 0.5s linear, background-color 0.5s linear; }
 
 .banner {
   background-image: -moz-linear-gradient(77deg, #ff8f5a 0%, #ff2f96 99%);
@@ -413,9 +417,9 @@ a:hover {
   justify-content: center;
   align-items: center; }
   .banner__container {
-    padding: 76px 0 67px 0; }
+    padding: 76px 0 64px 0; }
   .banner__text {
-    padding: 0 25% 0 30.2%;
+    padding: 0 21% 0 25.6%;
     color: white; }
   .banner__title {
     font-size: 3em; }
@@ -428,7 +432,7 @@ a:hover {
 .footer__container {
   display: flex;
   justify-content: space-between;
-  padding: 77px 16.7% 63px 15.8%; }
+  padding: 77px 20% 63px 19.7%; }
 
 .footer-menu__item {
   line-height: 33px; }
@@ -440,7 +444,7 @@ a:hover {
   display: block; }
 
 .footer__contacts {
-  margin: 5px 0px 0px 94px;
+  margin: 5px 0px 0px 92px;
   font-style: inherit; }
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
@@ -451,10 +455,12 @@ a:hover {
   -webkit-text-fill-color: transparent; }
 
 .icon-phone {
-  margin: 0px 5px 0px 0px; }
+  margin-right: 7px;
+  font-size: 25.7px; }
 
 .icon-mail-alt {
-  margin: 0px 8px 0px 0px; }
+  margin-right: 10px;
+  padding-left: 3px; }
 
 .footer-contacts__link {
   display: block;
@@ -474,7 +480,8 @@ a:hover {
   background-color: #fbfbfb; }
   .footer__button:hover {
     color: #fbfbfb;
-    background-color: #ff4e2e; }
+    background-color: #ff4e2e;
+    transition: color 0.5s linear, background-color 0.5s linear; }
 
 .social {
   margin-top: 30px; }
@@ -521,7 +528,7 @@ a:hover {
 .copyright {
   display: block;
   background-color: #31293c;
-  font-size: 1.1em;
+  font-size: 1em;
   font-style: inherit;
   text-align: center;
   color: white;
