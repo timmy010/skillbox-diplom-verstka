@@ -153,14 +153,14 @@ a:hover {
   max-width: 1920px;
   margin: 0 auto;
   position: relative;
-  padding: 0 19.7% 0 19.7%; }
+  padding: 0 375px 0 375px; }
 
 .header__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding-top: 30px; }
+  padding: 29px 372px 0 371px; }
 
 .header__burger {
   padding: 0;
@@ -211,7 +211,7 @@ a:hover {
 
 .header__phone {
   margin-left: auto;
-  margin-right: 29px;
+  margin-right: 24px;
   margin-bottom: 3px; }
 
 .button {
@@ -243,7 +243,7 @@ a:hover {
 .cover__container {
   display: flex;
   justify-content: space-between;
-  padding: 0 0 0 19.6%; }
+  padding: 0 0 0 372px; }
 
 .title {
   font-size: 5em;
@@ -252,18 +252,18 @@ a:hover {
   font-style: normal; }
 
 .cover__text {
-  margin-top: 211px;
+  margin-top: 210px;
   z-index: 100; }
 
 .cover__subtitle {
   font-size: 1.55em;
   font-weight: 500;
-  margin-top: 15px; }
+  margin-top: 13px; }
 
 .cover__button {
-  width: 269px;
+  width: 267px;
   height: 59px;
-  margin-top: 21px;
+  margin-top: 19px;
   font-size: 18px;
   color: white;
   background-color: #ff4e2e;
@@ -272,14 +272,14 @@ a:hover {
 .cover__pic {
   margin-top: 60px;
   width: 52.5%;
-  height: 635px;
+  height: 627px;
   position: relative; }
   .cover__pic .cover__person {
     position: absolute;
     left: 87px;
     top: 9px;
     width: 432px;
-    height: 625px;
+    height: 98%;
     min-width: 432px; }
   .cover__pic .cover__gradient {
     height: 100%;
@@ -287,7 +287,7 @@ a:hover {
     min-width: 562px;
     background-image: url(../../img/gradientfull.svg);
     background-repeat: no-repeat;
-    background-size: 989px 771px;
+    background-size: 980px 760px;
     background-position: top left;
     overflow: hidden; }
 
@@ -309,9 +309,10 @@ a:hover {
     align-items: center;
     margin-top: 88px; }
   .whatido__button {
-    width: 270px;
+    width: 268px;
     height: 60px;
-    margin-top: 72px;
+    margin-right: 3px;
+    margin-top: 71px;
     font-size: 18px;
     color: white;
     background-color: #ff4e2e;
@@ -337,7 +338,7 @@ a:hover {
     width: 76px;
     height: 74px; }
   .benefits-item__title {
-    margin-top: 14px;
+    margin-top: 11px;
     font-size: 1.3em;
     line-height: 1.4em;
     color: #8993ad; }
@@ -347,18 +348,18 @@ a:hover {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  padding-top: 96px;
-  padding-bottom: 101px; }
+  padding: 92px 375px 101px 375px; }
 
 .portfolio__button {
   width: 268px;
   height: 59px;
-  margin-top: 79px;
+  margin-top: 76px;
   font-size: 18px; }
 
 .portfolio__title {
   font-size: 3.4em;
-  margin-bottom: 99px; }
+  margin-bottom: 99px;
+  margin-left: 8px; }
 
 .slider-container {
   width: 100%; }
@@ -385,17 +386,13 @@ a:hover {
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
   border-radius: 50%;
   transform: rotate(180deg);
-  width: 65px;
-  height: 60px;
+  width: 60px;
+  height: 64px;
   top: 46.4%;
   left: auto;
   right: 342px; }
   .swiper-button-next::after {
     display: none; }
-  .swiper-button-next:hover {
-    color: #fbfbfb;
-    background-color: #ff4e2e;
-    transition: color 0.5s linear, background-color 0.5s linear; }
 
 .swiper-button-prev {
   cursor: pointer;
@@ -405,16 +402,12 @@ a:hover {
   background-size: contain;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
   border-radius: 50%;
-  width: 65px;
-  height: 60px;
+  width: 60px;
+  height: 64px;
   top: 46.4%;
   left: 342px; }
   .swiper-button-prev::after {
     display: none; }
-  .swiper-button-prev:hover {
-    color: #fbfbfb;
-    background-color: #ff4e2e;
-    transition: color 0.5s linear, background-color 0.5s linear; }
 
 .banner {
   background-image: -moz-linear-gradient(77deg, #ff8f5a 0%, #ff2f96 99%);
@@ -425,22 +418,23 @@ a:hover {
   justify-content: center;
   align-items: center; }
   .banner__container {
-    padding: 76px 0 64px 0; }
+    padding: 76px 0 61px 0; }
   .banner__text {
-    padding: 0 21% 0 25.4%;
+    padding: 0 409px 0 484px;
     color: white; }
   .banner__title {
-    font-size: 3em; }
+    font-size: 2.8em;
+    line-height: 58px; }
   .banner__desc {
     font-size: 1.2em;
-    margin-top: 35px;
+    margin-top: 31px;
     width: 86%;
-    line-height: 27px; }
+    line-height: 29px; }
 
 .footer__container {
   display: flex;
   justify-content: space-between;
-  padding: 77px 20.8% 64px 19.7%; }
+  padding: 75px 394px 65px 372px; }
 
 .footer-menu__item {
   line-height: 33px; }
@@ -452,7 +446,7 @@ a:hover {
   display: block; }
 
 .footer__contacts {
-  margin: 5px 0px 0px 92px;
+  margin: 6px 0px 0px 95px;
   font-style: inherit; }
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
@@ -477,7 +471,7 @@ a:hover {
   text-decoration: none; }
 
 .footer__phone {
-  margin-bottom: 30px; }
+  margin-bottom: 28px; }
 
 .footer__button {
   border: 1px solid #ff4e2e;
@@ -497,7 +491,7 @@ a:hover {
 .footer__social-list {
   padding: 0;
   margin: 0;
-  margin-top: 31px; }
+  margin-top: 29px; }
 
 .footer__social-item {
   display: inline-block; }
@@ -540,4 +534,4 @@ a:hover {
   font-style: inherit;
   text-align: center;
   color: white;
-  padding: 15px 0 29px 0px; }
+  padding: 29px 14px 32px 0px; }
