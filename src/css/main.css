@@ -153,7 +153,7 @@ a:hover {
   max-width: 1920px;
   margin: 0 auto;
   position: relative;
-  padding: 0 18.8% 0 19.7%; }
+  padding: 0 19.7% 0 19.7%; }
 
 .header__container {
   display: flex;
@@ -243,7 +243,7 @@ a:hover {
 .cover__container {
   display: flex;
   justify-content: space-between;
-  padding: 0 0 0 19.7%; }
+  padding: 0 0 0 19.6%; }
 
 .title {
   font-size: 5em;
@@ -287,7 +287,7 @@ a:hover {
     min-width: 562px;
     background-image: url(../../img/gradientfull.svg);
     background-repeat: no-repeat;
-    background-size: 1010px 773px;
+    background-size: 989px 771px;
     background-position: top left;
     overflow: hidden; }
 
@@ -298,7 +298,7 @@ a:hover {
     flex-flow: column wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 85px 18.5% 96px 19.4%; }
+    padding: 85px 19.2% 96px 19.4%; }
   .whatido__title {
     font-size: 3.4em; }
   .whatido__benefits-container {
@@ -321,9 +321,9 @@ a:hover {
   .whatido__benefits-item:nth-child(2) > .benefits-item__img {
     margin-left: 42px; }
   .whatido__benefits-item:nth-child(2) > .benefits-item__title {
-    padding-left: 12px; }
+    padding-left: 5px; }
   .whatido__benefits-item:nth-child(3) {
-    padding-left: 28px; }
+    padding-left: 25px; }
   .whatido__benefits-item:nth-child(3) > .benefits-item__title {
     padding-left: 14px; }
   .whatido__benefits-item:nth-child(4) {
@@ -348,12 +348,12 @@ a:hover {
   justify-content: center;
   align-items: center;
   padding-top: 96px;
-  padding-bottom: 102px; }
+  padding-bottom: 101px; }
 
 .portfolio__button {
   width: 268px;
   height: 59px;
-  margin-top: 77px;
+  margin-top: 79px;
   font-size: 18px; }
 
 .portfolio__title {
@@ -389,7 +389,7 @@ a:hover {
   height: 60px;
   top: 46.4%;
   left: auto;
-  right: 324px; }
+  right: 342px; }
   .swiper-button-next::after {
     display: none; }
   .swiper-button-next:hover {
@@ -427,7 +427,7 @@ a:hover {
   .banner__container {
     padding: 76px 0 64px 0; }
   .banner__text {
-    padding: 0 21% 0 25.6%;
+    padding: 0 21% 0 25.4%;
     color: white; }
   .banner__title {
     font-size: 3em; }
@@ -440,7 +440,7 @@ a:hover {
 .footer__container {
   display: flex;
   justify-content: space-between;
-  padding: 77px 20% 64px 19.7%; }
+  padding: 77px 20.8% 64px 19.7%; }
 
 .footer-menu__item {
   line-height: 33px; }
@@ -540,4 +540,4 @@ a:hover {
   font-style: inherit;
   text-align: center;
   color: white;
-  padding: 29px 0 29px 0px; }
+  padding: 15px 0 29px 0px; }
