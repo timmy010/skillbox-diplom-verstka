@@ -554,23 +554,60 @@ a:hover {
   .container {
     padding: 29px 3.9% 0 3.9%; }
   .cover__container {
-    padding: 0 0 0 3.9%; }
+    padding: 0 0 0 3.9%;
+    margin-bottom: 251px;
+    position: relative; }
   .cover__text {
     margin-top: 237px; }
   .cover__title {
     font-size: 54px; }
+  .cover__subtitle {
+    margin-top: 21px; }
+  .cover__button {
+    margin-top: 20px;
+    width: 320px;
+    height: 68px; }
   .cover__pic {
     width: 50%;
     height: 635px;
-    position: relative; }
+    position: absolute;
+    left: 476px; }
   .cover__person {
     z-index: 999;
-    top: 14px;
-    left: 20px; }
+    top: 12px;
+    left: 76px; }
   .cover__gradient {
     position: absolute;
-    background-size: 980px 760px;
-    top: 0px;
+    background-image: url(../../img/Ellipse_1.svg);
+    background-size: 100% 83%;
+    top: 108px;
     height: 100%;
-    width: 100%;
-    min-width: 562px; } }
+    width: 100%; }
+  .whatido__container {
+    padding: 62px 3.9% 106px 3.9%; }
+  .whatido__title {
+    margin-right: 25px; }
+  .whatido__benefits-container {
+    padding: 0 16% 0 15%; }
+  .whatido__benefits-item {
+    margin: 0% 0% 10% 0%; }
+  .whatido__benefits-item:nth-child(2) {
+    max-width: 269px; }
+  .whatido__benefits-item:nth-child(2) > .benefits-item__img {
+    margin-left: 0px; }
+  .whatido__benefits-item:nth-child(2) > .benefits-item__title {
+    padding-left: 0px; }
+  .whatido__benefits-item:nth-child(3) {
+    padding-left: 0px; }
+  .whatido__benefits-item:nth-child(3) > .benefits-item__title {
+    padding-left: 0px; }
+  .whatido__benefits-item:nth-child(4) {
+    padding-left: 0px; }
+  .whatido__button {
+    width: 322px;
+    height: 67px;
+    margin-top: 9px; }
+  .portfolio__container {
+    padding: 87px 3.9% 0 3.9%; }
+  .portfolio__title {
+    margin-left: 3px; } }
