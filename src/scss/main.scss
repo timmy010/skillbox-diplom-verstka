@@ -116,7 +116,7 @@ a:hover {
     max-width: 1920px;
 	margin: 0 auto;
     position: relative;
-    padding: 0 375px 0 375px;
+    padding: 0 19.7% 0 19.7%;
 }
 
 .header__container {
@@ -124,7 +124,7 @@ a:hover {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 29px 372px 0 371px;
+    padding: 29px 19.55% 0 19.5%;
 }
 
 .header__burger {
@@ -221,7 +221,7 @@ a:hover {
 .cover__container {
     display: flex;
     justify-content: space-between;
-    padding: 0 0 0 372px;
+    padding: 0 0 0 19.55%;
 }
 
 .title {
@@ -257,25 +257,25 @@ a:hover {
     width: 52.5%;
     height: 627px;
     position: relative;
+}
 
-    .cover__person {
-        position: absolute;
-        left: 87px;
-        top: 9px;
-        width: 432px;
-        height: 98%;
-        min-width: 432px;
-    }
-    .cover__gradient {
-        height: 100%;
-        width: 100%;
-        min-width: 562px;
-        background-image: url(../../img/gradientfull.svg);
-        background-repeat: no-repeat;
-        background-size: 980px 760px;
-        background-position: top left;
-        overflow: hidden;
-    }
+.cover__person {
+    position: absolute;
+    left: 87px;
+    top: 9px;
+    width: 432px;
+    height: 98%;
+    min-width: 432px;
+}
+.cover__gradient {
+    height: 100%;
+    width: 100%;
+    min-width: 562px;
+    background-image: url(../../img/gradientfull.svg);
+    background-repeat: no-repeat;
+    background-size: 980px 760px;
+    background-position: top left;
+    overflow: hidden;
 }
 
 .whatido {
@@ -354,7 +354,7 @@ a:hover {
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    padding: 92px 375px 101px 375px;
+    padding: 92px 19.7% 101px 19.7%;
 }
 
 .portfolio__button {
@@ -401,9 +401,9 @@ a:hover {
     transform: rotate(180deg);
     width: 60px;
     height: 64px;
-    top: 46.4%;
+    top: 46%;
     left: auto;
-    right: 342px;
+    right: 18%;
 
     &::after {
         display: none;
@@ -424,10 +424,10 @@ a:hover {
     background-size: contain;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
     border-radius: 50%;
-    width: 60px;
+    width: 61px;
     height: 64px;
-    top: 46.4%;
-    left: 342px;
+    top: 46%;
+    left: 18%;
 
     &::after {
         display: none;
@@ -454,7 +454,7 @@ a:hover {
     }
 
     &__text {
-        padding: 0 409px 0 484px;
+        padding: 0 21.49% 0 25.43%;
         color: white;
     }
 
@@ -474,7 +474,7 @@ a:hover {
 .footer__container {
     display: flex;
     justify-content: space-between;
-    padding: 75px 394px 65px 372px;
+    padding: 75px 20.7% 65px 19.55%;
 }
 
 .footer-menu__item {
@@ -596,5 +596,16 @@ a:hover {
     font-style: inherit;
     text-align: center;
     color: white;
-    padding: 29px 14px 32px 0px;
+    padding: 29px 0.74% 32px 0px;
 }
+
+
+
+
+
+
+
+
+
+
+@import "mobile.scss";

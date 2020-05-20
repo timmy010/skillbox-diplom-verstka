@@ -153,14 +153,14 @@ a:hover {
   max-width: 1920px;
   margin: 0 auto;
   position: relative;
-  padding: 0 375px 0 375px; }
+  padding: 0 19.7% 0 19.7%; }
 
 .header__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 29px 372px 0 371px; }
+  padding: 29px 19.55% 0 19.5%; }
 
 .header__burger {
   padding: 0;
@@ -243,7 +243,7 @@ a:hover {
 .cover__container {
   display: flex;
   justify-content: space-between;
-  padding: 0 0 0 372px; }
+  padding: 0 0 0 19.55%; }
 
 .title {
   font-size: 5em;
@@ -274,22 +274,24 @@ a:hover {
   width: 52.5%;
   height: 627px;
   position: relative; }
-  .cover__pic .cover__person {
-    position: absolute;
-    left: 87px;
-    top: 9px;
-    width: 432px;
-    height: 98%;
-    min-width: 432px; }
-  .cover__pic .cover__gradient {
-    height: 100%;
-    width: 100%;
-    min-width: 562px;
-    background-image: url(../../img/gradientfull.svg);
-    background-repeat: no-repeat;
-    background-size: 980px 760px;
-    background-position: top left;
-    overflow: hidden; }
+
+.cover__person {
+  position: absolute;
+  left: 87px;
+  top: 9px;
+  width: 432px;
+  height: 98%;
+  min-width: 432px; }
+
+.cover__gradient {
+  height: 100%;
+  width: 100%;
+  min-width: 562px;
+  background-image: url(../../img/gradientfull.svg);
+  background-repeat: no-repeat;
+  background-size: 980px 760px;
+  background-position: top left;
+  overflow: hidden; }
 
 .whatido {
   background-color: #fff; }
@@ -348,7 +350,7 @@ a:hover {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  padding: 92px 375px 101px 375px; }
+  padding: 92px 19.7% 101px 19.7%; }
 
 .portfolio__button {
   width: 268px;
@@ -388,9 +390,9 @@ a:hover {
   transform: rotate(180deg);
   width: 60px;
   height: 64px;
-  top: 46.4%;
+  top: 46%;
   left: auto;
-  right: 342px; }
+  right: 18%; }
   .swiper-button-next::after {
     display: none; }
 
@@ -402,10 +404,10 @@ a:hover {
   background-size: contain;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
   border-radius: 50%;
-  width: 60px;
+  width: 61px;
   height: 64px;
-  top: 46.4%;
-  left: 342px; }
+  top: 46%;
+  left: 18%; }
   .swiper-button-prev::after {
     display: none; }
 
@@ -420,7 +422,7 @@ a:hover {
   .banner__container {
     padding: 76px 0 61px 0; }
   .banner__text {
-    padding: 0 409px 0 484px;
+    padding: 0 21.49% 0 25.43%;
     color: white; }
   .banner__title {
     font-size: 2.8em;
@@ -434,7 +436,7 @@ a:hover {
 .footer__container {
   display: flex;
   justify-content: space-between;
-  padding: 75px 394px 65px 372px; }
+  padding: 75px 20.7% 65px 19.55%; }
 
 .footer-menu__item {
   line-height: 33px; }
@@ -534,4 +536,41 @@ a:hover {
   font-style: inherit;
   text-align: center;
   color: white;
-  padding: 29px 14px 32px 0px; }
+  padding: 29px 0.74% 32px 0px; }
+
+@media (max-width: 1800px) {
+  .whatido__benefits-item {
+    margin: 0 10% 0 10%; } }
+
+@media (max-width: 1600px) {
+  .whatido__benefits-item {
+    margin: 0% 5% 0% 5%; } }
+
+@media (max-width: 1024px) {
+  .header__menu {
+    display: none; }
+  .header__burger {
+    display: block; }
+  .container {
+    padding: 29px 3.9% 0 3.9%; }
+  .cover__container {
+    padding: 0 0 0 3.9%; }
+  .cover__text {
+    margin-top: 237px; }
+  .cover__title {
+    font-size: 54px; }
+  .cover__pic {
+    width: 50%;
+    height: 635px;
+    position: relative; }
+  .cover__person {
+    z-index: 999;
+    top: 14px;
+    left: 20px; }
+  .cover__gradient {
+    position: absolute;
+    background-size: 980px 760px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    min-width: 562px; } }

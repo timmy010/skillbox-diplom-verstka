@@ -1,48 +1,56 @@
 //Десктопы
 
-@media (max-width: 1920px) {
+@media (max-width: 1800px) {
+    .whatido__benefits-item {
+        margin: 0 10% 0 10%;
+    }
+}
 
+@media (max-width: 1600px) {
+    .whatido__benefits-item {
+        margin: 0% 5% 0% 5%;
+    }
 }
 
 //Планшеты
 
 @media (max-width: 1024px) {
-   .main-menu {
-       display: none;
-   }
-
-   .burger {
-       display: inline-block;
-   }
-
-   .container {
-    padding: 0 4%;
-   }
-
-   .cover .container {
-       padding: 0 0 0 3.7%;
-   }
-
-   .text {
-       margin-top: 239px;
-   }
-
-   .text h1 {
+    .header__menu {
+        display: none;
+    }
+    .header__burger {
+        display: block;
+    }
+    .container {
+        padding: 29px 3.9% 0 3.9%
+    }
+    .cover__container {
+        padding: 0 0 0 3.9%;
+    }
+    .cover__text {
+        margin-top: 237px;
+    }
+    .cover__title {
         font-size: 54px;
-   }
-
-   button.callback {
-       margin-right: 0px;
-   }
-
-   .whatido {
-       border: 1px solid red;
-   }
-
-   .pic .gradient {
-        background-size: 994px 769px;
-        min-width: none;
-   }
+    }
+    .cover__pic {
+        width: 50%;
+        height: 635px;
+        position: relative;
+    }
+    .cover__person {
+        z-index: 999;
+        top: 14px;
+        left: 20px;
+    }
+    .cover__gradient {
+        position: absolute;
+        background-size: 980px 760px;
+        top: 0px;
+        height: 100%;
+        width: 100%;
+        min-width: 562px;
+    }
 }
 
 //Смартфоны
