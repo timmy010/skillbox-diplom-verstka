@@ -18,6 +18,12 @@
     .header__menu {
         display: none;
     }
+    .header__button {
+        width: 207px;
+    }
+    .header__phone {
+        margin-right: 29px;
+    }
     .header__burger {
         display: block;
     }
@@ -98,10 +104,48 @@
         margin-top: 9px;
     }
     .portfolio__container {
-        padding: 87px 3.9% 0 3.9%;
+        padding: 87px 3.9% 101px 3.9%;
     }
     .portfolio__title {
         margin-left: 3px;
+    }
+    .slider-container {
+        display: none;
+    }
+    .portfolio__button {
+        margin-top: 0px;
+        width: 320px;
+        height: 68px;
+    }
+
+    .slider-stub {
+        width: 100%;
+        height: 625px;
+        background-color: green;
+    }
+
+    .banner__container {
+        padding-bottom: 64px;
+    }
+    .banner__text {
+        padding: 0 3.9% 0 3.9%;
+    }
+    .footer__container {
+        padding: 99px 3.9% 67px 3.9%;
+    }
+    .footer__contacts {
+        margin-left: 54px;
+    }
+    .footer__phone {
+        margin-bottom: 29px;
+    }
+    .copyright {
+        padding-right: 1.4%;
+    }
+
+    .popup__form {
+        width: 50%;
+        height: 87vh;
     }
 }
 

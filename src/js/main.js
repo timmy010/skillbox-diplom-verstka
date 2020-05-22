@@ -1,14 +1,50 @@
 $(function(){
-	// Слайдер
-	var mySwiper = new Swiper('.swiper-container', {
-		loop: true,
-		slidesPerView: 3,
-		spaceBetween: 30,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-	});
+	// Cлайдер
+
+	function swiperTablet() {
+		$('.swiper-button-next, .swiper-button-prev').hide();
+		$('.swiper-pagination').show();
+		var mySwiper = new Swiper('.swiper-container', {
+			loop: true,
+			slidesPerView: 2,
+			spaceBetween: 20,
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+			  },
+		});
+	}
+
+	function swiperDesktop() {
+		$('.swiper-button-next, .swiper-button-prev').show();
+		$('.swiper-pagination').hide();
+		var mySwiper = new Swiper('.swiper-container', {
+			loop: true,
+			slidesPerView: 3,
+			spaceBetween: 30,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+	}
+
+	let windowWindth = $(window).width();
+
+	if (windowWindth <= 1024) {
+		swiperTablet();
+    } else {
+		swiperDesktop();
+	}
+	
+	$(window).resize(function() {
+        windowWindth = $(window).width();
+        if (windowWindth <= 1024) {
+			swiperTablet();
+		} else {
+			swiperDesktop();
+		}
+    });
 
 	// Плавный скролл якорей
 
