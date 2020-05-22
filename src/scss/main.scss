@@ -21,7 +21,6 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-
     width: 30%;
 	padding: 20px;	
 	background: #fff;
@@ -108,8 +107,22 @@ input, textarea {
 // POPUP END
 
 a:hover {
-    opacity: 0.8;
-    transition: opacity 0.5s linear;
+    transform: scale(1.1);
+    transition: transform, 0.5s;
+}
+
+.tag {
+    position: absolute;
+    font-weight: bold;
+    color: white;
+    transition: transform, 1s;
+}
+
+.tag-gradient {
+    color: #fa0891;
+    background: -webkit-linear-gradient(#fa0891, #f26522);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .container {
@@ -140,25 +153,39 @@ a:hover {
 	outline: 0;
 	background-color: transparent;
 	cursor: pointer;
-  }
+}
 
-  .menu__list {
+.menu__list {
     list-style: none;
     margin: 0;
     padding-left: 0;
-  }
-  .menu__item {
+}
+.menu__item {
     display: inline-block;
-  }
-  .menu__link {
+}
+.menu__link {
     color: black;
     text-decoration: none;
-  }
-  .menu__link:hover {
-    text-decoration: none;
-    border-bottom: 1px solid $color_light_red;
-    color: $color_light_red;
 }
+
+// Эффект ховера пунктов меню - Начало
+
+.menu__link:after {
+    display: block;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: $color_light_red;
+    content: "";
+    transition: width 0.3s ease-out;
+}
+    
+.menu__link:hover:after,
+.menu__link:focus:after {
+    width: 100%;
+}
+
+// Эффект ховера пунктов меню - Конец
 
 .header-menu__item {
     margin-right: 28px;
@@ -200,7 +227,7 @@ a:hover {
     &:hover {
         color: $color_dark_red; 
         background-color: #fbfbfb;
-        transition: color 0.5s linear, background-color 0.5s linear;
+        transition: color 0.3s linear, background-color 0.3s linear;
     }
 }
 
@@ -222,6 +249,7 @@ a:hover {
     display: flex;
     justify-content: space-between;
     padding: 0 0 0 19.55%;
+    position: relative;
 }
 
 .title {
@@ -277,6 +305,32 @@ a:hover {
     background-position: top left;
     overflow: hidden;
 }
+
+.cover__tag-div-1 {
+    font-size: 29px;
+    transform: translate(410px, 88px) rotate(-13deg);
+};
+.cover__tag-div-2 {
+    font-size: 38px;
+    transform: translate(570px, 459px) rotate(20deg);
+};
+.cover__tag-pound {
+    font-size: 55px;
+    transform: translate(-124px, 284px) rotate(13deg);
+};
+.cover__tag-braces {
+    font-size: 50px;
+    transform: translate(-243px, 56px) rotate(27deg);
+};
+.cover__tag-slash-1 {
+    font-size: 41px;
+    transform: translate(2px, 586px) rotate(-22deg);
+};
+.cover__tag-slash-2 {
+    display: none;
+    font-size: 41px;
+    transform: translate(2px, 586px) rotate(-22deg);
+};
 
 .whatido {
     background-color: #fff;
@@ -360,7 +414,7 @@ a:hover {
 .portfolio__button {
     width: 268px;
     height: 59px;
-    margin-top: 76px;
+    margin-top: 73px;
     font-size: 18px;
 }
 
@@ -409,11 +463,10 @@ a:hover {
         display: none;
     }
 
-    // &:hover {
-    //     color: #fbfbfb;
-    //     background-color: $color_dark_red;
-    //     transition: color 0.5s linear, background-color 0.5s linear;
-    // }
+    &:hover {
+        opacity: 0.8;
+        transition: opacity, 0.5s, linear;
+    }
 }
     
 .swiper-button-prev {
@@ -433,11 +486,10 @@ a:hover {
         display: none;
     }
 
-    // &:hover {
-    //     color: #fbfbfb;
-    //     background-color: $color_dark_red;
-    //     transition: color 0.5s linear, background-color 0.5s linear;
-    // }
+    &:hover {
+        opacity: 0.8;
+        transition: opacity, 0.5s, linear;
+    }
 }
 
 .banner {
@@ -450,11 +502,11 @@ a:hover {
     align-items: center;
 
     &__container {
-        padding: 76px 0 61px 0;
+        padding: 76px 0 60px 0;
     }
 
     &__text {
-        padding: 0 21.49% 0 25.43%;
+        padding: 0 21.49% 0 25.49%;
         color: white;
     }
 
@@ -470,6 +522,27 @@ a:hover {
         line-height: 29px;
     }
 }
+
+.banner__tag-div {
+    font-size: 36px;
+    transform: translate(502px, 133px) rotate(20deg);
+};
+.banner__tag-pound {
+    font-size: 55px;
+    transform: translate(-689px, 91px) rotate(16deg);
+};
+.banner__tag-braces-1 {
+    font-size: 48px;
+    transform: translate(-801px, -100px) rotate(27deg);
+};
+.banner__tag-braces-2 {
+    font-size: 48px;
+    transform: translate(820px, 94px) rotate(-18deg);
+};
+.banner__tag-slash {
+    font-size: 40px;
+    transform: translate(717px, -91px) rotate(-22deg);
+};
 
 .footer__container {
     display: flex;

@@ -64,12 +64,13 @@ $(function(){
 
 	$('.button').on('click', function(e) {
 		e.preventDefault();
-		$('.popup__container').fadeIn(100, 'linear');
+		// $('.popup__container').fadeIn();
+		$('.popup__container').show();
 		$("body").addClass("fixed");
 	});
 
 	$('.popup__close').click(function() {
-		$(this).parents('.popup__container').fadeOut(100, 'linear');
+		$(this).parents('.popup__container').fadeOut();
 		$("body").removeClass("fixed");
 		return false;
 	});        	

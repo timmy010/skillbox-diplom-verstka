@@ -13,12 +13,16 @@ html, body {
     min-width: 320px;
     font-size: 16px;
     background-color: #fbfbfb;
+    overflow-x: hidden;
 }
 
 *, *:before, *:after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-transition: 0.5s ease; /* Safari and Chrome */
+    -moz-transition: 0.5s ease; /* Firefox 4 */
+    -o-transition: 0.5s ease; /* Opera */
 }
 
 img { border: 0; max-width: 100%; }

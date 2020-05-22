@@ -147,6 +147,61 @@
         width: 50%;
         height: 87vh;
     }
+
+    // Cover tags
+
+    .cover__tag-div-1 {
+        font-size: 30px;
+        transform: translate(847px, 73px) rotate(-15deg);
+    };
+    .cover__tag-div-2 {
+        display: none;
+        font-size: 38px;
+        transform: translate(0px, 0px) rotate(20deg);
+    };
+    .cover__tag-pound {
+        font-size: 56px;
+        transform: translate(18px, 554px) rotate(16deg);
+    };
+    .cover__tag-braces {
+        font-size: 50px;
+        transform: translate(38px, 78px) rotate(27deg);
+    };
+    .cover__tag-slash-1 {
+        font-size: 41px;
+        transform: translate(318px, 507px) rotate(-23deg);
+    };
+    .cover__tag-slash-2 {
+        display: inline;
+        font-size: 46px;
+        transform: translate(382px, 155px) rotate(14deg);
+    };
+
+    // Banner tags
+
+    .banner__tag-div {
+        font-size: 24px;
+        transform: translate(29px, 131px) rotate(20deg);
+    };
+    .banner__tag-pound {
+        display: none;
+        font-size: 55px;
+        transform: translate(0px, 91px) rotate(16deg);
+    };
+    .banner__tag-braces-1 {
+        font-size: 33px;
+        transform: translate(-341px, -148px) rotate(27deg);
+    };
+    .banner__tag-braces-2 {
+        display: none;
+        font-size: 48px;
+        transform: translate(0px, 0px) rotate(-18deg);
+    };
+    .banner__tag-slash {
+        font-size: 40px;
+        transform: translate(390px, 121px) rotate(-22deg);
+    };
+    
 }
 
 //Смартфоны
