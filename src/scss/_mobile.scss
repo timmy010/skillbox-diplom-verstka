@@ -14,7 +14,11 @@
 
 //Планшеты
 
-@media (max-width: 1024px) {
+@media (max-width: 1220px) {
+    
+}
+
+@media (max-width: 1220px) {
     .header__menu {
         display: none;
     }
@@ -53,7 +57,8 @@
         width: 50%;
         height: 635px;
         position: absolute;
-        left: 476px;
+        right: 0;
+        // left: 476px;
     }
     .cover__person {
         z-index: 999;
@@ -227,7 +232,50 @@
         right: 9.2%;
         transform: rotate(-22deg);
     };
-    
+}
+
+@media (max-width: 980px) {
+    .benefits-item {
+        width: 100%;
+        max-width: unset;  
+        &__img {
+            width: 76px;
+            height: 74px;
+        }
+        &__title {
+            margin-top: 11px;
+            font-size: 1.3em;
+            line-height: 1.4em;
+            color: $color_symbol;
+        }
+    }
+
+    .whatido {
+        &__benefits-container {
+            padding: 0;
+        }
+        &__benefits-item {
+            margin: 0;
+        }
+        &__benefits-item:nth-child(2) {
+            max-width: unset;
+        }
+        &__benefits-item:nth-child(2)>.benefits-item__img {
+            margin-left: 0;
+        }
+        &__benefits-item:nth-child(2)>.benefits-item__title {
+            padding-left: 0;
+        }
+        &__benefits-item:nth-child(3) {
+            padding-left: 0;
+        }
+        &__benefits-item:nth-child(3)>.benefits-item__title {
+            padding-left: 0;
+        }
+        &__benefits-item:nth-child(4) {
+            padding-left: 0;
+        }
+    }
 }
 
 //Смартфоны
