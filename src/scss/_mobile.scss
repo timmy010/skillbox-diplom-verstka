@@ -106,6 +106,12 @@
 
     // Slider START
 
+    .swiper-pagination {
+        display: block;
+    }
+    .swiper-button-prev, .swiper-button-next {
+        display: none;
+    }
     .portfolio__container {
         padding: 87px 3.9% 101px 3.9%;
     }
@@ -113,17 +119,26 @@
         margin-left: 3px;
     }
     .portfolio__button {
-        margin-top: 0px;
+        margin-top: 86px;
         width: 320px;
         height: 68px;
     }
-
-    .swiper-pagination {
-        display: block;
+    .swiper-container {
+        padding-bottom: 107px;
     }
-
-    .swiper-button-prev, .swiper-button-next {
-        display: none;
+    .swiper-slide__title {
+        margin-top: 17px;
+        font-size: 1.6em;
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 15px;
+    }
+    .swiper-pagination-bullet {
+        width: 18px;
+        height: 18px;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: $color_dark_red;
     }
 
     //Slider END

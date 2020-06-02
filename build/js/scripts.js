@@ -10632,7 +10632,7 @@ $(function(){
 		breakpoints: {
 			720: {
 				slidesPerView: 2,
-				spaceBetween: 20,
+				spaceBetween: 35,
 			},
 			1025: {
 				slidesPerView: 3,
