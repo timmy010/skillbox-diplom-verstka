@@ -10624,7 +10624,7 @@ $(function(){
 	var mySwiper = new Swiper('.swiper-container', {
 		loop: true,
 		slidesPerView: 1,
-		spaceBetween: 20,
+		spaceBetween: 0,
 		pagination: {
 			el: '.swiper-pagination',
 			type: 'bullets',
@@ -10750,6 +10750,12 @@ $(function(){
     } else {
 		$('.header__button').text('Заказать звонок');
 	}
+
+	// if (windowWindth <= 320) {
+	// 	$('.swiper-slide').addClass(swiper-slide-active);
+    // } else {
+	// 	$('.swiper-wrapper .swiper-slide:nth-child(1)').addClass(swiper-slide-active);
+	// }
 
     $(window).resize(function() {
 		windowWindth = $(window).width();
