@@ -15,10 +15,6 @@
 //Планшеты
 
 @media (max-width: 1220px) {
-    
-}
-
-@media (max-width: 1220px) {
     .header__menu {
         display: none;
     }
@@ -74,6 +70,7 @@
         height: 100%;
         width: 100%;
     }
+
     .whatido__container {
         padding: 83px 3.9% 106px 3.9%;
     }
@@ -281,7 +278,33 @@
 //Смартфоны
 
 @media (max-width: 768px) {
+    .header__button {
+        background-image: url('/img/tel-button.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 45px 45px;
+        width: 45px;
+        height: 45px;
+        border: 0;
+    }
+    .header__phone {
+        margin: 0;
+    }
+    .cover__container {
+        flex-flow: column wrap;
+    }
+    .cover__pic {
+        order: 1;
+        position: relative;
+        width: 100%;
+    }
+    .cover__text {
+        order: 2;
+    }
 
+    .footer__container {
+        flex-flow: column wrap;
+    }
 }
 
 //Смартфоны 2
@@ -293,5 +316,85 @@
 //Смартфоны 3
 
 @media (max-width: 320px) {
+    .phone {
+        font-size: 19px;
+    }
+    .container {
+        padding: 0 6.3%;
+    }
+    .header__container {
+        padding-top: 26px;
+    }
+    .header__burger {
+        width: 24px;
+        height: 18px;
+        background-size: 24px 18px;
+    }
+    .header__button {
+        width: 26px;
+        height: 26px;
+        background-size: 26px 26px;
+    }
 
+    // COVER
+
+    .cover__container {
+        padding: 0 6.3%;
+        display: flex;
+        justify-content: space-between;
+        flex-flow: column wrap;
+        margin-bottom: 229px;
+        position: relative;
+    }
+    .cover__pic {
+        order: 1;
+        position: relative;
+        width: 100%;
+        height: 635px;
+        right: 0;
+        margin-top: 60px;
+    }
+    .cover__person {
+        position: absolute;
+        z-index: 999;
+        top: 26px;
+        left: 57px;
+        width: 224px;
+        min-width: 224px;
+        height: 334px;
+    }
+    .cover__gradient {
+        position: absolute;
+        background-image: url(../../img/gradientfull.svg);
+        background-size: 100% 83%;
+        background-repeat: no-repeat;
+        background-position: top left;
+        top: 108px;
+        height: 100%;
+        width: 100%;
+        min-width: 562px;
+        overflow: hidden;
+    }
+    .cover__text {
+        order: 2;
+        margin-top: 237px;
+        z-index: 100;
+    }
+    .cover__title {
+        font-size: 54px;
+    }
+    .cover__subtitle {
+        margin-top: 21px;
+        font-size: 1.55em;
+        font-weight: 500;
+    }
+    .cover__button {
+        margin-top: 20px;
+        width: 320px;
+        height: 68px;
+        font-size: 18px;
+        color: #fff;
+        background-color: #ff4e2e;
+        border: 1px solid #ff4e2e;
+    }
 }

@@ -10735,4 +10735,35 @@ $(function(){
 		validationForm();
 	});
 
+	//Адаптивность
+
+	let windowWindth = $(window).width();
+
+	if (windowWindth <= 1220) {
+		$('.portfolio__button').text('Узнать больше');
+    } else {
+		$('.header__button').text('Заказать проект');
+	}
+
+    if (windowWindth <= 768) {
+		$('.header__button').text('');
+    } else {
+		$('.header__button').text('Заказать звонок');
+	}
+
+    $(window).resize(function() {
+		windowWindth = $(window).width();
+		
+		if (windowWindth <= 1220) {
+			$('.portfolio__button').text('Узнать больше');
+		} else {
+			$('.header__button').text('Заказать проект');
+		}
+
+        if (windowWindth <= 768) {
+			$('.header__button').text('');
+    	} else {
+			$('.header__button').text('Заказать звонок');
+		}
+    });
 });
