@@ -10,6 +10,9 @@
     .whatido__benefits-item {
         margin: 0% 5% 0% 5%;
     }
+    .popup__form {
+        height: 90vh;
+    }
 }
 
 //Планшеты
@@ -169,7 +172,7 @@
 
     .popup__form {
         width: 50%;
-        height: 87vh;
+        height: 90vh;
     }
 
     // Cover tags
@@ -284,10 +287,10 @@
         background-image: url('/img/tel-button.png');
         background-position: center;
         background-repeat: no-repeat;
-        background-size: 45px 45px;
-        width: 45px;
-        height: 45px;
         border: 0;
+        width: 26px;
+        height: 26px;
+        background-size: 26px 26px;
     }
     .header__phone {
         margin: 0;
@@ -307,17 +310,9 @@
     .footer__container {
         flex-flow: column wrap;
     }
-}
 
-//Смартфоны 2
+    /////////////////////////
 
-@media (max-width: 576px) {
-
-}
-
-//Смартфоны 3
-
-@media (max-width: 320px) {
     .title {
         font-size: 30px;
     }
@@ -328,17 +323,15 @@
         padding: 0 6.3%;
     }
     .header__container {
-        padding-top: 26px;
+        padding: 26px 6.3% 0 6.3%;
+    }
+    .header__container.header__container--mobile-menu-opened {
+        padding: 26px 1% 0 1% !important;
     }
     .header__burger {
         width: 24px;
         height: 18px;
         background-size: 24px 18px;
-    }
-    .header__button {
-        width: 26px;
-        height: 26px;
-        background-size: 26px 26px;
     }
 
     // COVER
@@ -368,16 +361,13 @@
     .cover__text {
         margin-top: 13px;
         z-index: 100;
-        padding-left: 6.1%;
-    }
-    .cover__title {
-        padding-left: 5px;
+        text-align: center;
     }
     .cover__subtitle {
         text-align: center;
         margin-top: 7px;
         font-size: 16px;
-        padding: 0 49px 0 27px;
+        padding: 0 10px 0 9px;
         line-height: 23px;
     }
     .cover__button {
@@ -457,14 +447,174 @@
     }
 
     .portfolio__container {
-        padding: 96px 6.3% 102px;
+        padding: 96px 6.3% 51px;
     }
     .portfolio__title {
         margin: 0 3px 42px 0;
         line-height: 34px;
         text-align: center;
     }
+    .swiper-container {
+        padding-bottom: 84px;
+    }
     .swiper-slide__title {
+        font-size: 18.6px;
+        margin-top: 14px;
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: 45px;
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 8px;
+        width: 11px;
+        height: 11px;
+    }
+    .portfolio__button {
+        margin-top: 0;
+        width: 280px;
+        height: 55px;
+        font-size: 16px;
+    }
+    .banner {
+        &__container {
+            padding: 42px 0 26px;
+        }
+        &__text {
+            padding: 0 6%
+        }
+        &__title {
+            font-size: 27px;
+            line-height: 40px;
+        }
+        &__desc {
+            font-size: 16px;
+            margin-top: 32px;
+            width: 100%;
+            line-height: 30px;
+        }
+    }
+    .footer {
+        &__container {
+            text-align: center;
+            padding: 38px 6.3% 35px 6.3%;
+        }
+        &__menu {
+            font-size: 1em;
+        }
+        &__contacts {
+            margin: 28px 0 0 0;
+        }
+        &__phone {
+            font-size: 21px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #8993ad;
+        }
+        &__mail {
+            font-size: 21px;
+            font-weight: bold;
+            color: #8993ad;
+        }
+        &__button {
+            margin-top: 25px;
+            width: 280px;
+            height: 55px;
+            font-size: 17px;
+            color: white;
+            background-color: $color_dark_red;
+        }
+        &__social-list {
+            margin: 50px 0 0;
+        }
+    }
+
+    [class^="icon-"]:before, [class*=" icon-"]:before {
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+    }
+    .icon-phone:before {
+        font-size: 16px;
+    }
+    .icon-phone {
+        margin-right: 12px;
+        font-size: 24px;
+    }
+    .icon-mail-alt {
+        margin-right: 13px;
+        padding-left: 0px;
+    }
+    .copyright {
+        font-size: 13px;
+        padding: 18px 0px 17px 5px;
+    }
+
+    .cover__tag-div-1 {
+        display: none;
+        font-size: 29px;
+        top: 13%;
+        left: 41.1%;
+    };
+    .cover__tag-div-2 {
+        display: block;
+        font-size: 16px;
+        top: 15.5%;
+        left: 76.7%;
+    };
+    .cover__tag-pound {
+        font-size: 26px;
+        top: 25.3%;
+        left: 12%;
+    };
+    .cover__tag-braces {
+        font-size: 26px;
+        top: 7.5%;
+        left: 15.2%;
+    };
+    .cover__tag-slash-1 {
+        font-size: 20px;
+        top: 4.7%;
+        left: 53.6%;
+        transform: rotate(-32deg);
+    };
+    .cover__tag-slash-2 {
+        display: none;
+        font-size: 46px;
+        top: 33.3%;
+        left: 41.2%;
+        transform: rotate(14deg);
+    };
+    .banner__tag-pound, .banner__tag-div, .banner__tag-braces-1, .banner__tag-braces-2, .banner__tag-slash {
+        display: none;
+    }
+
+    .popup__form {
+        width: 100%;
+        height: 100vh;
+        border: 0;
+    }
+
+    .header__menu {
+        width: 100%;
+        height: 100vh;
+        padding-top: 10px;
+    }
+    .header-menu__item {
+        line-height: 40px;
+        font-family: "Arial";
         font-size: 18px;
+        font-weight: 400;
+        display: block;
+        border-bottom: 1px solid #ebebeb;
+    }
+}
+
+//Смартфоны 3
+
+@media (max-width: 320px) {
+    .footer {
+        &__container {
+            text-align: unset;
+        }
     }
 }

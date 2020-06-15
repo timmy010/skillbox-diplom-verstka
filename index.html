@@ -6,13 +6,14 @@
     <title>Дипломный проект - Верстка в Skillbox</title>
     <link rel="stylesheet" href="fonts/icon-fonts/css/fontello.css">
     <link rel="stylesheet" href="build/css/main.min.css">
+
 </head>
 <body>
 
     <h1 class="hidden">Дмитрий Алексеев - Frontend-разработчик и веб-верстальщик</h1>
 
     <div class="popup__container hide">
-        <form class="popup__form" method="">
+        <form class="popup__form" action="/build/php/mail.php" method="POST">
             <h2 class="popup__title">Оставить заявку</h2>
             <p class="popup__subtitle">Оставьте свои контактные данные и нажмите Отправить.</p>
             <p class="popup__subtitle">Я свяжусь с Вами через 5 минут, чтобы обсудить Вашу задачу</p>
@@ -22,7 +23,7 @@
             <input class="popup__input popup__input-phone" type="tel" name="Phone" placeholder="+7-(999)-999-99-99" required>
             <label class="popup__label" for="popup_description"><span>Комментарий</span></label>
             <textarea class="popup__textarea popup__textarea-comment" rows="7" name="popup_comment" placeholder="Хочу одностраничный сайт"></textarea> 
-            <input class="button popup__button" type="button" name="send" value="Отправить">
+            <button class="button popup__button" type="submit" name="send" value="Отправить">Отправить</button>
     
             <p class="popup__descripton">Поля помеченные * обязательны для заполнения</p>
             <p class="popup__descripton">Нажимая кнопку Отправить Вы соглашаетесь с политикой конфиденциальности</p>
@@ -53,12 +54,12 @@
 
     <section class="cover">
         <div class="container cover__container">
-            <!-- <span class="tag cover__tag-div-1 tag-gradient">&lt;div&gt;</span>
+            <span class="tag cover__tag-div-1 tag-gradient">&lt;div&gt;</span>
             <span class="tag cover__tag-div-2 tag-gradient">&lt;div&gt;</span>
             <span class="tag cover__tag-pound tag-gradient">#</span>
             <span class="tag cover__tag-braces tag-gradient">{ }</span>
             <span class="tag cover__tag-slash-1 tag-gradient">&lt;/&gt;</span>
-            <span class="tag cover__tag-slash-2 tag-gradient">&lt;/&gt;</span> -->
+            <span class="tag cover__tag-slash-2 tag-gradient">&lt;/&gt;</span>
             <div class="cover__text">
                 <h2 class="title cover__title">Дмитрий Алексеев</h2>
                 <p class="cover__subtitle">Frontend-разработчик и веб-верстальщик</p>
@@ -129,11 +130,11 @@
     </section> 
 
     <section class="banner banner__container">
-            <!-- <span class="tag banner__tag-div">&lt;div&gt;</span>
+            <span class="tag banner__tag-div">&lt;div&gt;</span>
             <span class="tag banner__tag-pound">#</span>
             <span class="tag banner__tag-braces-1">{ }</span>
             <span class="tag banner__tag-braces-2">{ }</span>
-            <span class="tag banner__tag-slash">&lt;/&gt;</span> -->
+            <span class="tag banner__tag-slash">&lt;/&gt;</span>
         <div class="banner__text" id="payment">
             <h2 class="title banner__title">Адаптивная вёрстка под все устройства и&nbsp;браузеры от 1000 рублей всего за&nbsp;4 часа.*</h2>
             <p class="banner__desc">* Срок и&nbsp;стоимость могут отличаться от заявленных и&nbsp;рассчитываются  индивидуально, в&nbsp;зависимости от сложности задач</p>
@@ -169,16 +170,16 @@
                 <button class="button footer__button">Заказать звонок</button>
                 <ul class="footer__social-list">
                     <li class="footer__social-item">
-                        <a class="footer__social-link vk-icon" href="#"></a>
+                        <a class="footer__social-link vk-icon" href="#" target="_blank" onclick="this.href='https://vk.com/share.php?url='+window.location.href+window.location.hash+'&title='+document.title"></a>
                     </li>
                     <li class="footer__social-item">
-                        <a class="footer__social-link fb-icon" href="#"></a>
+                        <a class="footer__social-link fb-icon" href="#" target="_blank" onclick="this.href='http://www.facebook.com/share.php?u='+window.location.href+window.location.hash"></a>
                     </li>
                     <li class="footer__social-item">
-                        <a class="footer__social-link tw-icon" href="#"></a>
+                        <a class="footer__social-link tw-icon" href="#" target="_blank" onclick="this.href='http://twitter.com/timeline/home?status='+document.title+'%20'+window.location.href+window.location.hash"></a>
                     </li>
                     <li class="footer__social-item">
-                        <a class="footer__social-link inst-icon" href="#"></a>
+                        <a class="footer__social-link inst-icon" href="#" target="_blank"></a>
                     </li>
                 </ul>
             </div>

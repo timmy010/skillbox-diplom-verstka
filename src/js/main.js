@@ -32,6 +32,26 @@ $(function(){
 		document.querySelector(whatidoLink).scrollIntoView({ behavior: 'smooth' });
 	});
 
+	// Клик по пункту мобильного меню
+
+	$('body').on('click', '.menu__link', function(e) {
+		e.preventDefault();
+
+		if (windowWindth <= 768 && menu.is(':visible')) {
+			menu.hide();
+			burger.css({
+				'backgroundImage' : 'url(../../img/burger.svg)',
+				'width' : '24',
+			});
+			$('.header__container').removeClass('header__container--mobile-menu-opened')
+			$('body').removeClass('fixed');
+			
+			let whatidoLink = $(this).attr('href');
+			document.querySelector(whatidoLink).scrollIntoView({ behavior: 'smooth' });
+		}
+		
+	});
+
 	// POPUP Форма
 
 	let popupName = $('.popup__input-name'),
@@ -42,13 +62,12 @@ $(function(){
 
 	$('.button').on('click', function(e) {
 		e.preventDefault();
-		// $('.popup__container').fadeIn();
-		$('.popup__container').show();
+		$('.popup__container').fadeIn(100, 'linear');
 		$("body").addClass("fixed");
 	});
 
 	$('.popup__close').click(function() {
-		$(this).parents('.popup__container').fadeOut();
+		$(this).parents('.popup__container').fadeOut(100, 'linear');
 		$("body").removeClass("fixed");
 		return false;
 	});        	
@@ -118,10 +137,10 @@ $(function(){
 
 	let windowWindth = $(window).width();
 
-	if (windowWindth <= 1220) {
+	if (windowWindth > 320 && windowWindth <= 1220) {
 		$('.portfolio__button').text('Узнать больше');
-    } else {
-		$('.header__button').text('Заказать проект');
+	} else {
+		$('.portfolio__button').text('Заказать проект');
 	}
 
     if (windowWindth <= 768) {
@@ -130,19 +149,32 @@ $(function(){
 		$('.header__button').text('Заказать звонок');
 	}
 
-	// if (windowWindth <= 320) {
-	// 	$('.swiper-slide').addClass(swiper-slide-active);
-    // } else {
-	// 	$('.swiper-wrapper .swiper-slide:nth-child(1)').addClass(swiper-slide-active);
-	// }
+	if (windowWindth <= 320) {
+		mySwiper.slideTo(2);
+		$('.swiper-slide').each(function(){
+			let link = $(this).find('.swiper-slide__img');
+			if (link.attr('src') === 'img/site_det.png') {
+				console.log('Условие выполнилось');
+				link.attr('src', 'img/site_det-mobile.png');
+			}
+		});
+    } else {
+		$('.swiper-slide').each(function(){
+			let link = $(this).find('.swiper-slide__img');
+			if (link.attr('src') === 'img/site_det.png') {
+				console.log('Условие выполнилось');
+				link.attr('src', 'img/site_det.png');
+			}
+		});
+	}
 
     $(window).resize(function() {
 		windowWindth = $(window).width();
 		
-		if (windowWindth <= 1220) {
+		if (windowWindth > 320 && windowWindth <= 1220) {
 			$('.portfolio__button').text('Узнать больше');
 		} else {
-			$('.header__button').text('Заказать проект');
+			$('.portfolio__button').text('Заказать проект');
 		}
 
         if (windowWindth <= 768) {
@@ -150,5 +182,31 @@ $(function(){
     	} else {
 			$('.header__button').text('Заказать звонок');
 		}
+	});
+	
+	//Мобильное меню
+
+	let burger = $('.header__burger'),
+		menu = $('.header__menu');
+
+	burger.click(function(e){
+        e.preventDefault();
+        menu.toggle(300, function() {
+            if (menu.is(':visible')) {
+                burger.css({
+					'backgroundImage' : 'url(../../img/close.png)',
+					'width' : '18',
+				});
+				$('.header__container').addClass('header__container--mobile-menu-opened')
+                $('body').addClass('fixed');
+            } else {
+                burger.css({
+					'backgroundImage' : 'url(../../img/burger.svg)',
+					'width' : '24',
+				});
+				$('.header__container').removeClass('header__container--mobile-menu-opened')
+                $('body').removeClass('fixed');
+            }
+        });
     });
 });
