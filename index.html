@@ -13,7 +13,7 @@
     <h1 class="hidden">Дмитрий Алексеев - Frontend-разработчик и веб-верстальщик</h1>
 
     <div class="popup__container hide">
-        <form class="popup__form" action="/build/php/mail.php" method="POST">
+        <form class="popup__form" action="php/send.php" enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'php/send.php')">
             <h2 class="popup__title">Оставить заявку</h2>
             <p class="popup__subtitle">Оставьте свои контактные данные и нажмите Отправить.</p>
             <p class="popup__subtitle">Я свяжусь с Вами через 5 минут, чтобы обсудить Вашу задачу</p>
@@ -23,7 +23,7 @@
             <input class="popup__input popup__input-phone" type="tel" name="Phone" placeholder="+7-(999)-999-99-99" required>
             <label class="popup__label" for="popup_description"><span>Комментарий</span></label>
             <textarea class="popup__textarea popup__textarea-comment" rows="7" name="popup_comment" placeholder="Хочу одностраничный сайт"></textarea> 
-            <button class="button popup__button" type="submit" name="send" value="Отправить">Отправить</button>
+            <input class="button popup__button" type="submit" name="send" value="Отправить">
     
             <p class="popup__descripton">Поля помеченные * обязательны для заполнения</p>
             <p class="popup__descripton">Нажимая кнопку Отправить Вы соглашаетесь с политикой конфиденциальности</p>

@@ -85,7 +85,7 @@ input, textarea {
 .popup__button  {
     width: 100%;
 	height: 55px;
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .popup__close {
@@ -230,11 +230,15 @@ a:hover {
     background-color: $color_dark_red;
     cursor: pointer;
     transition: 0.5s;
+    outline: 0;
 
     &:hover {
         color: $color_dark_red; 
         background-color: #fbfbfb;
         transition: color 0.3s linear, background-color 0.3s linear;
+    }
+    &:active {
+        outline: 0;
     }
 }
 
