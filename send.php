@@ -5,9 +5,9 @@ require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
 // Переменные, которые отправляет пользователь
-$name = $_POST['Name'];
-$phone = $_POST['Phone'];
-$text = $_POST['popup_comment'];
+$name = $_POST['name'];
+$phone = $_POST['phone'];
+$text = $_POST['text'];
 
 // Формирование самого письма
 $title = "Новое письмо с сайта Портфолио";
@@ -24,7 +24,7 @@ try {
     $mail->isSMTP();   
     $mail->CharSet = "UTF-8";
     $mail->SMTPAuth   = true;
-    //$mail->SMTPDebug = 2;
+    $mail->SMTPDebug = 2;
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
     // Настройки вашей почты

@@ -103,6 +103,19 @@ $(function(){
 		popupComment.val('');
 	}
 
+	function send() {
+		$.ajax({
+			type: "POST",
+			url: "../../send.php",
+			data: $('.popup__form').serializeArray()
+		}).done(function() {
+			console.log('Аякс отправлен');
+			alert('Спасибо! Ваша заявка принята.');
+			$(this).find('input').val('');
+			$('.popup__form').trigger('reset');
+		});
+	};
+
 	function validationForm(){
 		popupComment.next('p').remove();
 
@@ -111,12 +124,13 @@ $(function(){
 			popupPhone.removeClass('popup__error');
 			popupComment.next('p').remove();
 			popupPhone.next('p').remove();
-
+			
 			if (popupPhone.inputmask("isComplete")){
 			  } else {
 				popupPhone.addClass('popup__error');
 				popupPhone.after(`<p class="popup__error-text">*Поле заполнено неверно!</p>`)
 			  }
+			send();  
 			clearForm();	  
 		} else {
 			popupComment.next('p').remove();
@@ -128,37 +142,10 @@ $(function(){
 		}
 	};
 
-	// $('.popup__button').on('click', function(e) {
-	// 	// e.preventDefault();
-	// 	validationForm();
-	// });
-
-	// Отправка данных на сервер
-function send(event, php){
-	console.log("Отправка запроса");
-	event.preventDefault ? event.preventDefault() : event.returnValue = false;
-	var req = new XMLHttpRequest();
-	req.open('POST', php, true);
-	req.onload = function() {
-		if (req.status >= 200 && req.status < 400) {
-		json = JSON.parse(this.response); // internet explorer 11
-			console.log(json);
-			
-			// ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
-			if (json.result == "success") {
-				// Если сообщение отправлено
-				alert("Сообщение отправлено");
-			} else {
-				// Если произошла ошибка
-				alert("Ошибка. Сообщение не отправлено");
-			}
-		// Если не удалось связаться с php файлом
-		} else {alert("Ошибка сервера. Номер: "+req.status);}}; 
-	
-	// Если не удалось отправить запрос. Стоит блок на хостинге
-	req.onerror = function() {alert("Ошибка отправки запроса");};
-	req.send(new FormData(event.target));
-	}
+	$('.popup__button').on('click', function(e) {
+		e.preventDefault();
+		validationForm();
+	});
 
 	//Адаптивность
 
