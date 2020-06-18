@@ -628,9 +628,25 @@
     }
 
     .popup__form {
+        padding: 40px 20px 0 20px;
         width: 100%;
         height: 100vh;
         border: 0;
+    }
+    .popup__subtitle {
+        font-size: 1em;
+    }
+    .popup__label {
+        font-size: 1em;
+    }
+    .popup__textarea {
+        height: 10vh;
+    }
+    .popup__close {
+        top: 50px;
+        right: 24px;
+        width: 15px;
+        height: 15px;
     }
 
     .header__menu {
