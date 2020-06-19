@@ -2,6 +2,7 @@
 @import "colors.scss";
 @import "consta.scss";
 @import "swiper.scss";
+@import "keyframes.scss";
 
 // POPUP START
 .popup__container {
@@ -122,8 +123,8 @@ a:hover {
     position: absolute;
     font-weight: bold;
     color: white;
-    transition: transform, 1s;
     z-index: 10;
+    animation-name: fadeInDownBig;
 }
 
 .tag-gradient {
@@ -323,35 +324,39 @@ a:hover {
     top: 13%;
     left: 41.1%;
     transform: rotate(-13deg);
-    // transform: translate(410px, 88px) rotate(-13deg);
+    animation-duration: 1.4s;
 };
 .cover__tag-div-2 {
     font-size: 38px;
     top: 66.8%;
     left: 49.5%;
     transform: rotate(20deg);
-    // transform: translate(570px, 459px) rotate(20deg);
+    transition: transform, 2s, 'linear', 1.7s;
+    animation-duration: 1.6s;
 };
 .cover__tag-pound {
     font-size: 55px;
     top: 41.3%;
     left: 12.9%;
     transform: rotate(18deg);
-    // transform: translate(-124px, 284px) rotate(13deg);
+    transition: transform, 2s, 'linear', 1.9s;
+    animation-duration: 1.8s;
 };
 .cover__tag-braces {
     font-size: 50px;
     top: 8.2%;
     left: 6.8%;
     transform: rotate(27deg);
-    // transform: translate(-243px, 56px) rotate(27deg);
+    transition: transform, 2s, 'linear', 2.1s;
+    animation-duration: 2s;
 };
 .cover__tag-slash-1 {
     font-size: 41px;
     top: 85.3%;
     left: 19.67%;
     transform: rotate(-22deg);
-    // transform: translate(2px, 586px) rotate(-22deg);
+    transition: transform, 2s, 'linear', 2.3s;
+    animation-duration: 2.2s;
 };
 .cover__tag-slash-2 {
     display: none;
@@ -359,6 +364,7 @@ a:hover {
     top: 33.3%;
     left: 41.2%;
     transform: rotate(14deg);
+    transition: transform, 2s, 'linear', 1s;
 };
 
 .whatido {
@@ -571,35 +577,35 @@ a:hover {
     bottom: 5%;
     right: 21.4%;
     transform: rotate(20deg);
-    // transform: translate(502px, 133px) rotate(20deg);
+    animation-duration: 1.4s;
 };
 .banner__tag-pound {
     font-size: 55px;
     bottom: 13%;
     left: 13%;
     transform: rotate(16deg);
-    // transform: translate(-689px, 91px) rotate(16deg);
+    animation-duration: 1.6s;
 };
 .banner__tag-braces-1 {
     font-size: 48px;
     top: 16.5%;
     left: 6.8%;
     transform: rotate(27deg);
-    // transform: translate(-801px, -100px) rotate(27deg);
+    animation-duration: 1.8s;
 };
 .banner__tag-braces-2 {
     font-size: 49px;
     transform: rotate(-18deg);
     bottom: 13.5%;
     right: 5.7%;
-    // transform: translate(820px, 94px) rotate(-18deg);
+    animation-duration: 2s;
 };
 .banner__tag-slash {
     font-size: 40px;
     top: 20.5%;
     right: 10.8%;
     transform: rotate(-22deg);
-    // transform: translate(717px, -91px) rotate(-22deg);
+    animation-duration: 2.2s;
 };
 
 .footer__container {

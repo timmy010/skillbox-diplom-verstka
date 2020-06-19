@@ -13,6 +13,7 @@ const jsFiles = [
   './src/js/smoothscroll.min.js',
   './src/js/jquery-3.4.1.js',
   './src/js/jquery.inputmask.min.js',
+  './src/js/wow.min.js',
   './src/js/main.js',
 ]
 

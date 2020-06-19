@@ -24,6 +24,10 @@ $(function(){
 		},
 	});
 
+	//Анимация 
+
+	new WOW().init();
+
 	// Плавный скролл якорей
 
 	$('body').on('click', '.menu__link', function(e) {
