@@ -58,7 +58,7 @@
         height: 634px;
         position: absolute;
         right: 0;
-        overflow-y: hidden;
+        overflow: hidden;
     }
     .cover__person {
         z-index: 999;
@@ -149,6 +149,7 @@
         display: none;
     }
     .portfolio__container {
+        width: 100%;
         padding: 87px 3.9% 102px 3.9%;
     }
     .portfolio__title {
@@ -265,50 +266,91 @@
 }
 
 @media (max-width: 980px) {
-    .benefits-item {
-        width: 100%;
-        max-width: unset;  
-        &__img {
-            width: 76px;
-            height: 74px;
-        }
-        &__title {
-            margin-top: 11px;
-            font-size: 1.3em;
-            line-height: 1.4em;
-            color: $color_symbol;
-        }
+    .benefits-item__img {
+        width: 60px;
+        height: 60px;
+    }
+    .benefits-item__title {
+        margin-top: 10px;
+        padding: 0 10px;
+        font-size: 16px;
+        line-height: 24px;
     }
 
     .whatido {
+        &__container {
+            padding: 0 6.2%;
+        }
         &__benefits-container {
             padding: 0;
+            margin: 0;
+            margin-top: 43px;
+        }
+        &__title {
+            margin: 0;
+            margin-top: 14px;
         }
         &__benefits-item {
-            margin: 0;
+            margin: 0 5%;
+            margin-top: 0px;
+            margin-bottom: 33px;
         }
-        &__benefits-item:nth-child(2) {
-            max-width: unset;
+
+        &__benefits-item__title {
+            font-size: 16px;
         }
+
+        &__benefits-item:nth-child(1)>.benefits-item__img {
+            width: 64px;
+            height: 56px;
+            padding-right: 3px;
+        }
+        &__benefits-item:nth-child(1)>.benefits-item__title {
+            padding-left: 9px;
+            margin-top: 10px;
+        }
+
         &__benefits-item:nth-child(2)>.benefits-item__img {
-            margin-left: 0;
+            width: 62px;
+            height: 56px;
+            padding-right: 2px;
         }
         &__benefits-item:nth-child(2)>.benefits-item__title {
-            padding-left: 0;
+            padding-left: 8px;
         }
+
         &__benefits-item:nth-child(3) {
-            padding-left: 0;
+            margin-bottom: 32px;
         }
-        &__benefits-item:nth-child(3)>.benefits-item__title {
-            padding-left: 0;
+        &__benefits-item:nth-child(3)>.benefits-item__img {
+            width: 62px;
+            height: 60px;
+            padding-right: 2px;
         }
+
         &__benefits-item:nth-child(4) {
-            padding-left: 0;
+            margin-bottom: 0px;
+        }
+        &__benefits-item:nth-child(4)>.benefits-item__img {
+            width: 66px;
+            height: 60px;
+            padding-right: 7px;
+        }
+        &__benefits-item:nth-child(4)>.benefits-item__title {
+            padding-left: 12px;
+            margin-top: 10px;
+        }
+
+        &__button {
+            width: 280px;
+            height: 55px;
+            margin-top: 34px;
+            font-size: 16px;
         }
     }
 }
 
-//Смартфоны
+//Смартфоны 768
 
 @media (max-width: 768px) {
     .header__button {
@@ -387,7 +429,7 @@
         overflow: hidden;
     }
     .cover__text {
-        margin-top: 13px;
+        margin-top: 73px;
         z-index: 100;
         text-align: center;
     }
@@ -405,8 +447,6 @@
         font-size: 16px;
     }
 
-    //WHAT I DO
-
     .benefits-item__img {
         width: 60px;
         height: 60px;
@@ -419,69 +459,11 @@
     }
 
     .whatido {
-        &__container {
-            padding: 0 6.2%;
-        }
-        &__benefits-container {
-            padding: 0;
-            margin: 0;
-            margin-top: 43px;
-        }
-        &__title {
-            margin: 0;
-            margin-top: 14px;
-        }
         &__benefits-item {
-            margin-top: 0px;
-            margin-bottom: 33px;
+            margin: 0;
         }
-
-        &__benefits-item:nth-child(1)>.benefits-item__img {
-            width: 64px;
-            height: 56px;
-            padding-right: 3px;
-        }
-        &__benefits-item:nth-child(1)>.benefits-item__title {
-            padding-left: 9px;
-            margin-top: 10px;
-        }
-
-        &__benefits-item:nth-child(2)>.benefits-item__img {
-            width: 62px;
-            height: 56px;
-            padding-right: 2px;
-        }
-        &__benefits-item:nth-child(2)>.benefits-item__title {
-            padding-left: 8px;
-        }
-
         &__benefits-item:nth-child(3) {
-            margin-bottom: 32px;
-        }
-        &__benefits-item:nth-child(3)>.benefits-item__img {
-            width: 62px;
-            height: 60px;
-            padding-right: 2px;
-        }
-
-        &__benefits-item:nth-child(4) {
-            margin-bottom: 0px;
-        }
-        &__benefits-item:nth-child(4)>.benefits-item__img {
-            width: 66px;
-            height: 60px;
-            padding-right: 7px;
-        }
-        &__benefits-item:nth-child(4)>.benefits-item__title {
-            padding-left: 12px;
-            margin-top: 10px;
-        }
-
-        &__button {
-            width: 280px;
-            height: 55px;
-            margin-top: 34px;
-            font-size: 16px;
+            margin: 0;
         }
     }
 
@@ -534,7 +516,6 @@
     }
     .footer {
         &__container {
-            text-align: center;
             padding: 38px 6.3% 35px 6.3%;
         }
         &__menu {
@@ -593,36 +574,36 @@
         font-size: 29px;
         top: 13%;
         left: 41.1%;
-    };
+    }
     .cover__tag-div-2 {
         display: block;
         font-size: 16px;
         top: 15.5%;
         left: 76.7%;
-    };
+    }
     .cover__tag-pound {
         font-size: 26px;
         top: 25.3%;
         left: 12%;
-    };
+    }
     .cover__tag-braces {
         font-size: 26px;
         top: 7.5%;
         left: 15.2%;
-    };
+    }
     .cover__tag-slash-1 {
         font-size: 20px;
         top: 4.7%;
         left: 53.6%;
         transform: rotate(-32deg);
-    };
+    }
     .cover__tag-slash-2 {
         display: none;
         font-size: 46px;
         top: 33.3%;
         left: 41.2%;
         transform: rotate(14deg);
-    };
+    }
     .banner__tag-pound, .banner__tag-div, .banner__tag-braces-1, .banner__tag-braces-2, .banner__tag-slash {
         display: none;
     }
@@ -630,8 +611,9 @@
     .popup__form {
         padding: 40px 20px 0 20px;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         border: 0;
+        overflow: scroll;
     }
     .popup__subtitle {
         font-size: 1em;
@@ -644,7 +626,7 @@
     }
     .popup__close {
         top: 50px;
-        right: 24px;
+        right: 15px;
         width: 15px;
         height: 15px;
     }
@@ -664,7 +646,84 @@
     }
 }
 
-//Смартфоны 3
+// Смартфоны 620
+
+@media (max-width: 620px) {
+    .whatido {
+        &__container {
+            padding: 0 6.2%;
+        }
+        &__benefits-container {
+            padding: 0;
+            margin: 0;
+            margin-top: 43px;
+        }
+        &__title {
+            margin: 0;
+            margin-top: 14px;
+        }
+        &__benefits-item {
+            width: 100%;
+            max-width: unset;
+            margin-top: 0px;
+            margin-bottom: 33px;
+        }
+
+        &__benefits-item:nth-child(1)>.benefits-item__img {
+            width: 64px;
+            height: 56px;
+            padding-right: 3px;
+        }
+        &__benefits-item:nth-child(1)>.benefits-item__title {
+            padding-left: 9px;
+            margin-top: 10px;
+        }
+
+        &__benefits-item:nth-child(2) {
+            max-width: unset;
+        }
+
+        &__benefits-item:nth-child(2)>.benefits-item__img {
+            width: 62px;
+            height: 56px;
+            padding-right: 2px;
+        }
+        &__benefits-item:nth-child(2)>.benefits-item__title {
+            padding-left: 8px;
+        }
+
+        &__benefits-item:nth-child(3) {
+            margin-bottom: 32px;
+        }
+        &__benefits-item:nth-child(3)>.benefits-item__img {
+            width: 62px;
+            height: 60px;
+            padding-right: 2px;
+        }
+
+        &__benefits-item:nth-child(4) {
+            margin-bottom: 0px;
+        }
+        &__benefits-item:nth-child(4)>.benefits-item__img {
+            width: 66px;
+            height: 60px;
+            padding-right: 7px;
+        }
+        &__benefits-item:nth-child(4)>.benefits-item__title {
+            padding-left: 12px;
+            margin-top: 10px;
+        }
+
+        &__button {
+            width: 280px;
+            height: 55px;
+            margin-top: 34px;
+            font-size: 16px;
+        }
+    }
+}
+
+//Смартфоны 320
 
 @media (max-width: 320px) {
     .footer {

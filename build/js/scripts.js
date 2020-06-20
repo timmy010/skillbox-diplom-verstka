@@ -10633,11 +10633,11 @@ $(function(){
 			type: 'bullets',
 		  },
 		breakpoints: {
-			720: {
+			770: {
 				slidesPerView: 2,
 				spaceBetween: 35,
 			},
-			1025: {
+			1220: {
 				slidesPerView: 3,
 				spaceBetween: 30,
 				navigation: {

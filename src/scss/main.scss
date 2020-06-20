@@ -261,7 +261,7 @@ a:hover {
 .cover__container {
     display: flex;
     justify-content: space-between;
-    padding: 0 0 0 19.55%;
+    padding: 0 0 235px 19.55%;
     position: relative;
 }
 
@@ -274,7 +274,7 @@ a:hover {
 
 .cover__text {
     margin-top: 210px;
-    z-index: 100;
+    z-index: 999;
 }
 
 .cover__subtitle {
@@ -294,28 +294,36 @@ a:hover {
 }
 
 .cover__pic {
-    margin-top: 60px;
+    z-index: 110;
     width: 52.5%;
     height: 627px;
-    position: relative;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    overflow: hidden;
 }
 
 .cover__person {
     position: absolute;
-    left: 87px;
+    left: 273px;
     top: 6px;
     width: 432px;
     height: 99%;
     min-width: 432px;
+    z-index: 980;
 }
+
 .cover__gradient {
+    position: absolute;
+    background-image: url(../../img/gradientfull.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 99% 119%;
+    top: 4px;
+    left: 19.3%;
     height: 100%;
     width: 100%;
     min-width: 562px;
-    background-image: url(../../img/gradientfull.svg);
-    background-repeat: no-repeat;
-    background-size: 980px 760px;
-    background-position: top left;
     overflow: hidden;
 }
 
@@ -442,11 +450,12 @@ a:hover {
 //Slider START
 
 .portfolio__container {
+    width: 1157px;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    padding: 92px 19.7% 101px 19.7%;
+    padding: 92px 0px 101px 0px;
 }
 
 .portfolio__button {
@@ -501,7 +510,7 @@ a:hover {
     height: 64px;
     top: 46%;
     left: auto;
-    right: 18%;
+    right: -2.7%;
 
     &::after {
         display: none;
@@ -524,7 +533,7 @@ a:hover {
     width: 61px;
     height: 64px;
     top: 46%;
-    left: 18%;
+    left: -2.7%;
 
     &::after {
         display: none;
