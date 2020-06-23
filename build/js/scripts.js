@@ -10780,7 +10780,7 @@ $(function(){
 	let windowWindth = $(window).width();
 
 	if (windowWindth > 320 && windowWindth <= 1220) {
-		$('.portfolio__button').text('Узнать больше');
+		$('.portfolio__button').text('Узнать стоимость');
 	} else {
 		$('.portfolio__button').text('Заказать проект');
 	}
@@ -10796,7 +10796,6 @@ $(function(){
 		$('.swiper-slide').each(function(){
 			let link = $(this).find('.swiper-slide__img');
 			if (link.attr('src') === 'img/site_det.png') {
-				console.log('Условие выполнилось');
 				link.attr('src', 'img/site_det-mobile.png');
 			}
 		});
@@ -10804,7 +10803,6 @@ $(function(){
 		$('.swiper-slide').each(function(){
 			let link = $(this).find('.swiper-slide__img');
 			if (link.attr('src') === 'img/site_det.png') {
-				console.log('Условие выполнилось');
 				link.attr('src', 'img/site_det.png');
 			}
 		});
