@@ -475,6 +475,7 @@ a:hover {
 .slider-container {
     width: 100%;
     max-width: 1170px;
+    position: relative;
 }
 
 .swiper-container {
@@ -510,9 +511,9 @@ a:hover {
     transform: rotate(180deg);
     width: 60px;
     height: 64px;
-    top: 45.6%;
+    top: 37.8%;
     left: auto;
-    right: 17.8%;
+    right: -2.4%;
 
     &::after {
         display: none;
@@ -534,8 +535,8 @@ a:hover {
     border-radius: 50%;
     width: 61px;
     height: 64px;
-    top: 45.6%;
-    left: 17.6%;
+    top: 37.8%;
+    left: -2.7%;
 
     &::after {
         display: none;
