@@ -135,10 +135,11 @@ a:hover {
 }
 
 .container {
-    max-width: 1920px;
+    max-width: 1200px;
+    width: 100%;
 	margin: 0 auto;
     position: relative;
-    padding: 0 19.7% 0 19.7%;
+    padding: 0 15px;
 }
 
 .header__container {
@@ -146,7 +147,7 @@ a:hover {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 19.2% 0 19.2%;
+    padding-top: 30px;
 }
 
 .header__burger {
@@ -173,7 +174,7 @@ a:hover {
     display: inline-block;
 }
 .menu__link {
-    color: black;
+    color: #1f1f24;
     text-decoration: none;
 }
 
@@ -229,10 +230,10 @@ a:hover {
     margin: 0;
     padding: 0;
     background-color: none;
-    border: 1px solid $color_dark_red;
+    border: 1px solid #ff4e2e;
     font-size: 16px;
     color: #fbfbfb;
-    background-color: $color_dark_red;
+    background-color: #ff4e2e;
     cursor: pointer;
     transition: 0.5s;
     outline: 0;
@@ -256,7 +257,7 @@ a:hover {
 
     &:hover {
         color: #fbfbfb;
-        background-color: $color_dark_red;
+        background-color: #ff4e2e;
         transition: color 0.5s linear, background-color 0.5s linear;
     }
 }
@@ -264,7 +265,7 @@ a:hover {
 .cover__container {
     display: flex;
     justify-content: space-between;
-    padding: 0 0 235px 19.2%;
+    padding: 0 0 235px 0;
     position: relative;
 }
 
@@ -277,10 +278,12 @@ a:hover {
 
 .cover__text {
     margin-top: 212px;
+    margin-left: 15px;
     z-index: 999;
 }
 
 .cover__subtitle {
+    color: rgb(137, 147, 173);
     font-size: 1.55em;
     font-weight: 500;
     margin-top: 14px;
@@ -292,50 +295,36 @@ a:hover {
     margin-top: 20px;
     font-size: 18px;
     color: white;
-    background-color: $color_dark_red;
-    border: 1px solid $color_dark_red;
+    background-color: #ff4e2e;
+    border: 1px solid #ff4e2e;
 }
 
 .cover__pic {
     z-index: 110;
-    width: 52.5%;
+    width: 67%;
     height: 634px;
     position: absolute;
-    right: 0;
+    right: -349px;
     top: 60px;
     overflow: hidden;
 }
 
 .cover__person {
     position: absolute;
-    left: 280px;
-    top: 6px;
+    left: 81px;
+    top: 9px;
     width: 432px;
     height: 99%;
     min-width: 432px;
     z-index: 980;
 }
 
-// .cover__gradient {
-//     position: absolute;
-//     background-image: url(../../img/gradientfull.svg);
-//     background-repeat: no-repeat;
-//     background-position: top left;
-//     background-size: 98.6% 119%;
-//     top: 4px;
-//     left: 19.3%;
-//     height: 100%;
-//     width: 100%;
-//     min-width: 562px;
-//     overflow: hidden;
-// }
-
 .cover__gradient {
     position: absolute;
 	bottom: -134px;
-	right: -117px;
-	width: 920px;
-	height: 764px;
+    right: -472px;
+    width: 1273px;
+    height: 764px;
 }
 
 .cover__gradient-desktop-bg { 
@@ -348,16 +337,16 @@ a:hover {
 }
 
 .cover__tag-div-1 {
-    font-size: 30px;
-    top: 12.8%;
-    left: 40.9%;
+    font-size: 29px;
+    top: 12.9%;
+    left: 35.9%;
     transform: rotate(-13deg);
     animation-duration: 1.4s;
 };
 .cover__tag-div-2 {
     font-size: 38px;
     top: 67.2%;
-    left: 49.5%;
+    left: 49.2%;
     transform: rotate(20deg);
     transition: transform, 2s, 'linear', 1.7s;
     animation-duration: 1.6s;
@@ -365,7 +354,7 @@ a:hover {
 .cover__tag-pound {
     font-size: 55px;
     top: 41.5%;
-    left: 12.8%;
+    left: -9.5%;
     transform: rotate(18deg);
     transition: transform, 2s, 'linear', 1.9s;
     animation-duration: 1.8s;
@@ -373,7 +362,7 @@ a:hover {
 .cover__tag-braces {
     font-size: 49px;
     top: 8.2%;
-    left: 6.7%;
+    left: -19%;
     transform: rotate(27deg);
     transition: transform, 2s, 'linear', 2.1s;
     animation-duration: 2s;
@@ -381,7 +370,7 @@ a:hover {
 .cover__tag-slash-1 {
     font-size: 42px;
     top: 85.6%;
-    left: 19.2%;
+    left: 1.4%;
     transform: rotate(-22deg);
     transition: transform, 2s, 'linear', 2.3s;
     animation-duration: 2.2s;
@@ -399,11 +388,12 @@ a:hover {
     background-color: #fff;
 
     &__container {
+        max-width: 1184px;
         display: flex;
         flex-flow: column wrap;
         justify-content: space-between;
         align-items: center;
-        padding: 87px 19% 103px 18.8%;
+        padding: 87px 0 103px 0;
     }
     
     &__title {
@@ -439,7 +429,7 @@ a:hover {
         padding-left: 7px;
     }
     &__benefits-item:nth-child(3) {
-        padding-left: 19px;
+        padding-left: 26px;
     }
     &__benefits-item:nth-child(3)>.benefits-item__title {
         padding-left: 14px;
@@ -462,7 +452,7 @@ a:hover {
         margin-top: 15px;
         font-size: 1.3em;
         line-height: 1.4em;
-        color: $color_symbol;
+        color: #8993ad;
     }
 }
 
@@ -480,7 +470,6 @@ a:hover {
     width: 270px;
     height: 60px;
     margin-top: 75px;
-    margin-right: 3px;
     font-size: 18px;
 }
 
@@ -512,7 +501,7 @@ a:hover {
 .swiper-slide__title {
     margin-top: 31px;
     font-size: 20px;
-    color: $color_symbol;
+    color: #8993ad;
 }
     
 .swiper-button-next {
@@ -579,13 +568,13 @@ a:hover {
     align-items: center;
 
     &__container {
+        max-width: 940px;
         padding: 75px 0 62px 0;
         position: relative;
     }
 
     &__text {
-        padding: 0 16.49% 0 25.2%;
-        color: white;
+        color: #fff;
     }
 
     &__title {
@@ -603,22 +592,22 @@ a:hover {
 
 .banner__tag-div {
     font-size: 36px;
-    bottom: 5%;
-    right: 21.2%;
+    bottom: 5.2%;
+    right: -8.4%;
     transform: rotate(20deg);
     animation-duration: 1.4s;
 };
 .banner__tag-pound {
     font-size: 55px;
     bottom: 13%;
-    left: 12.4%;
+    left: -26%;
     transform: rotate(16deg);
     animation-duration: 1.6s;
 };
 .banner__tag-braces-1 {
     font-size: 48px;
     top: 16.5%;
-    left: 6.3%;
+    left: -38.4%;
     transform: rotate(27deg);
     animation-duration: 1.8s;
 };
@@ -626,26 +615,30 @@ a:hover {
     font-size: 49px;
     transform: rotate(-18deg);
     bottom: 13.5%;
-    right: 5.4%;
+    right: -40.6%;
     animation-duration: 2s;
 };
 .banner__tag-slash {
     font-size: 40px;
     top: 20.5%;
-    right: 10.5%;
+    right: -30%;
     transform: rotate(-22deg);
     animation-duration: 2.2s;
 };
 
+.footer {
+    background-color: #fff;;
+}
+
 .footer__container {
-    background-color: #fff;
     display: flex;
     justify-content: space-between;
-    padding: 77px 20.5% 66px 19.2%;
+    padding: 77px 0 66px 0;
+    max-width: 1170px;
 }
 
 .footer-menu__item {
-    line-height: 33px;
+    line-height: 32px;
 }
 
 .footer__menu {
@@ -657,7 +650,7 @@ a:hover {
 }
 
 .footer__contacts {
-    margin: 6px 0px 0px 95px;
+    margin: 6px 0px 0px 94px;
     font-style: inherit;
 }
 
@@ -681,13 +674,17 @@ a:hover {
 
 .footer-contacts__link {
     display: block;
-    color: black;
+    color: inherit;
     font-size: 1.6em;
     text-decoration: none;
 }
 
 .footer__phone {
     margin-bottom: 28px;
+}
+
+.footer__buttons {
+    margin-right: 23px;
 }
 
 .footer__button {
@@ -700,7 +697,7 @@ a:hover {
 
     &:hover {
         color: #fbfbfb;
-        background-color: $color_dark_red;
+        background-color: #ff4e2e;
         transition: color 0.5s linear, background-color 0.5s linear;
     }
 }
@@ -762,7 +759,7 @@ a:hover {
     font-size: 1em;
     font-style: inherit;
     text-align: center;
-    color: white;
+    color: #Fff;
     padding: 29px 1% 32px 0px;
 }
 

@@ -7,9 +7,6 @@
 }
 
 @media (max-width: 1600px) {
-    .whatido__benefits-item {
-        margin: 0% 5% 0% 5%;
-    }
     .popup__form {
         height: 90vh;
     }
@@ -18,6 +15,9 @@
 //Планшеты
 
 @media (max-width: 1220px) {
+    .header__container {
+        max-width: 945px;
+    }
     .header__menu {
         display: none;
     }
@@ -31,7 +31,7 @@
         display: block;
     }
     .container {
-        padding: 29px 3.9% 0 3.9%
+        padding: 29px 0% 0 0%
     }
     .cover__container {
         padding: 0 0 0 3.9%;
@@ -40,6 +40,7 @@
     }
     .cover__text {
         margin-top: 237px;
+        margin-left: 0;
     }
     .cover__title {
         font-size: 54px;
@@ -66,14 +67,19 @@
         left: 76px;
         height: 98%;
     }
+    
     .cover__gradient {
         position: absolute;
-        background-image: url(../../img/gradientfull.svg);
-        background-size: 180% 98%;
-        top: 108px;
-        left: 0px;
-        height: 100%;
-        width: 100%;
+        bottom: -184px;
+        right: -584px;
+        width: 1130px;
+        height: 708px;
+    }
+    .cover__gradient-desktop-bg {
+        display: none;
+    }
+    .cover__gradient-tablet-bg {
+        display: block;
     }
 
     .whatido__container {
@@ -183,12 +189,13 @@
 
     .banner__container {
         padding-bottom: 62px;
-    }
-    .banner__text {
-        padding: 0 3.9% 0 3.9%;
+        padding-top: 75px;
     }
     .footer__container {
         padding: 99px 3.9% 67px 3.9%;
+    }
+    .footer__buttons {
+        margin-right: 0px;
     }
     .footer__contacts {
         margin-left: 54px;
@@ -243,7 +250,7 @@
     .banner__tag-div {
         font-size: 24px;
         bottom: 8.3%;
-        right: 44.4%;
+        right: 43.8%;
         transform: rotate(20deg);
     };
     .banner__tag-pound {
@@ -252,7 +259,7 @@
     .banner__tag-braces-1 {
         font-size: 33px;
         top: 5.7%;
-        left: 15.2%;
+        left: 12.1%;
         transform: rotate(27deg);
     };
     .banner__tag-braces-2 {
@@ -261,12 +268,16 @@
     .banner__tag-slash {
         font-size: 40px;
         top: 78.4%;
-        right: 9.2%;
+        right: 5.6%;
         transform: rotate(-22deg);
     };
 }
 
 @media (max-width: 980px) {
+    .header__container, .banner__container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
     .benefits-item__img {
         width: 60px;
         height: 60px;
@@ -280,7 +291,7 @@
 
     .whatido {
         &__container {
-            padding: 0 6.2%;
+            padding: 0 6.2% 106px 6.2%;
         }
         &__benefits-container {
             padding: 0;
@@ -397,7 +408,8 @@
         padding: 26px 6.3% 0 6.3%;
     }
     .header__container.header__container--mobile-menu-opened {
-        padding: 26px 1% 0 1% !important;
+        max-width: unset;
+        padding: 26px 1% 0;
     }
     .header__burger {
         width: 24px;
@@ -416,18 +428,25 @@
     }
     .cover__person {
         top: 28px;
-        left: 76px;
+        left: 50%;
+        transform: translateX(-50%);
         width: 227px;
         min-width: unset;
         height: 94%;
     }
     .cover__gradient {
-        background-size: 132% 94%;
-        top: 63px;
-        left: -37px;
-        width: 112%;
-        min-width: 320px;
-        overflow: hidden;
+        position: absolute;
+        bottom: -413px;
+        right: -752px;
+        width: 1130px;
+        height: 708px;
+    }
+
+    .cover__gradient-tablet-bg {
+        display: none;
+    }
+    .cover__gradient-mobile-bg {
+        display: block;
     }
     .cover__text {
         margin-top: 73px;
@@ -460,6 +479,9 @@
     }
 
     .whatido {
+        &__container {
+            padding: 0 6.3% 50px 6.3%;
+        }
         &__benefits-item {
             margin: 0;
         }
@@ -469,7 +491,7 @@
     }
 
     .portfolio__container {
-        padding: 96px 6.3% 51px;
+        padding: 46px 6.3% 51px;
     }
     .portfolio__title {
         margin: 0 3px 42px 0;
@@ -523,7 +545,7 @@
             font-size: 1em;
         }
         &__contacts {
-            margin: 28px 0 0 0;
+            margin: 31px 0 0 0;
         }
         &__phone {
             font-size: 21px;
@@ -651,9 +673,6 @@
 
 @media (max-width: 620px) {
     .whatido {
-        &__container {
-            padding: 0 6.2%;
-        }
         &__benefits-container {
             padding: 0;
             margin: 0;
@@ -727,6 +746,10 @@
 //Смартфоны 320
 
 @media (max-width: 320px) {
+    .cover__person {
+        transform: unset;
+        left: 76px;
+    }
     .footer {
         &__container {
             text-align: unset;

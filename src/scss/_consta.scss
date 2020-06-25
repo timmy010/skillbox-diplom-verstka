@@ -12,7 +12,9 @@ html, body, div, span, h1, h2, a, img, ul, li, form, label, table, caption, tr, 
 html, body {
     min-width: 320px;
     font-size: 16px;
+    color: #1f1f24;
     background-color: #fbfbfb;
+    overflow-x: hidden;
 }
 
 *, *:before, *:after {

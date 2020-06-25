@@ -10812,7 +10812,7 @@ $(function(){
 		windowWindth = $(window).width();
 		
 		if (windowWindth > 320 && windowWindth <= 1220) {
-			$('.portfolio__button').text('Узнать больше');
+			$('.portfolio__button').text('Узнать стоимость');
 		} else {
 			$('.portfolio__button').text('Заказать проект');
 		}
@@ -10821,6 +10821,23 @@ $(function(){
 			$('.header__button').text('');
     	} else {
 			$('.header__button').text('Заказать звонок');
+		}
+
+		if (windowWindth <= 320) {
+			mySwiper.slideTo(2);
+			$('.swiper-slide').each(function(){
+				let link = $(this).find('.swiper-slide__img');
+				if (link.attr('src') === 'img/site_det.png') {
+					link.attr('src', 'img/site_det-mobile.png');
+				}
+			});
+		} else {
+			$('.swiper-slide').each(function(){
+				let link = $(this).find('.swiper-slide__img');
+				if (link.attr('src') === 'img/site_det-mobile.png') {
+					link.attr('src', 'img/site_det.png');
+				}
+			});
 		}
 	});
 	
