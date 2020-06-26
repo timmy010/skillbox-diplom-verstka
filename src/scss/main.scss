@@ -162,13 +162,15 @@ a:hover {
 	border: 0;
 	outline: 0;
 	background-color: transparent;
-	cursor: pointer;
+    cursor: pointer;
+    transition: display 0.2s, margin 0.2s;
 }
 
 .menu__list {
     list-style: none;
     margin: 0;
     padding-left: 0;
+    transition: display 0.2s linear;
 }
 .menu__item {
     display: inline-block;
@@ -212,7 +214,6 @@ a:hover {
     text-decoration: none;
     color: black;
     font-size: 1.62em; 
-    font-weight: 600; 
     letter-spacing: -0.5px;
 }
 
@@ -224,6 +225,7 @@ a:hover {
     margin-left: auto;
     margin-right: 30px;
     margin-bottom: 3px;
+    font-weight: 600;
 }
 
 .button {
@@ -235,7 +237,7 @@ a:hover {
     color: #fbfbfb;
     background-color: #ff4e2e;
     cursor: pointer;
-    transition: 0.5s;
+    transition: color 0.3s linear, background-color 0.3s linear;
     outline: 0;
 
     &:hover {

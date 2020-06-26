@@ -10631,6 +10631,7 @@ $(function(){
 		pagination: {
 			el: '.swiper-pagination',
 			type: 'bullets',
+			clickable: true,
 		  },
 		breakpoints: {
 			770: {
@@ -10785,12 +10786,6 @@ $(function(){
 		$('.portfolio__button').text('Заказать проект');
 	}
 
-    if (windowWindth <= 768) {
-		$('.header__button').text('');
-    } else {
-		$('.header__button').text('Заказать звонок');
-	}
-
 	if (windowWindth <= 320) {
 		mySwiper.slideTo(2);
 		$('.swiper-slide').each(function(){
@@ -10808,8 +10803,48 @@ $(function(){
 		});
 	}
 
+	if (windowWindth <= 768) {
+		$('.header__button').text('');
+		$('.header__burger').css({
+			'width' : '24px',
+			'height' : '18px',
+			'background-size' : '24px 18px',
+		});
+    } else {
+		$('.header__button').text('Заказать звонок');
+		$('.header__burger').css({
+			'width' : '45px',
+			'height' : '45px',
+			'background-size' : '45px',
+		});
+	}
+
     $(window).resize(function() {
 		windowWindth = $(window).width();
+
+		if (windowWindth > 1220) {
+			$('.header__menu').css('display', 'block');
+		} else {
+			$('.header__menu').css('display', 'none');
+		}
+
+		if (menu.is(':visible')) {
+			$('.header__container').addClass('header__container--mobile-menu-opened')
+			$('body').addClass('fixed');
+			
+			burger.css({
+				'backgroundImage' : 'url(../../img/close.svg)',
+				'margin-right' : '10px'
+			});
+		} else {
+			$('.header__container').removeClass('header__container--mobile-menu-opened')
+			$('body').removeClass('fixed');
+			
+			burger.css({
+				'backgroundImage' : 'url(../../img/burger.svg)',
+				'margin-right' : '0'
+			});
+		}
 		
 		if (windowWindth > 320 && windowWindth <= 1220) {
 			$('.portfolio__button').text('Узнать стоимость');
@@ -10839,30 +10874,48 @@ $(function(){
 				}
 			});
 		}
+
+		if (windowWindth <= 768) {
+			$('.header__button').text('');
+			$('.header__burger').css({
+				'width' : '24px',
+				'height' : '18px',
+				'background-size' : '24px 18px',
+			});
+		} else {
+			$('.header__button').text('Заказать звонок');
+			$('.header__burger').css({
+				'width' : '45px',
+				'height' : '45px',
+				'background-size' : '45px',
+			});
+		}
 	});
 	
 	//Мобильное меню
 
 	let burger = $('.header__burger'),
 		menu = $('.header__menu');
-
+	
 	burger.click(function(e){
         e.preventDefault();
         menu.toggle(300, function() {
             if (menu.is(':visible')) {
-                burger.css({
-					'backgroundImage' : 'url(../../img/close.png)',
-					'width' : '18',
-				});
 				$('.header__container').addClass('header__container--mobile-menu-opened')
-                $('body').addClass('fixed');
+				$('body').addClass('fixed');
+				
+                burger.css({
+					'backgroundImage' : 'url(../../img/close.svg)',
+					'margin-right' : '10px'
+				});
             } else {
+				$('.header__container').removeClass('header__container--mobile-menu-opened')
+				$('body').removeClass('fixed');
+				
                 burger.css({
 					'backgroundImage' : 'url(../../img/burger.svg)',
-					'width' : '24',
+					'margin-right' : '0'
 				});
-				$('.header__container').removeClass('header__container--mobile-menu-opened')
-                $('body').removeClass('fixed');
             }
         });
     });

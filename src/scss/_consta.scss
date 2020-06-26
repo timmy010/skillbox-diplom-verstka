@@ -37,7 +37,9 @@ img { border: 0; max-width: 100%; }
 
 .fixed {
 	position: fixed;
-	overflow: hidden;
+    overflow: hidden;
+    width: 100%;
+    max-width: inherit;
 }
 
 .clearfix::after {
