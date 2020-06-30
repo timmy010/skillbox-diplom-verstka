@@ -1,123 +1,119 @@
 @import "fonts.scss";
-@import "colors.scss";
 @import "consta.scss";
 @import "swiper.scss";
 @import "keyframes.scss";
 
 // POPUP START
-.popup__container {
-    position: fixed;
-    z-index: 9999;
-}
-.popup__container:before {
-	content: '';
-	background: #000;
-	position: fixed; 
-	left: 0;
-	top: 0;
-	width: 100%; 
-	height: 100%;
-	opacity: 0.7;
-	z-index: 9999;
-}
 
-.popup__form {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 30%;
-	padding: 20px;	
-	background: #fff;
-	border: 1px solid $color_light_red;
-	border-radius: 5px; 
-	z-index: 9999;
-    opacity: 1;	
-}
+.popup {
+    &__container {
+        position: fixed;
+        z-index: 9999;
+    }
+    &__container:before {
+        content: '';
+        background: #000;
+        position: fixed; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%;
+        opacity: 0.7;
+        z-index: 9999;
+    }
+    
+    &__form {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 30%;
+        padding: 20px;	
+        background: #fff;
+        border: 1px solid #fc557c;
+        border-radius: 5px; 
+        z-index: 9999;
+        opacity: 1;	
+    }
+    
+    &__title {
+        text-align: center;
+        font-size: 2em;
+    }
+    
+    &__subtitle {
+        font-size: 1.1em;
+        text-align: center;
+    }
+    
+    &__descripton {
+        text-align: center;
+        font-size: 0.8em;
+    }
+    
+    &__label {
+        font-size: 18px;
+        color: #8993ad;
+    }
+    
+    &__input {
+        width: 100%;
+        height: 42px;
+        background-color: #ff4d2e1f;
+        border: 1px solid #ff4e2e1f;
+        display: block;
+        margin: 10px 0;
+        padding-left: 10px;
+    }
+    
+    &__input:focus {
+        outline: none;
+        border: 2px solid #8993ad;
+    }
+    
+    &__textarea {
+        width: 100%;
+        height: 15vh;
+        background-color: #ff4d2e1f;
+        border: 1px solid #ff4e2e1f;
+        display: block;
+        margin: 10px 0;
+        padding-left: 10px;
+    }
+    
+    &__textarea:focus {
+        outline: none;
+        border: 2px solid #8993ad;
+    }
 
-.popup__title {
-    text-align: center;
-    font-size: 2em;
-}
-
-.popup__subtitle {
-    font-size: 1.1em;
-    text-align: center;
-}
-
-.popup__descripton {
-    text-align: center;
-    font-size: 0.8em;
-}
-
-.popup__label {
-	font-size: 18px;
-    color: $color_symbol;
-}
-
-.popup__input {
-    width: 100%;
-	height: 42px;
-	background-color: #ff4d2e1f;
-	border: 1px solid #ff4e2e1f;
-    display: block;
-    margin: 10px 0;
-    padding-left: 10px;
-}
-
-.popup__input:focus {
-    outline: none;
-    border: 2px solid #8993ad;
-}
-
-.popup__textarea {
-    width: 100%;
-    height: 15vh;
-	background-color: #ff4d2e1f;
-	border: 1px solid #ff4e2e1f;
-    display: block;
-    margin: 10px 0;
-    padding-left: 10px;
-}
-
-.popup__textarea:focus {
-    outline: none;
-    border: 2px solid #8993ad;
-}
-
-input, textarea {
-    font-size: 16px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-}
-
-.popup__button  {
-    width: 100%;
-	height: 55px;
-    cursor: pointer;
-}
-
-.popup__close {
-	position: absolute;
-	top: 10px;
-    right: 17px;
-    width: 20px;
-    height: 20px;
-    background-image: url('../../img/close.svg');
-	background-size: 45px 45px;
-	background-repeat: no-repeat;
-	background-position: center;
-}
-
-.popup__error {
-    border: 1px solid red;
-}
-
-.popup__error-text {
-    font-size:14px;
-    color: red;
-    text-align: center;
+    &__button  {
+        width: 100%;
+        height: 55px;
+        cursor: pointer;
+    }
+    
+    &__close {
+        position: absolute;
+        top: 10px;
+        right: 17px;
+        width: 20px;
+        height: 20px;
+        background-image: url('../../img/close.svg');
+        background-size: 45px 45px;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 9999;
+    }
+    
+    &__error {
+        border: 1px solid red;
+    }
+    
+    &__error-text {
+        font-size:14px;
+        color: red;
+        text-align: center;
+    }
 }
 
 // POPUP END
@@ -168,10 +164,13 @@ a:hover {
 	background-repeat: no-repeat;
 	background-position: center;
 	border: 0;
-	outline: none;
 	background-color: transparent;
     cursor: pointer;
     transition: display 0.2s, margin 0.2s;
+}
+
+.header__burger:focus {
+    outline: none;
 }
 
 .menu__list {
@@ -202,7 +201,6 @@ a:hover {
 }
 .menu__link:focus {
     border: unset;
-    padding: 0;
 }
     
 .menu__link:hover:after,
@@ -255,7 +253,6 @@ a:hover {
     &:focus {
         outline: none;
         border: 4px solid #8993ad;
-        padding: 2px;
     }
 
     &:hover {
@@ -271,7 +268,7 @@ a:hover {
 
 .header__button {
     width: 207px;
-    height: 44px;
+    padding: 12px 0;
     color: #f53f4f;
     border: 1px solid #f82370;
     background-color: #fbfbfb;
@@ -283,13 +280,6 @@ a:hover {
     }
 }
 
-.cover__container {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 0 235px 0;
-    position: relative;
-}
-
 .title {
     font-size: 5em;
     font-family: 'Roboto';
@@ -297,9 +287,17 @@ a:hover {
     font-style: normal;
 }
 
+.cover__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 235px 0;
+    position: relative;
+}
+
 .cover__text {
     margin-top: 212px;
     margin-left: 15px;
+    padding-right: 30%;
     z-index: 999;
 }
 
@@ -311,8 +309,8 @@ a:hover {
 }
 
 .cover__button {
-    width: 271px;
-    height: 60px;
+    width: 270px;
+    padding: 19px 0;
     margin-top: 20px;
     font-size: 18px;
     color: white;
@@ -432,7 +430,7 @@ a:hover {
 
     &__button {
         width: 270px;
-        height: 60px;
+        padding: 18px 0;
         margin-top: 72px;
         font-size: 18px;
         color: white;
@@ -484,12 +482,13 @@ a:hover {
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    padding: 88px 0px 102px 0px;
+    padding: 88px 0px 103px 0px;
+    text-align: center;
 }
 
 .portfolio__button {
     width: 270px;
-    height: 60px;
+    padding: 18px 0;
     margin-top: 75px;
     font-size: 18px;
 }
@@ -553,7 +552,6 @@ a:hover {
     &:focus {
         outline: none;
         border: 2px solid #8993ad;
-        padding: 2px;
     }
 }
     
@@ -582,7 +580,6 @@ a:hover {
     &:focus {
         outline: none;
         border: 2px solid #8993ad;
-        padding: 2px;
     }
 }
 
@@ -720,11 +717,11 @@ a:hover {
 }
 
 .footer__button {
-    border: 1px solid $color_dark_red;
+    border: 1px solid #ff4e2e;
     width: 247px;
-    height: 46px;
+    padding: 13px 0;
     font-size: 16px;
-    color: $color_light_red;
+    color: #ff6375;
     background-color: #fbfbfb;
 
     &:hover {
@@ -837,4 +834,4 @@ a:hover {
 
 
 @import "mobile.scss";
-// @import "keyframes.scss"
+@import "keyframes.scss"

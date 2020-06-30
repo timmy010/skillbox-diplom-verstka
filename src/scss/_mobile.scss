@@ -6,12 +6,6 @@
     }
 }
 
-@media (max-width: 1600px) {
-    .popup__form {
-        height: 90vh;
-    }
-}
-
 //Планшеты
 
 @media (max-width: 1220px) {
@@ -41,6 +35,7 @@
     .cover__text {
         margin-top: 237px;
         margin-left: 0;
+        padding-right: 0;
     }
     .cover__title {
         font-size: 54px;
@@ -67,7 +62,6 @@
         left: 76px;
         height: 98%;
     }
-    
     .cover__gradient {
         position: absolute;
         bottom: -184px;
@@ -81,7 +75,6 @@
     .cover__gradient-tablet-bg {
         display: block;
     }
-
     .whatido__container {
         padding: 83px 3.9% 106px 3.9%;
     }
@@ -182,7 +175,7 @@
         height: 18px;
     }
     .swiper-pagination-bullet-active {
-        background-color: $color_dark_red;
+        background-color: #ff4e2e;
     }
 
     //Slider END
@@ -209,7 +202,6 @@
 
     .popup__form {
         width: 50%;
-        height: 90vh;
     }
 
     // Cover tags
@@ -406,8 +398,6 @@
         flex-flow: column wrap;
     }
 
-    /////////////////////////
-
     .title {
         font-size: 30px;
     }
@@ -577,7 +567,7 @@
             height: 55px;
             font-size: 17px;
             color: white;
-            background-color: $color_dark_red;
+            background-color: #ff4e2e;
         }
         &__social-list {
             margin: 50px 0 0;
@@ -666,20 +656,6 @@
         width: 15px;
         height: 15px;
     }
-
-    // .header__menu {
-    //     width: 100%;
-    //     height: 100vh;
-    //     padding-top: 10px;
-    // }
-    // .header-menu__item {
-    //     line-height: 40px;
-    //     font-family: "Arial";
-    //     font-size: 18px;
-    //     font-weight: 400;
-    //     display: block;
-    //     border-bottom: 1px solid #ebebeb;
-    // }
 }
 
 // Смартфоны 620
