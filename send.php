@@ -8,11 +8,13 @@ require 'phpmailer/Exception.php';
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $text = $_POST['text'];
+$formName = $_POST['formData'];
 
 // Формирование самого письма
 $title = "Новое письмо с сайта Портфолио";
 $body = "
 <h2>Новое письмо с сайта Портфолио</h2>
+<b>$formName</b><br>
 <b>Имя:</b> $name<br>
 <b>Телефон:</b> $phone<br><br>
 <b>Сообщение:</b><br>$text

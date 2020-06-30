@@ -63,7 +63,11 @@
     display: block;
     margin: 10px 0;
     padding-left: 10px;
-    outline: 0;
+}
+
+.popup__input:focus {
+    outline: none;
+    border: 2px solid #8993ad;
 }
 
 .popup__textarea {
@@ -74,7 +78,11 @@
     display: block;
     margin: 10px 0;
     padding-left: 10px;
-    outline: 0;
+}
+
+.popup__textarea:focus {
+    outline: none;
+    border: 2px solid #8993ad;
 }
 
 input, textarea {
@@ -160,7 +168,7 @@ a:hover {
 	background-repeat: no-repeat;
 	background-position: center;
 	border: 0;
-	outline: 0;
+	outline: none;
 	background-color: transparent;
     cursor: pointer;
     transition: display 0.2s, margin 0.2s;
@@ -175,6 +183,7 @@ a:hover {
 .menu__item {
     display: inline-block;
 }
+
 .menu__link {
     color: #1f1f24;
     text-decoration: none;
@@ -190,6 +199,10 @@ a:hover {
     background-color: #fc557c;
     content: "";
     transition: width 0.3s ease-out;
+}
+.menu__link:focus {
+    border: unset;
+    padding: 0;
 }
     
 .menu__link:hover:after,
@@ -238,15 +251,21 @@ a:hover {
     background-color: #ff4e2e;
     cursor: pointer;
     transition: color 0.3s linear, background-color 0.3s linear;
-    outline: 0;
+
+    &:focus {
+        outline: none;
+        border: 4px solid #8993ad;
+        padding: 2px;
+    }
 
     &:hover {
-        color: $color_dark_red; 
+        color: #ff4e2e; 
         background-color: #fbfbfb;
         transition: color 0.3s linear, background-color 0.3s linear;
     }
     &:active {
-        outline: 0;
+        outline: none;
+        border: 2px solid #fc557c;  
     }
 }
 
@@ -531,6 +550,11 @@ a:hover {
         opacity: 0.8;
         transition: opacity, 0.5s, linear;
     }
+    &:focus {
+        outline: none;
+        border: 2px solid #8993ad;
+        padding: 2px;
+    }
 }
     
 .swiper-button-prev {
@@ -553,6 +577,12 @@ a:hover {
     &:hover {
         opacity: 0.8;
         transition: opacity, 0.5s, linear;
+    }
+
+    &:focus {
+        outline: none;
+        border: 2px solid #8993ad;
+        padding: 2px;
     }
 }
 
@@ -765,8 +795,40 @@ a:hover {
     padding: 29px 1% 32px 0px;
 }
 
-
-
+.term {
+    li {
+         list-style-type: none;
+         line-height: 30px;
+    }
+    ol {
+        counter-reset: list1;
+    }
+    ol li:before {
+        counter-increment: list1;
+        content: counter(list1) ". ";
+    }
+    ol ol {
+        counter-reset: list2;
+    }
+    ol ol li:before {
+        counter-increment: list2;
+        content: counter(list1) "." counter(list2) ". ";
+    }
+    a {
+        text-decoration: none;
+    }
+    &__title {
+        font-size: 3em;
+        text-align: center;
+        margin-top: 60px;
+    }
+    &__subtitle {
+        display: inline-block;
+        font-size: 1.2em;
+        font-weight: 600;
+        margin: 10px 0;
+    }
+}
 
 
 

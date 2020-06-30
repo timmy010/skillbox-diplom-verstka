@@ -29,18 +29,15 @@ $(function(){
 
 	new WOW().init();
 
-	// Плавный скролл якорей
+	// Клик по пункту меню
 
 	$('body').on('click', '.menu__link', function(e) {
-		e.preventDefault();
-		let whatidoLink = $(this).attr('href');
-		document.querySelector(whatidoLink).scrollIntoView({ behavior: 'smooth' });
-	});
 
-	// Клик по пункту мобильного меню
-
-	$('body').on('click', '.menu__link', function(e) {
-		e.preventDefault();
+		if (window.location.pathname=='/') {
+			e.preventDefault();
+			let whatidoLink = $(this).attr('href');
+			document.querySelector(whatidoLink).scrollIntoView({ behavior: 'smooth' });
+		}
 
 		if (windowWindth <= 768 && menu.is(':visible')) {
 			menu.hide();
@@ -61,35 +58,65 @@ $(function(){
 
 	let popupName = $('.popup__input-name'),
 		popupPhone = $('.popup__input-phone'),
+		popupButton = $('.popup__button'),
 		popupComment = $('.popup__textarea-comment');
+
+	function clearForm() {
+		console.log('Сработала clearForm');
+		popupName.val('');
+		popupPhone.val('');
+		popupComment.val('');
+	}
+
+	function clearError() {
+		console.log('Сработала clearError');
+		popupName.removeClass('popup__error');
+		popupPhone.removeClass('popup__error');
+		popupButton.next('p').remove();
+		popupPhone.next('p').remove();
+	}
 
 	// Вызов формы
 
 	$('.button').on('click', function(e) {
 		e.preventDefault();
+		clearError();
 		$('.popup__container').fadeIn(100, 'linear');
 		$("body").addClass("fixed");
 	});
 
+	$('.button--callback').on('click', function(e) {
+		e.preventDefault();
+		$('.popup__form-callback').fadeIn(100, 'linear');
+	});
+
+	$('.button--other').on('click', function(e) {
+		e.preventDefault();
+		$('.popup__form').fadeIn(100, 'linear');
+	});
+
 	$('.popup__close').click(function() {
 		$(this).parents('.popup__container').fadeOut(100, 'linear');
+		$(this).parents('.popup__form').fadeOut(100, 'linear');
 		$("body").removeClass("fixed");
 		return false;
-	});        	
+	});
  
 	// Закрытие по клавише Esc.
 	$(document).keydown(function(e) {
 		if (e.keyCode === 27) {
 			e.stopPropagation();
 			$('.popup__container').fadeOut(100, 'linear');
+			$(this).find('.popup__form').fadeOut(100, 'linear');
 			$("body").removeClass("fixed");
 		}
 	});
 
 	// Клик по фону, но не по окну.
 	$('.popup__container').click(function(e) {
-		if ($(e.target).closest('.popup__form').length == 0) {
+		if ($(e.target).closest('.popup__form').length == 0 && $(e.target).closest('.popup__form-callback').length == 0) {
 			$(this).fadeOut(100, 'linear');
+			$(this).find('.popup__form').fadeOut(100, 'linear');
 			$("body").removeClass("fixed");				
 		}
 	});
@@ -100,56 +127,50 @@ $(function(){
 		"mask": "+7 (999) 999-9999",
 	});
 
-	// Доработка формы
+	//Доработка формы
 
-	function clearForm() {
-		popupName.val('');
-		popupPhone.val('');
-		popupComment.val('');
-	}
-
-	function send() {
+	function send(form) {
 		$.ajax({
 			type: "POST",
 			url: "../../send.php",
-			data: $('.popup__form').serializeArray()
+			data: form.serializeArray()
 		}).done(function() {
 			console.log('Аякс отправлен');
 			alert('Спасибо! Ваша заявка принята.');
 			$(this).find('input').val('');
-			$('.popup__form').trigger('reset');
+			form.trigger('reset');
 		});
 	};
 
-	function validationForm(){
-		popupComment.next('p').remove();
+	function validationForm(form, popupName, popupPhone){
+		popupButton.next('p').remove();
+		console.log('popupName = ' + popupName.val() + ' popupPhone = ' +  popupPhone.val());
 
 		if (popupName.val().length !== 0 && popupPhone.val().length !== 0) {
-			popupName.removeClass('popup__error');
-			popupPhone.removeClass('popup__error');
-			popupComment.next('p').remove();
-			popupPhone.next('p').remove();
+			clearError();
 			
 			if (popupPhone.inputmask("isComplete")){
 			  } else {
 				popupPhone.addClass('popup__error');
 				popupPhone.after(`<p class="popup__error-text">*Поле заполнено неверно!</p>`)
 			  }
-			send();  
+			send(form);
 			clearForm();	  
 		} else {
-			popupComment.next('p').remove();
-			popupPhone.next('p').remove();
+			clearError();
 			popupName.addClass('popup__error');
 			popupPhone.addClass('popup__error');
-			popupComment.after(`<p class="popup__error-text">*Заполните все поля, отмеченные *!</p>`)
+			popupButton.after(`<p class="popup__error-text">*Заполните все поля, отмеченные *!</p>`)
 			clearForm();
 		}
 	};
 
 	$('.popup__button').on('click', function(e) {
 		e.preventDefault();
-		validationForm();
+		let form = $(this).parents('form');
+		popupName = form.find('input[name="name"]');
+		popupPhone = form.find('input[name="phone"]');
+		validationForm(form, popupName, popupPhone);
 	});
 
 	//Адаптивность

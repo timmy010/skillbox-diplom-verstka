@@ -13,19 +13,35 @@
     <h1 class="hidden">Дмитрий Алексеев - Frontend-разработчик и веб-верстальщик</h1>
 
     <div class="popup__container hide">
-        <form class="popup__form">
+        <form class="popup__form popup__form-callback hide">
+            <h2 class="popup__title">Заказать звонок</h2>
+            <p class="popup__subtitle">Оставьте свои контактные данные и нажмите Отправить.<br> Я свяжусь с Вами через 5 минут</p>
+            <label class="popup__label" for="popup_callback_name"><span>* Ваше имя</span></label>
+            <input class="popup__input popup__input-name" type="text" name="name" placeholder="Иван" id="popup_callback_name" required>
+            <label class="popup__label" for="popup_callback_phone"><span>* Ваш номер телефона</span></label>
+            <input class="popup__input popup__input-phone" type="tel" name="phone" placeholder="+7-(999)-999-99-99" id="popup_callback_phone" required>
+            <input class="button popup__button" type="submit" value="Отправить">
+            <input type="hidden" name="formData" value="Данные с формы - обратный звонок">
+    
+            <p class="popup__descripton">Поля помеченные * обязательны для заполнения</p>
+            <p class="popup__descripton">Нажимая кнопку Отправить Вы соглашаетесь с <a href="/term.html" target="_blank">политикой конфиденциальности</a></p>
+            <a class="popup__close" href="#"></a>
+        </form>
+
+        <form class="popup__form hide">
             <h2 class="popup__title">Оставить заявку</h2>
             <p class="popup__subtitle">Оставьте свои контактные данные и нажмите Отправить.<br> Я свяжусь с Вами через 5 минут, чтобы обсудить Вашу задачу</p>
             <label class="popup__label" for="popup_name"><span>* Ваше имя</span></label>
-            <input class="popup__input popup__input-name" type="text" name="name" placeholder="Иван" required>
+            <input class="popup__input popup__input-name" type="text" name="name" placeholder="Иван" id="popup_name" required>
             <label class="popup__label" for="popup_phone"><span>* Ваш номер телефона</span></label>
-            <input class="popup__input popup__input-phone" type="tel" name="phone" placeholder="+7-(999)-999-99-99" required>
+            <input class="popup__input popup__input-phone" type="tel" name="phone" placeholder="+7-(999)-999-99-99" id="popup_phone" required>
             <label class="popup__label" for="popup_description"><span>Комментарий</span></label>
-            <textarea class="popup__textarea popup__textarea-comment" name="text" placeholder="Хочу одностраничный сайт"></textarea> 
+            <textarea class="popup__textarea popup__textarea-comment" name="text" placeholder="Хочу одностраничный сайт" id="popup_description"></textarea> 
             <input class="button popup__button" type="submit" value="Отправить">
+            <input type="hidden" name="formData" value="Данные с формы - оставить заявку">
     
             <p class="popup__descripton">Поля помеченные * обязательны для заполнения</p>
-            <p class="popup__descripton">Нажимая кнопку Отправить Вы соглашаетесь с политикой конфиденциальности</p>
+            <p class="popup__descripton">Нажимая кнопку Отправить Вы соглашаетесь с <a href="/term.html" target="_blank">политикой конфиденциальности</a></p>
             <a class="popup__close" href="#"></a>
         </form>
     </div>
@@ -47,7 +63,7 @@
                 </ul>
             </nav>
             <a class="phone header__phone" href="tel:84999955577">+7 (499) 995-55-77</a>
-            <button class="button header__button">Заказать звонок</button>
+            <button class="button header__button button--callback">Заказать звонок</button>
         </div>
     </header>
 
@@ -62,11 +78,10 @@
             <div class="cover__text">
                 <h2 class="title cover__title">Дмитрий Алексеев</h2>
                 <p class="cover__subtitle">Frontend-разработчик и веб-верстальщик</p>
-                <button class="button cover__button">Узнать больше</button>
+                <button class="button cover__button button--other">Узнать больше</button>
             </div>
             <div class="cover__pic">
                 <img class="cover__person" src="img/chel.png" alt="Дмитрий Алексеев">
-                <!-- <div class="cover__gradient"></div> -->
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="cover__gradient">
 					<defs>
 						<linearGradient id="orange-to-pink" x1="0%" x2="22.495%" y1="97.437%" y2="0%">
@@ -92,23 +107,23 @@
             <h2 class="title whatido__title" id="whatido">Что я делаю</h2>
             <ul class="whatido__benefits-container">
                 <li class="benefits-item whatido__benefits-item">
-                    <img class="benefits-item__img" src="img/icons/tools-and-utensils.png" alt="">
+                    <img class="benefits-item__img" src="img/icons/tools-and-utensils.png" alt="Вёрстка лендинг-страниц и&nbsp;сайтов любой сложности">
                     <p class="benefits-item__title">Вёрстка лендинг-страниц и&nbsp;сайтов любой сложности</p>
                 </li>
                 <li class="benefits-item whatido__benefits-item">
-                    <img class="benefits-item__img" src="img/icons/responsive.png" alt="">
+                    <img class="benefits-item__img" src="img/icons/responsive.png" alt="Адаптивная верстка под все браузеры и устройства">
                     <p class="benefits-item__title">Адаптивная верстка под все браузеры и устройства</p>
                 </li>
                 <li class="benefits-item whatido__benefits-item">
-                    <img class="benefits-item__img" src="img/icons/programming.png" alt="">
+                    <img class="benefits-item__img" src="img/icons/programming.png" alt="Frontend-разработка и программирование">
                     <p class="benefits-item__title">Frontend-разработка и программирование</p>
                 </li>
                 <li class="benefits-item whatido__benefits-item">
-                    <img class="benefits-item__img" src="img/icons/coding.png" alt="">
+                    <img class="benefits-item__img" src="img/icons/coding.png" alt="Исправление и доработка существующей верстки">
                     <p class="benefits-item__title">Исправление и доработка существующей верстки</p>
                 </li>
             </ul>
-            <button class="button whatido__button">Узнать стоимость</button>
+            <button class="button whatido__button button--other">Узнать стоимость</button>
         </div>
     </section>
        
@@ -124,15 +139,15 @@
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide portfolio__swiper-slide">
-                                <img class="swiper-slide__img" src="img/site_psoholog.png" alt="">
+                                <img class="swiper-slide__img" src="img/site_psoholog.png" alt="Портфолио - Сайт психолога Веры Антоновой">
                                 <p class="swiper-slide__title">Сайт психолога Веры Антоновой</p>
                             </div>
                             <div class="swiper-slide portfolio__swiper-slide">
-                                <img class="swiper-slide__img" src="img/site_det.png" alt="">
+                                <img class="swiper-slide__img" src="img/site_det.png" alt="Портфолио - Сайт магазина детской одежды">
                                 <p class="swiper-slide__title">Сайт магазина детской одежды</p>
                             </div>
                             <div class="swiper-slide portfolio__swiper-slide">
-                                <img class="swiper-slide__img" src="img/site_rybolov.png" alt="">
+                                <img class="swiper-slide__img" src="img/site_rybolov.png" alt="Портфолио - Сайт магазина &laquo;Рыболов&raquo;">
                                 <p class="swiper-slide__title">Сайт магазина &laquo;Рыболов&raquo;</p>
                             </div>
                         </div>
@@ -140,7 +155,7 @@
                     </div>
             </div>
 
-            <button class="button portfolio__button">Заказать проект</button> 
+            <button class="button portfolio__button button--other">Заказать проект</button> 
         </div>
     </section> 
 
@@ -157,18 +172,6 @@
             </div>
         </div>
     </section>
-
-    <!-- <section class="banner banner__container">
-        <span class="tag banner__tag-div wow">&lt;div&gt;</span>
-        <span class="tag banner__tag-pound wow">#</span>
-        <span class="tag banner__tag-braces-1 wow">{ }</span>
-        <span class="tag banner__tag-braces-2 wow">{ }</span>
-        <span class="tag banner__tag-slash wow">&lt;/&gt;</span>
-    <div class="banner__text" id="payment">
-        <h2 class="title banner__title">Адаптивная вёрстка под все устройства и&nbsp;браузеры от 1000 рублей всего за&nbsp;4 часа.*</h2>
-        <p class="banner__desc">* Срок и&nbsp;стоимость могут отличаться от заявленных и&nbsp;рассчитываются  индивидуально, в&nbsp;зависимости от сложности задач</p>
-    </div>
-</section> -->
 
     <footer class="footer">
         <div class="container footer__container">
@@ -196,7 +199,7 @@
                 </a>
             </address>
             <div class="footer__buttons">
-                <button class="button footer__button">Заказать звонок</button>
+                <button class="button footer__button button--callback">Заказать звонок</button>
                 <ul class="footer__social-list">
                     <li class="footer__social-item">
                         <a class="footer__social-link vk-icon" href="#" target="_blank" onclick="this.href='https://vk.com/share.php?url='+window.location.href+window.location.hash+'&title='+document.title"></a>
@@ -205,7 +208,7 @@
                         <a class="footer__social-link fb-icon" href="#" target="_blank" onclick="this.href='http://www.facebook.com/share.php?u='+window.location.href+window.location.hash"></a>
                     </li>
                     <li class="footer__social-item">
-                        <a class="footer__social-link tw-icon" href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Ftim010.000webhostapp.com&ref_src=twsrc%5Etfw&text=Frontend-разработчик и веб-верстальщик Дмитрий Алексеев&url=https%3A%2F%2Ftim010.000webhostapp.com" target="_blank"></a>
+                        <a class="footer__social-link tw-icon" href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Ftim010.000webhostapp.com&ref_src=twsrc%5Etfw&text=Frontend-разработчик-и-веб-верстальщик-Дмитрий-Алексеев&url=https%3A%2F%2Ftim010.000webhostapp.com" target="_blank"></a>
                     </li>
                     <li class="footer__social-item">
                         <a class="footer__social-link inst-icon" href="https://instagram.com/" target="_blank"></a>
