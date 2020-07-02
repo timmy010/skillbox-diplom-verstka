@@ -10700,28 +10700,33 @@ $(function(){
 		popupPhone.next('p').remove();
 	}
 
+	function showSmth(whatOpen) {
+		whatOpen.fadeIn(100, 'linear');
+	}
+
+	function closeSmth(whatClose) {
+		whatClose.fadeOut(100, 'linear');
+	}
+
 	// Вызов формы
 
-	$('.button').on('click', function(e) {
-		e.preventDefault();
+	$('.button').on('click', function() {
 		clearError();
-		$('.popup__container').fadeIn(100, 'linear');
+		showSmth($('.popup__container'));
 		$("body").addClass("fixed");
 	});
 
-	$('.button--callback').on('click', function(e) {
-		e.preventDefault();
-		$('.popup__form-callback').fadeIn(100, 'linear');
+	$('.button--callback').on('click', function() {
+		showSmth($('.popup__form-callback'));
 	});
 
-	$('.button--other').on('click', function(e) {
-		e.preventDefault();
-		$('.popup__form').fadeIn(100, 'linear');
+	$('.button--other').on('click', function() {
+		showSmth($('.popup__form'));
 	});
 
 	$('.popup__close').click(function() {
-		$(this).parents('.popup__container').fadeOut(100, 'linear');
-		$(this).parents('.popup__form').fadeOut(100, 'linear');
+		closeSmth($(this).parents('.popup__container'));
+		closeSmth($(this).parents('.popup__form'));
 		$("body").removeClass("fixed");
 		return false;
 	});
@@ -10730,8 +10735,8 @@ $(function(){
 	$(document).keydown(function(e) {
 		if (e.keyCode === 27) {
 			e.stopPropagation();
-			$('.popup__container').fadeOut(100, 'linear');
-			$(this).find('.popup__form').fadeOut(100, 'linear');
+			closeSmth($('.popup__container'));
+			closeSmth($(this).find('.popup__form'));
 			$("body").removeClass("fixed");
 		}
 	});
@@ -10739,8 +10744,8 @@ $(function(){
 	// Клик по фону, но не по окну.
 	$('.popup__container').click(function(e) {
 		if ($(e.target).closest('.popup__form').length == 0 && $(e.target).closest('.popup__form-callback').length == 0) {
-			$(this).fadeOut(100, 'linear');
-			$(this).find('.popup__form').fadeOut(100, 'linear');
+			closeSmth($(this));
+			closeSmth($(this).find('.popup__form'));
 			$("body").removeClass("fixed");				
 		}
 	});
@@ -10807,6 +10812,12 @@ $(function(){
 		$('.portfolio__button').text('Заказать проект');
 	}
 
+	if ($('.popup__form').is(':visible')) {
+		$('body').addClass('fixed');
+	} else {
+		$('body').removeClass('fixed');
+	}
+
 	if (windowWindth <= 320) {
 		mySwiper.slideTo(2);
 		$('.swiper-slide').each(function(){
@@ -10865,6 +10876,12 @@ $(function(){
 				'backgroundImage' : 'url(../../img/burger.svg)',
 				'margin-right' : '0'
 			});
+		}
+
+		if ($('.popup__form').is(':visible')) {
+			$('body').addClass('fixed');
+		} else {
+			$('body').removeClass('fixed');
 		}
 		
 		if (windowWindth > 320 && windowWindth <= 1220) {
