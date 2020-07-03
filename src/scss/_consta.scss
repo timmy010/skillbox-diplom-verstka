@@ -8,10 +8,18 @@ html, body, div, span, h1, h2, a, img, ul, li, form, label, table, caption, tr, 
     font-style: normal;
 }
 
+a {
+    transition: transform, 0.5s;
+}
+
+a:hover {
+    transform: scale(1.1);
+}
+
 a:focus {
     outline: none;
-    border: 2px solid #8993ad40;
-    padding: 2px;
+    opacity: 0.5;
+    transition: unset;
 }
 
 html, body {

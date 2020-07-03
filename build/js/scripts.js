@@ -10653,6 +10653,19 @@ $(function(){
 
 	new WOW().init();
 
+	// Функции скролла
+
+	function disableScroll() {
+		let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
+		$('body').addClass("fixed");
+		$('body').css('padding-right', paddingOffset);
+	}
+
+	function enableScroll() {
+		$('body').removeClass("fixed");
+		$('body').css('padding-right', '0');
+	}
+
 	// Клик по пункту меню
 
 	$('body').on('click', '.menu__link', function(e) {
@@ -10669,8 +10682,8 @@ $(function(){
 				'backgroundImage' : 'url(../../img/burger.svg)',
 				'width' : '24',
 			});
-			$('.header__container').removeClass('header__container--mobile-menu-opened')
-			$('body').removeClass('fixed');
+			$('.header__container').removeClass('header__container--mobile-menu-opened');
+			enableScroll();
 			
 			let whatidoLink = $(this).attr('href');
 			document.querySelector(whatidoLink).scrollIntoView({ behavior: 'smooth' });
@@ -10683,17 +10696,16 @@ $(function(){
 	let popupName = $('.popup__input-name'),
 		popupPhone = $('.popup__input-phone'),
 		popupButton = $('.popup__button'),
-		popupComment = $('.popup__textarea-comment');
+		popupComment = $('.popup__textarea-comment'),
+		scrollNow = window.pageYOffset; 
 
 	function clearForm() {
-		console.log('Сработала clearForm');
 		popupName.val('');
 		popupPhone.val('');
 		popupComment.val('');
 	}
 
 	function clearError() {
-		console.log('Сработала clearError');
 		popupName.removeClass('popup__error');
 		popupPhone.removeClass('popup__error');
 		popupButton.next('p').remove();
@@ -10708,12 +10720,26 @@ $(function(){
 		whatClose.fadeOut(100, 'linear');
 	}
 
+	function showThanks() {
+		$('body').append(`
+			<div class="message">
+				<h3 class="message__title">Спасибо за заявку!</h3>
+				<p class="message__text">Я свяжусь с Вами через 5 минут, чтобы обсудить Вашу задачу</p>
+			</div>
+		`);
+		setTimeout(function () {
+			closeSmth($('.message'));
+			closeSmth($('.popup__container'));
+		}, 3000);
+	}
+
 	// Вызов формы
 
 	$('.button').on('click', function() {
 		clearError();
 		showSmth($('.popup__container'));
-		$("body").addClass("fixed");
+		scrollNow = window.pageYOffset;
+		disableScroll();
 	});
 
 	$('.button--callback').on('click', function() {
@@ -10727,7 +10753,8 @@ $(function(){
 	$('.popup__close').click(function() {
 		closeSmth($(this).parents('.popup__container'));
 		closeSmth($(this).parents('.popup__form'));
-		$("body").removeClass("fixed");
+		enableScroll();
+		window.scrollTo(0, scrollNow);
 		return false;
 	});
  
@@ -10737,7 +10764,8 @@ $(function(){
 			e.stopPropagation();
 			closeSmth($('.popup__container'));
 			closeSmth($(this).find('.popup__form'));
-			$("body").removeClass("fixed");
+			enableScroll();
+			window.scrollTo(0, scrollNow);
 		}
 	});
 
@@ -10746,7 +10774,8 @@ $(function(){
 		if ($(e.target).closest('.popup__form').length == 0 && $(e.target).closest('.popup__form-callback').length == 0) {
 			closeSmth($(this));
 			closeSmth($(this).find('.popup__form'));
-			$("body").removeClass("fixed");				
+			enableScroll();
+			window.scrollTo(0, scrollNow);			
 		}
 	});
 
@@ -10764,16 +10793,14 @@ $(function(){
 			url: "../../send.php",
 			data: form.serializeArray()
 		}).done(function() {
-			console.log('Аякс отправлен');
-			alert('Спасибо! Ваша заявка принята.');
-			$(this).find('input').val('');
 			form.trigger('reset');
+			closeSmth($('.popup__form'));
+			showThanks();
 		});
 	};
 
 	function validationForm(form, popupName, popupPhone){
 		popupButton.next('p').remove();
-		console.log('popupName = ' + popupName.val() + ' popupPhone = ' +  popupPhone.val());
 
 		if (popupName.val().length !== 0 && popupPhone.val().length !== 0) {
 			clearError();
@@ -10813,9 +10840,9 @@ $(function(){
 	}
 
 	if ($('.popup__form').is(':visible')) {
-		$('body').addClass('fixed');
+		disableScroll();
 	} else {
-		$('body').removeClass('fixed');
+		enableScroll();
 	}
 
 	if (windowWindth <= 320) {
@@ -10861,16 +10888,16 @@ $(function(){
 		}
 
 		if (menu.is(':visible')) {
-			$('.header__container').addClass('header__container--mobile-menu-opened')
-			$('body').addClass('fixed');
+			$('.header__container').addClass('header__container--mobile-menu-opened');
+			disableScroll();
 			
 			burger.css({
 				'backgroundImage' : 'url(../../img/close.svg)',
 				'margin-right' : '10px'
 			});
 		} else {
-			$('.header__container').removeClass('header__container--mobile-menu-opened')
-			$('body').removeClass('fixed');
+			$('.header__container').removeClass('header__container--mobile-menu-opened');
+			enableScroll();
 			
 			burger.css({
 				'backgroundImage' : 'url(../../img/burger.svg)',
@@ -10879,9 +10906,9 @@ $(function(){
 		}
 
 		if ($('.popup__form').is(':visible')) {
-			$('body').addClass('fixed');
+			disableScroll();
 		} else {
-			$('body').removeClass('fixed');
+			enableScroll();
 		}
 		
 		if (windowWindth > 320 && windowWindth <= 1220) {
@@ -10940,7 +10967,7 @@ $(function(){
         menu.toggle(300, function() {
             if (menu.is(':visible')) {
 				$('.header__container').addClass('header__container--mobile-menu-opened')
-				$('body').addClass('fixed');
+				disableScroll();
 				
                 burger.css({
 					'backgroundImage' : 'url(../../img/close.svg)',
@@ -10948,7 +10975,7 @@ $(function(){
 				});
             } else {
 				$('.header__container').removeClass('header__container--mobile-menu-opened')
-				$('body').removeClass('fixed');
+				enableScroll();
 				
                 burger.css({
 					'backgroundImage' : 'url(../../img/burger.svg)',

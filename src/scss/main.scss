@@ -116,12 +116,30 @@
     }
 }
 
-// POPUP END
+.message {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    padding: 20px;	
+    background: #fff;
+    border: 1px solid #fc557c;
+    border-radius: 5px; 
+    z-index: 9999;
+    opacity: 1;
 
-a:hover {
-    transform: scale(1.1);
-    transition: transform, 0.5s;
+    &__title {
+        font-size: 1.5em;
+        font-weight: bold;
+        text-align: center;
+    }
+    &__text {
+        font-size: 1.2em;
+    }
 }
+
+// POPUP END
 
 .tag {
     position: absolute;
@@ -262,7 +280,7 @@ a:hover {
     }
     &:active {
         outline: none;
-        border: 2px solid #fc557c;  
+        opacity: 0.5;
     }
 }
 
@@ -540,6 +558,7 @@ a:hover {
     top: 37.8%;
     left: auto;
     right: -2.4%;
+    transition: opacity, 0.7s;
 
     &::after {
         display: none;
@@ -547,7 +566,6 @@ a:hover {
 
     &:hover {
         opacity: 0.8;
-        transition: opacity, 0.7s;
     }
     &:focus {
         outline: none;
@@ -567,6 +585,7 @@ a:hover {
     height: 64px;
     top: 37.8%;
     left: -2.7%;
+    transition: opacity, 0.7s;
 
     &::after {
         display: none;
@@ -574,7 +593,6 @@ a:hover {
 
     &:hover {
         opacity: 0.8;
-        transition: opacity, 0.7s;
     }
 
     &:focus {
