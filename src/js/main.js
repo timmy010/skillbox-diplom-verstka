@@ -169,7 +169,6 @@ $(function(){
 			url: "../../send.php",
 			data: form.serializeArray()
 		}).done(function() {
-			form.trigger('reset');
 			closeSmth($('.popup__form'));
 			showThanks();
 		});

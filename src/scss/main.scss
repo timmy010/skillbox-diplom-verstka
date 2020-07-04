@@ -378,6 +378,7 @@
     top: 12.9%;
     left: 35.9%;
     transform: rotate(-13deg);
+    transition: transform, 2s, 'linear', 1.5s;
     animation-duration: 1.4s;
 };
 .cover__tag-div-2 {
@@ -419,6 +420,7 @@
     left: 41.2%;
     transform: rotate(14deg);
     transition: transform, 2s, 'linear', 1s;
+    animation-duration: 2.4s;
 };
 
 .whatido {

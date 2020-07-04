@@ -1,17 +1,19 @@
 @keyframes fadeInDownBig {
-    from {
+    0% {
       opacity: 0;
       -webkit-transform: translate3d(0, -2000px, 0);
       transform: translate3d(0, -2000px, 0);
     }
   
-    to {
+    80% {
       opacity: 1;
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
     }
-  }
-  .animate__fadeInDownBig {
-    -webkit-animation-name: fadeInDownBig;
-    animation-name: fadeInDownBig;
+
+    100% {
+      -webkit-transform: translate3d(0, 0, -13deg);
+      transform: translate3d(0, 0, -13deg);
+      opacity: 1;
+    }
   }
