@@ -7,6 +7,7 @@ const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const notify = require('gulp-notify');
+const minify = require('gulp-minify');
 
 const jsFiles = [
   './src/js/swiper.min.js',
@@ -38,6 +39,9 @@ function styles() {
 function scripts() {
 	return gulp.src(jsFiles)
 		.pipe(concat('scripts.js'))
+		.pipe(minify({
+			ignoreFiles: ['.min.js']
+		}))
 		.pipe(gulp.dest('./build/js'))
 		.pipe(browserSync.stream());
 }
