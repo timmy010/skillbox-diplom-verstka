@@ -10866,18 +10866,8 @@ $(function(){
 
 	if (windowWindth <= 768) {
 		$('.header__button').text('');
-		$('.header__burger').css({
-			'width' : '24px',
-			'height' : '18px',
-			'background-size' : '24px 18px',
-		});
     } else {
 		$('.header__button').text('Заказать звонок');
-		$('.header__burger').css({
-			'width' : '45px',
-			'height' : '45px',
-			'background-size' : '45px',
-		});
 	}
 
     $(window).resize(function() {
@@ -10944,18 +10934,8 @@ $(function(){
 
 		if (windowWindth <= 768) {
 			$('.header__button').text('');
-			$('.header__burger').css({
-				'width' : '24px',
-				'height' : '18px',
-				'background-size' : '24px 18px',
-			});
 		} else {
 			$('.header__button').text('Заказать звонок');
-			$('.header__burger').css({
-				'width' : '45px',
-				'height' : '45px',
-				'background-size' : '45px',
-			});
 		}
 	});
 	
