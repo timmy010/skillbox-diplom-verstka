@@ -203,6 +203,9 @@
     .popup__form {
         width: 50%;
     }
+    .message {
+        width: 50%;
+    }
 
     // Cover tags
 
@@ -639,6 +642,14 @@
         padding: 40px 20px 0 20px;
         width: 100%;
         height: 100%;
+        border: 0;
+        overflow: scroll;
+    }
+    .message {
+        text-align: center;
+        padding: 40px 20px 0 20px;
+        width: 100%;
+        height: auto;
         border: 0;
         overflow: scroll;
     }
