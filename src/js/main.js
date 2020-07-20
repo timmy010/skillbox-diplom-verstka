@@ -253,24 +253,24 @@ $(function(){
 			$('.header__menu').css('display', 'block');
 		} else {
 			$('.header__menu').css('display', 'none');
-		}
 
-		if (menu.is(':visible')) {
-			$('.header__container').addClass('header__container--mobile-menu-opened');
-			disableScroll();
-			
-			burger.css({
-				'backgroundImage' : 'url(../../img/close.svg)',
-				'margin-right' : '10px'
-			});
-		} else {
-			$('.header__container').removeClass('header__container--mobile-menu-opened');
-			enableScroll();
-			
-			burger.css({
-				'backgroundImage' : 'url(../../img/burger.svg)',
-				'margin-right' : '0'
-			});
+			if (menu.is(':visible')) {
+				$('.header__container').addClass('header__container--mobile-menu-opened');
+				disableScroll();
+				
+				burger.css({
+					'backgroundImage' : 'url(../../img/close.svg)',
+					'margin-right' : '10px'
+				});
+			} else {
+				$('.header__container').removeClass('header__container--mobile-menu-opened');
+				enableScroll();
+				
+				burger.css({
+					'backgroundImage' : 'url(../../img/burger.svg)',
+					'margin-right' : '0'
+				});
+			}
 		}
 
 		if ($('.popup__form').is(':visible')) {
@@ -289,23 +289,6 @@ $(function(){
 			$('.header__button').text('');
     	} else {
 			$('.header__button').text('Заказать звонок');
-		}
-
-		if (windowWindth <= 320) {
-			mySwiper.slideTo(2);
-			$('.swiper-slide').each(function(){
-				let link = $(this).find('.swiper-slide__img');
-				if (link.attr('src') === 'img/site_det.png') {
-					link.attr('src', 'img/site_det-mobile.png');
-				}
-			});
-		} else {
-			$('.swiper-slide').each(function(){
-				let link = $(this).find('.swiper-slide__img');
-				if (link.attr('src') === 'img/site_det-mobile.png') {
-					link.attr('src', 'img/site_det.png');
-				}
-			});
 		}
 
 		if (windowWindth <= 768) {
